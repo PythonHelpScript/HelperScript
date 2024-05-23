@@ -154,7 +154,7 @@ Explanation
   The network convergence time is faster than OSPF networks, because EIGRP network can learn the topology information and updates more rapidly -> Answer D is not correct.
  Reference: https://scialert.net/fulltext/?doi=aujcs.2014.1.8
 
-Question 6
+Question 6 - Checked
 A customer wants to connect a device to an autonomous Cisco AP configured as a WGB. The WGB is configured properly; however, it fails to associate to a CAPWAP-enabled AP. Which change must be applied in the advanced WLAN settings to resolve this issue?
 A. Disable FlexConnect local switching
 B. Enable Aironet IE
@@ -169,7 +169,7 @@ Explanation
  Reference: https://www.cisco.com/c/en/us/support/docs/wireless-mobility/service-set-identifier-ssid/211293-
   Configure-Work-Group-Bridge-WGB-Multip.html
 
-Question 7
+Question 7 - Checked
 A customer deploys a new wireless network to perform location-based services using Cisco DNA Spaces. The customer has a single WLC located on-premises in a secure data center. The security team does not want to expose the WLC to the public Internet. Which solution allows the customer to securely send RSSI updates to Cisco DNA Spaces?
 A. Replace the WLC with a cloud-based controller
 B. Deploy a Cisco DNA Spaces connector as a VM
@@ -273,7 +273,7 @@ Explanation
  SD-Access Extended nodes – Switch operating in Layer2 mode connected to a Fabric Edge device
   Reference: https://www.ciscolive.com/c/dam/r/ciscolive/us/docs/2018/pdf/BRKCRS-2817.pdf
   
-Question 13
+Question 13 - Checked
 An engineer is configuring Local WebAuth on a Cisco Wireless LAN Controller. According to RFC 5737, which virtual IP address must be used in this configuration?
 A. 1.1.1.1
 B. 192.168.0.1
@@ -284,7 +284,7 @@ Answer: C
  
 Explanation
 
-Question 14
+Question 14 - Checked
 Refer to the exhibit.
 
     R1--------------R2
@@ -535,7 +535,7 @@ Answer: C
  
 Explanation
 
-Question 22
+Question 22 - Checked
 Refer to the exhibit.
 
 F1/0/47 - Group 1 (version 2)
@@ -735,7 +735,7 @@ Answer: BC
   
 Explanation
 
-Question 30
+Question 30 - Checked
 Refer to the exhibit.
 
      	monitor session 11 type erspan-source source interface GigabitEthernet3 
@@ -885,7 +885,7 @@ Explanation
 
    Reference: https://www.ccexpert.us/qos-implementing/dual-token-bucket-single-rate-classbased-policing-cont.html
   
-Question 35
+Question 35 - Checked
 Refer to the exhibit.
   
 Int e0/0
@@ -1092,7 +1092,7 @@ Answer: C
  
 Explanation
 
-Question 45
+Question 45 - Checked
 If AP power level is increased from 25 mW to 100 mW, what is the power difference in dBm?
 A. 6 dBm
 B. 14 dBm
@@ -1104,7 +1104,7 @@ Answer: A
 Explanation
  3 dB of gain = +3 dB = doubles signal strength (Let’s say, the base is P. So 10*log10(P/P)= 0 dB and 10*log10(2P/P) = 10*log10(2) = 3dB -> double signal)
  
-Question 46
+Question 46 - Checked
 When does a Cisco StackWise primary switch lose its role?
 A. when the priority value of a stack member is changed to a higher value
 B. when a switch with a higher priority is added to the stack
@@ -1642,7 +1642,7 @@ Explanation
   Reference: https://www.cisco.com/c/en/us/td/docs/cloud-systems-management/network-automation-and-management/dna-center/2-1-
   2/admin_guide/b_cisco_dna_center_admin_guide_2_1_2/b_cisco_dna_center_admin_guide_2_1_1_chapter_0110.html
  
-Question 6
+Question 6 - Checked
 Refer to the exhibit.
 
 R1 network 209.165.200.224/27
@@ -1651,7 +1651,7 @@ R2
 Int g0/0
 Ip address 209.165.202.130 255.255.255.252
 
-Router bgp 1202
+Router bgp 1201
 Network 209.165.201.1 mask 255.255.255.224
 Neighbor 209.165.202.129 remote-as 1200
   
@@ -1690,7 +1690,7 @@ Explanation
  Additionally, Each deployment node(s)’s IP address should be added to the SAN field to avoid a certificate warning when the server is accessed via the IP address.
  Reference: https://www.cisco.com/c/en/us/support/docs/security/identity-services-engine/215621-tls-ssl-certificates-in-ise.html
   
-Question 8
+Question 8 - Checked
 Refer to the exhibit.
 
 Rif#show ip bgp
@@ -1721,7 +1721,7 @@ Explanation
  Besides 192.168.101.2, other next hops have the same weight attribute of 0 so we have to consider Local preference.
  There are two next hops with LocPrf of 100 which are 192.168.101.18 and 192.168.101.10 (The field of LocPrf is empty means the default Local Preference of 100). Next we compare their AS Path. The next hop 192.168.101.18 has shorter AS Path so it will be the active next hop when the current one fails.
  
-Question 9
+Question 9 - Checked
 What is the API keys option for REST API authentication?
 A. a predetermined string that is passed from client to server
 B. a one-time encrypted token
@@ -1735,7 +1735,7 @@ Explanation
  API Keys were created as somewhat of a fix to the early authentication issues of HTTP Basic Authentication and other such systems. In this method, a unique generated value is assigned to each first time user, signifying that the user is known. When the user attempts to re-enter the system, their unique key (sometimes generated from their hardware combination and IP data, and other times randomly generated by the server which knows them) is used to prove that they’re the same user as before.
  Reference: https://blog.restcase.com/4-most-used-rest-api-authentication-methods/
   
-Question 10
+Question 10 - Checked
 Refer the exhibit.
   
 SW1                                        G0/0        G0/2
@@ -1862,7 +1862,7 @@ Explanation
   The configuration in the exhibit is missing destination IP address for the GRE tunnel so we have to add it with the “ip address 10.10.0.1”.
 
  
-Question 13
+Question 13 - Checked
 Refer to the exhibit.
 
 PM-4-ERR_DISABLE: channel-misconfig error detected of Po1 G1/0/2, G1/0/3 in err-disable state
@@ -1977,7 +1977,7 @@ Answer: AC
    
 Explanation
 
-Question 18
+Question 18 - Checked
 What happens when a FlexConnect AP changes to standalone mode?
 A. All controller dependent activities stops working except DFS
 B. Only clients on central switching WLANs stay connected
@@ -2116,7 +2116,7 @@ Answer: C
  
 Explanation
 
-Question 26
+Question 26 - Checked
 What are the main components of Cisco TrustSec?
 A. Cisco ISE and Enterprise Directory Services
 B. Cisco ISE, network switches, firewalls, and routers
@@ -2761,7 +2761,7 @@ B. VXLAN
 C. LISP
 D. Cisco Trust Security (CTS)
 
-Answer: C
+Answer: B
   
 Explanation
 
@@ -3404,7 +3404,7 @@ Explanation
  a physical switch.
     Although vSwitch does not run Spanning-tree protocol but vSwitch implements other loop prevention mechanisms. For example, a frame that enters from one VMNIC is not going to go out of the physical host from a different VMNIC card.
  
-Question 88
+Question 88 - Checked
 Refer to the exhibit.
 
 event manager applet config-alert
@@ -3826,13 +3826,19 @@ Answer: C
 Explanation
  A strange thing here is we have to “deny” source 10.0.0.5 in the ACL so that it is excluded from “policy-map CoPP”. It will be matched by the “class-default” which is implemented implicitly at the end of the policy-map. This default class will match all the traffic and allows them by default.
  
-Question 107
+Question 107 - Checked
 Refer to the exhibit.
   
 import requests
 import json
 
+Payload = [
+{ "jsonrpc": "2.0",
 ...
+"Params": {
+"Cmd": "show clock"
+}
+}]
 
 response = requests.post(url,data=sfjklj, headers=sfdjkldjsdl)
 
@@ -3863,7 +3869,7 @@ Answer: D
  
 Explanation
 
-Question 109
+Question 109 - Checked
 Refer to the exhibit.
 
 Switch 1
@@ -4898,7 +4904,7 @@ Answer: D
  
 Explanation
 
-Question 50
+Question 50 - Checked
 Refer to the exhibit.
   
 show ip bgp sum
@@ -5291,7 +5297,7 @@ Answer: A
  
 Explanation
 
-Question 65
+Question 65 - Checked
  In a Cisco SD-WAN solution, which two functions are performed by OMP? (Choose two)
 A. advertisement of network prefixes and their attributes
 B. segmentation and differentiation of traffic
@@ -5465,7 +5471,7 @@ Answer: A
  
 Explanation
 
-Question 76
+Question 76 - Checked
 Refer to the exhibit.
 
 Headers = {"Content-Type": "yang+json",
@@ -5499,7 +5505,7 @@ Explanation
  The 204 status code means that the request was received and understood, but that there is no need to send any data back. The server has fulfilled the request but does not need to return an entity-body, and might want to return updated meta information.
  Note: HTTP status code of 2xx means “Success”, which indicates that the client’s request was accepted successfully.
 
-Question 77
+Question 77 - Checked
 An administrator must enable Telnet access to Router X using the router username and password database for authentication. Which configuration should be applied?
 A. RouterX(config)#aaa new-model
  RouterX(config)#aaa authentication login auth-list local
@@ -5606,7 +5612,7 @@ Explanation
  When using Ternary Content Addressable Memory (TCAM) inside routers it’s used for faster address lookup that enables fast routing.
  In switches Content Addressable Memory (CAM) is used for building and lookup of mac address table that enables L2 forwarding decisions.
  
-Question 82
+Question 82 - Checked
 Refer to the exhibit.
 
    SW2(config)#track 1000 interface gigabitEthernet0/0 line-protocol
@@ -5767,17 +5773,6 @@ Explanation
  json.loads() takes in a string and returns a json object while json.dumps() takes in a json object and returns a string. In this question, “Devices” is a ‘list’, not a string so we have to “dumps” it first to convert it into a string before printing it out.
   Try printing with “loads”:
   Note: JSON does not have attributes “print” or “repr” so we cannot use them.
- 
-Question 2
- What is the function of Cisco DNA Center in a Cisco SD-Access deployment?
-A. It is responsible for routing decisions inside the fabric
-B. It is responsible for the design, management, provisioning, and assurance of the fabric network devices
-C. It possesses information about all endpoints, nodes, and external networks related to the fabric
-D. It provides integration and automation for all nonfabric nodes and their fabric counterparts
-  
-Answer: B
- 
-Explanation
 
 Question 3 - Checked
 Refer to the exhibit.
@@ -5798,37 +5793,6 @@ Answer: C
  
 Explanation
  If the DF bit is set, routers cannot fragment packets. The ping result of “MMMMM” means “Maximum transmission unit (MTU) problem. Could not fragment.” -> In this case, packet needs to be fragmented but we disabled fragmentation via DF bit.
- 
-Question 4
-Refer to the exhibit.
-
-username admin privilege 15 password 0 Cisco13579!
-aaa new-model
-
-aaa authentication login default local
-aaa authentication enable default none
-
-aaa common-criteria policy Admins
-min-length 1
-max-length 127
-char-changes 4
-lifetime month 2
-
-A network engineer must configure a password expiry mechanism on the gateway router for all local passwords to expire after 60 days. What is required to complete this task?
-A. Add the username admin privilege 15 common-criteria-policy Administrators password 0
- Cisco013579! command
-B. No further action is required. The configuration is complete
-C. Add the aaa authentication enable default Administrators command
-D. The password expiry mechanism is on the AAA server and must be configured there
-  
-Answer: A
- 
-Explanation
- The command “username username common-criteria-policy policy-name password password” applies a specific policy and password to a user profile.
- Reference: https://www.cisco.com/c/en/us/td/docs/ios-xml/ios/sec_usr_aaa/configuration/xe-17/sec-usr-aaa-xe-17-
-  book/sec-aaa-comm-criteria-pwd.pdf
-  In the exhibit above, we see the policy “Administrators” satisfies the requirements of “all local passwords to expire after 60 days” but this policy has not been applied to any user so we have to use above command to apply to local
- user “admin”.
  
 Question 5 - Checked
 Refer to the exhibit.
@@ -6069,7 +6033,7 @@ Explanation
  Good reference: https://developer.cisco.com/docs/cisco-netconf-and-rest-device-management-api-
   documentation/#!cisco-netconf-and-rest-device-management-api-documentation/edit-a-device-configuration-using-restconf
   
-Question 23A
+Question 23A - Checked
 Which of these are characteristics of Ansible? (Choose two)
 A. utilizes a push model
 B. utilizes a pull model
@@ -6083,7 +6047,7 @@ Explanation
  Puppet has multi-master architecture. If the active master goes down, then the other master takes the active master place.
  Reference: https://www.javatpoint.com/ansible-vs-puppet
   
-Question 23B
+Question 23B - Checked
 Which of these are characteristics of Puppet? (Choose two)
 A. utilizes a push model
 B. utilizes a pull model
@@ -6121,7 +6085,7 @@ Explanation
  As we see in the output, the type of this interface in all VLANs are “Edge” (which automatically transitions the port to the spanning tree forwarding state without passing through the blocking or learning states) so maybe this interface
  was configured with “portfast” command. There are many VLANs on this single interface so we can deduce it is a trunk port. Therefore the best answer here should be the command “spanning-tree portfast trunk” has been entered.
  
-Question 25
+Question 25 - Checked
 An engineer is troubleshooting the AP join process using DNS. Which FQDN must be resolvable on the network for the access points to successfully register to the WLC?
 A. cisco-capwap-controller.domain.com
 B. wlchostname.domain.com
@@ -6315,21 +6279,6 @@ Explanation
  In SD-Access, the underlay switches (edge nodes) support the physical connectivity for users and endpoints. However, end-user subnets and endpoints are not part of the underlay network—they are part of the automated overlay network.
  https://www.cisco.com/c/en/us/td/docs/solutions/CVD/Campus/cisco-sda-design-guide.html
  
-Question 39
-What is the centralized control policy in a Cisco SD-WAN deployment?
-A. list of ordered statements that define user access policies
-B. list of enabled services for all nodes within the cloud
-C. set of rules that governs nodes authentication within the cloud
-D. set of statements that defines how routing is performed
-  
-Answer: D
- 
-Explanation
- In Cisco SD-WAN, there are two types of Centralized Control Policies that fulfill different objectives:
- + Topology – Topology policies control the route information such as omp, tloc, and service routes that are being redistributed to a list of sites. As the name implies, they are typically used for limiting the number of overlay tunnels between sites and controlling the overlay topology.
- + VPN Membership – VPN Membership policies are used to control the distribution of routing information for specific VPNs to a list of sites. A typical use-case is for creating guest networks that have Internet access but site-to-site communication is restricted.
- Reference: https://www.networkacademy.io/ccie-enterprise/sdwan/what-is-a-centralized-control-policy
- 
 Question 43 - Checked
 Refer to the exhibit.
 
@@ -6468,7 +6417,7 @@ Answer: C
  
 Explanation
  
-Question 50
+Question 50 - Checked
  Which line must be added in the Python function to return the JSON object {“cat_9k”:”FXS193202SE”)?
 
 import json
@@ -6845,92 +6794,8 @@ Answer: A
  
 Explanation
  Roaming is a client side decision in 802.11 WiFi. Client devices listen for beacon frames or send probe requests to discover APs advertising the preferred SSID. The clients driver uses the received signal strength of beacons or probe responses to make decisions on whether to change APs or remain connected to the current AP.
- 
-Question 69
-Refer to the exhibit.
-
-R1
-Internet interface - G0/0 - 209.165.200.225
-Internal interface - G0/1 - 10.1.1.1
    
-External users require HTTP connectivity to an internal company web server that is listening on TCP port 8080. Which command set accomplishes this requirement?
-    Option A
-interface G0/0
-ip address 209.165.200.225 255.255.255.224 
-ip nat inside
-
-        Option B
-interface G0/0
-ip address 209.165.200.225 255.256.255.224 
-ip nat inside
-interface G0/1
-ip address 10.1.1.1 255.255.255.0 
-ip nat outside
-ip nat inside source static tcp 209.165.200.225 80 10.1.1.100 8080
-
-     Option C
-interface G0/0
-ip address 209.165.200.225 255.255.255.224 
-ip nat inside
-interface G0/1
-ip address 10.1.1.1 255.255.255.0 
-ip nat outside
-ip nat inside source static tcp 10.1.1.1 8080 209.166.200.225 80
-
-   Option D
-interface G0/0
-ip address 209.165.200.225 255.255.255.224 
-ip nat outside
-interface G0/1
-ip address 10.1.1.1 255.255.255.0 
-ip nat inside
-ip nat inside source static tcp 10.1.1.100 8080 interface G0/0 80
-
-     Option E
-interface G0/0
-ip address 209.165.200.225 255.255.255.224 
-ip nat outside
-interface G0/1
-ip address 10.1.1.1 255.255.255.0 
-ip nat inside
-ip nat inside source static tcp 209.165.200.225 8080 10.1.1.100 8080
-
-A. Option A
-B. Option B
-C. Option C
-D. Option D
-E. Option E
-  
-Answer: D
- 
-Explanation
- We need:
- + G0/0: NAT outside
- + G0/1: NAT inside
- -> Only Option D & Option E are correct
- We need to configure local-ip before global-ip in the command ip nat inside source static local-ip global-ip so only
- Option D is correct.
- 
-Question 70
-Which three elements determine Air Time efficiency? (Choose three)
-A. evert-driven RRM
-B. data rate (modulation density) or QAM
-C. channel bandwidth
-D. number of spatial streams and spatial reuse
-E. RF group leader
-F. dynamic channel assignment
-  
-Answer: BCD
- 
-Explanation
- Four things determine Air Time Efficiency
- 1. Data rate (Modulation density) orQAM -(how many Bit’s per Radio Symbol) 64 QAM is more robust but 1024 QAM is a lot faster
- 2. Number of spatial streams and spatial reuse (introduction of OFDMA and Resource Units) and UL/DL MU-MIMO
-  3. Channel bandwidth –How Many frequencies can we modulate at one time
-  4. Protocol overhead –Preamble/Ack/BA, Guard Interval “GI” etc.
- Reference: https://www.ciscolive.com/c/dam/r/ciscolive/emea/docs/2020/pdf/BRKEWN-3010.pdf
-  
-Question 72
+Question 72 - Checked
 Refer to the exhibit.
 
       def get_credentials():
@@ -7062,7 +6927,7 @@ Explanation
  Reference: https://www.cisco.com/c/en/us/support/docs/wireless/4400-series-wireless-lan-controllers/99121-vlan-
   acs-ad-config.html
 
-Question 82
+Question 82 - Checked
 If the noise floor is -90 dBm and the wireless client is receiving a signal of -75 dBm, what is the SNR?
 A. -165
 B. 83
@@ -7412,42 +7277,7 @@ Explanation
  “Command rejected: An interface must be configured to the “Access” or “Trunk” modes to be configured to
  “NoNegotiate.””
  
-Question 8
-Refer to the exhibit.
-
-      R1#show access-list 100
-   Extended IP access list 100
-   10 deny ip any any
-   20 permit ip 192.168.0.0 0.0.255.255 any
-   30 permit ip any 192.168.0.0 0.0.255.255
-
-            Option A
-R1(config)#no access-list 100 deny ip any any
-
-Option B
-R1(config)#ip access-list extended 100 
-R1(config-ext-nacl)#5 permit ip any any
-    
-         Option C
-R1(config)#ip access-list extended 100 
-R1(config-ext-nacl)#no 10
-
-Option D
-R1(config)#no access-list 100 seq 10 
-R1(config-ext-nacl)#access-list 100 seq 40 deny ip any any
-     
-Extended access-list 100 is configured on interface GigabitEthernet0/0 in an inbound direction, but it does not have the expected behavior of allowing only packets to or from 192.168.0.0/16. Which command set properly configures the access list?
-A. Option A
-B. Option B
-C. Option C
-D. Option D
-  
-Answer: C
- 
-Explanation
- The first ACL statement of “10 deny ip any any” will match and drop all traffic so we have to remove this statement.
-
-Question 10
+Question 10 - Checked
 Refer to the exhibit.
 
 test_json """{ sjsfdklsdfjlksfdjfdslkj }"""
@@ -7472,33 +7302,6 @@ Explanation
 
  
  Note: Triple quotes (“””) in Python allows strings to span multiple lines, including verbatim NEWLINEs, TABs, and any other special characters.
- 
-Question 11
-Refer to the exhibit.
-
-SW1
-Group Port-channel Protocol Ports
-1     Po2(SD)      LACP      F0/23(D)
-
-
-SW2
-%PM-4-ERR_DISABLE: channel-misconfig error detected on F0/24
-%PM-4-ERR_DISABLE: channel-misconfig error detected on F0/24
-
-Group Port-channel Protocol Ports
-1     Po1(SD)      -         F0/23(D) F0/24(D)
-
-An engineer is configuring an EtherChannel between Switch1 and Switch2 and notices the console message on Switch2. Based on the output, which action resolves this issue?
-A. Configure the same port channel interface number on both switches
-B. Configure less member ports on Switch2
-C. Configure more member ports on Switch1
-D. Configure the same EtherChannel protocol on both switches
-  
-Answer: D
- 
-Explanation
- In this case, we are using your EtherChannel without a negotiation protocol on Switch2. As a result, if the opposite switch is not configured for EtherChannel operation on the respective ports either, there is a danger of a switching
- loop. The EtherChannel Misconfiguration Guard tries to prevent that loop from occurring by disabling all the ports bundled in the EtherChannel.
 
 Question 17 - Checked
 Refer to the exhibit.
@@ -7762,7 +7565,7 @@ In this case the “IPv4 address on the tunnel” is 10.10.10.1/24 and “source
 the command “tunnel source fa0/0”. Therefore it only needs a tunnel destination, which is 172.16.0.2.
 Note: A multiple GRE (mGRE) interface does not require a tunnel destination address.
 
-Question 3
+Question 3 - Checked
 Which protocol infers that a YANG data model is being used?
 A. SNMP
 B. REST
@@ -7773,89 +7576,6 @@ Answer: C
 
 Explanation
 YANG (Yet Another Next Generation) is a data modeling language for the definition of data sent over network management protocols such as the NETCONF and RESTCONF.
-
-Question 4
-Which configuration restricts the amount of SSH that a router accepts 100 kbps?
-A.
-class-map match-all CoPP_SSH
-match access-group name CoPP_SSH
-!
-policy-map CoPP_SSH
-class CoPP_SSH
-police cir 100000
-exceed-action drop
-!
-!
-!
-interface GigabitEthernet0/1
-ip address 209.165.200.225 255.255.255.0 ip access-group CoPP_SSH out
-duplex auto
-speed auto
-media-type rj45
-service-policy input CoPP_SSH
-!
-ip access-list extended CoPP_SSH
-permit tcp any any eq 22
-!
-B.
-class-map match-all CoPP_SSH
-match access-group name CoPP_SSH
-!
-policy-map CoPP_SSH
-class CoPP_SSH
-police cir CoPP_SSH
-exceed-action drop
-!
-!
-!
-interface GigabitEthernet0/1
-ip address 209.165.200.225 255.255.255.0 ip access-group ... out
-duplex auto
-speed auto
-media-type rj45
-service-policy input CoPP_SSH
-!
-ip access-list extended CoPP_SSH
-deny tcp any any eq 22
-!
-
-C.
-class-map match-all CoPP_SSH match access-group name CoPP_SSH !
-policy-map CoPP_SSH
-class CoPP_SSH
-police cir 100000
-exceed-action drop
-!
-!
-!
-control-plane
-service-policy input CoPP_SSH
-!
-ip access-list extended CoPP_SSH deny tcp any any eq 22
-!
-D.
-class-map match-all CoPP_SSH match access-group name CoPP_SSH !
-policy-map CoPP_SSH
-class CoPP_SSH
-police cir 100000
-exceed-action drop
-!
-!
-!
-control-plane transit
-service-policy input CoPP_SSH
-!
-ip access-list extended CoPP_SSH permit tcp any any eq 22
-!
-
-Answer: C
-
-Explanation
-CoPP protects the route processor on network devices by treating route processor resources as a separate entity with its own ingress interface (and in some implementations, egress also). CoPP is used to police traffic that is destined to the route processor of the router such as:
-+ Routing protocols like OSPF, EIGRP, or BGP.
-+ Gateway redundancy protocols like HSRP, VRRP, or GLBP.
-+ Network management protocols like telnet, SSH, SNMP, or RADIUS.
- Therefore we must apply the CoPP to deal with SSH because it is in the management plane. CoPP must be put under “control-plane” command.
 
 Question 9 - Checked
 Which two namespaces does the LISP network architecture and protocol use? (Choose two)
@@ -8143,23 +7863,6 @@ A. 192.168.101.18
 B. 192.168.101.6 
 C. 192.168.101.10 
 D. 192.168.101.14
-
-Answer: A
-
-Explanation
-
-Question 6
-Refer to the exhibit.
-A. R3(config)#routerbgp200 R3(config-router)#neighbor 10.24.24.4 remote-as 100 R3(config-router)#bgp router-id 10.3.3.3
-R4(config)#router bgp 100 R4(config-router)#neighbor 10.24.24.3 remote-as 200\ R4(config-router)#bgp router-id 10.4.4.4
-B. R3(config)#router bgp 200
-R3(config-router)#neighbor 10.4.4.4 remote-as 100 R3(config-router)#neighbor 10.4.4.4 update-source loopback0
-R4(config)#router bgp 100
-R4(config-router)#neighbor 10.3.3.3 remote-as 200 R4(config-router)#neighbor 10.3.3.3 update-source loopback0
-C. R3(config)#router bgp 200
-R3(config-router)#neighbor 10.24.24.4 remote-as 100 R3(config-router)#neighbor 10.24.24.4 update-source loopback0
-R4(config)#router bgp 100
-R4(config-router)#neighbor 10.24.24.3 remote-as 200 R4(config-router)#neighbor 10.24.24.3 update-source loopback0
 
 Answer: A
 
@@ -8563,7 +8266,7 @@ Explanation
 Reference:
 https://www.cisco.com/c/en/us/td/docs/ios/solutions_docs/ip_multicast/White_papers/rps.html
 
-Question 1
+Question 1 - Checked
 When a wired client connects to an edge switch in an traffic leaving AS 200 which component decides whether the client has access to the network?
 A. control-plane node
 B. Identity Service Engine 
@@ -8574,7 +8277,7 @@ Answer: B
 
 Explanation
 
-Question 4
+Question 4 - Checked
 Which configuration restricts the amount of SSH that a router accepts 100 kbps?
 A.
 class-map match-allCoPP_SSH
@@ -8901,7 +8604,7 @@ When a user leaves the app, it automatically encrypts everything again. This way
 How token-based authentication works: Users log in to a system and – once authenticated – are provided with a token to access other services without having to enter their username and password multiple times. In short, token-based authentication adds a second layer of security to application, network, or service access.
 OAuth is an open standard for authorization used by many APIs and modern applications. The simplest example of OAuth is when you go to log onto a website and it offers one or more opportunities to log on using another website’s/service’s logon. You then click on the button linked to the other website, the other website authenticates you, and the website you were originally connecting to logs you on itself afterward using permission gained from the second website.
 
-Question 12
+Question 12 - Checked
 A client device roams between access points located on different floors in an atrium. The access points joined to the same controller and configuration in local mode. The access points are in different IP addresses, but the client VLAN in the group same. What type of roam occurs?
 A. intra-controller
 B. inter-subnet
@@ -9360,7 +9063,7 @@ Answer: D
 
 Explanation
 
-Question 5
+Question 5 - Checked
 Scenario The East-WLC-2504A controller has a problem. When configuration changes are made to the Employees- East-Wing AP Group that covers the East-Wing, none of the APs receive the updates. Refer to the exhibits to determine where the problems are.
 Note, not all menu items, text boxes, or radio buttons are active.
 Which four changes must be made in the configuration of the East-WLC-2504A controller to restore functionality to the Employees-East-Wing AP Group? (Choose four.)
@@ -9424,21 +9127,6 @@ D. synchronizes the system clock with the time source with IP address 10.1.1.1E.
 Answer: D
 
 Explanation: The ntp server ip-address global configuration command configures the NTP server for IOS devices.
-
-Question 3
-A network engineer has to decide between a Layer 2 Access Layer (STP-based) and a Layer 3 Access Layer (Routed access) campus design option. Which statement must be considered for a decision to be made?
-A. The STP based option does not require FHRP, whereas the Routed access option does.
-B. The Routed access option offers easier troubleshooting than the STP-based option.
-C. The STP based access option supports spanning VLANs across multiple access switches, whereas the Routed access option does not.
-D. The Routed access option is the best cost-effective solution.
-
-Answer: B
-
-Explanation: The Routed access design has a number of advantages over the STP-based design:
-No FHRP required – no need for FHRP protocols such as HSRP and VRRP.
-No STP required – since there are no L2 links to block, this design removes the need for STP.
-Easier troubleshooting – It offers common end-to-end troubleshooting tools (such as ping and traceroute).
-The Routed access is an excellent design for many environments, but it has the same limitation as the STP-based design, in which it does not support spanning VLANs across multiple access switches. Additionally, it might not be the most cost-effective solution because access layer switches with Layer 3 routing capability might cost more than Layer 2 switches do.
 
 Question 4 - Checked
 Which three functions are performed at the distribution layer of the hierarchical network model? (Choose three.)
@@ -9660,7 +9348,7 @@ Answer: D
 
 Explanation: A virtual machine (VM) is a software emulation of a physical server with an operating system. A container is an isolated environment where containerized applications run. Containers all share the same OS while remaining isolated from each other. They all use virtualized memory managed by the hypervisor. Because a container does not have a guest OS, it relies on the host operating system to provide underlying services. It typically takes a few seconds to start.
 
-Question 20
+Question 20 - Checked
 A network engineer wants to increase the overall efficiency and cost-effectiveness of a server by maximizing the use of available resources through virtualization. The engineer is considering VMs or containers. What is the difference between these two types of virtualization?
 A. VMs take minutes to start, whereas containers take seconds to start.
 B. VMs do not include a guest OS, whereas containers do.
@@ -9671,7 +9359,7 @@ Answer: A
 
 Explanation: Each VM on a server has an dedicated OS and all containers on a server share the host OS while remaining isolated from each other. A VM contains a guest OS. Containers do not contain one, so they are lightweight (small in size). When a VM starts, the guest OS needs to load first, and once it is operational, the application in the VM can then start and run. This whole process may take minutes. When a container starts, it leverages the kernel of the host OS, which is already running, and it typically takes a few seconds to start.
 
-Question 21
+Question 21 - Checked
 Refer to the exhibit. 
 
 Switch_2# show spanning-tree vlan 10
@@ -9712,7 +9400,7 @@ Answer: BEF
 
 Explanation: A virtual machine is a software emulation of a physical server including a CPU, memory, network interface, and operating system. The hypervisor is virtualization software that performs hardware abstraction. It allows multiple VMs to run concurrently in the virtual environment.
 
-Question 23
+Question 23 - Checked
 What is a characteristic of the PortFast feature?
 A. PortFast enables a Cisco Catalyst switch to move a port into blocking state when an attached workstation link comes up.
 B. A trunk port can be configured with PortFast if it connects to a hypervisor host.
@@ -9723,7 +9411,7 @@ Answer: B
 
 Explanation: One of the major benefits of the STP PortFast feature is that the access ports bypass the earlier 802.1D STP states (learning and listening) and forward traffic immediately. PortFast can be enabled on trunk links, but only with ports that are connecting to a single host, such as a server with only one NIC that is running a hypervisor with VMs on different VLANs.
 
-Question 24
+Question 24 - Checked
 Which three spanning tree protocols are industry standards? (Choose three.)
 A. PVST+
 B. MSTP
@@ -9736,7 +9424,7 @@ Answer: BDF
 
 Explanation: STP is the 802.1D standard. RSTP is the 802.1W standard. MSTP is the 802.1S standard. MST, PVST+, and Rapid PVST+ are Cisco proprietary.
 
-Question 25
+Question 25 - Checked
 Refer to the exhibit. 
 
 SW1# show spanning-tree mst config
@@ -9816,7 +9504,7 @@ Answer: B
 
 Explanation: High CPU consumption and low free memory space are common symptoms of a Layer 2 forwarding loop. In Layer 2 forwarding loops, besides constantly consuming switch bandwidth, the CPU spikes as well. As the packet is received on a different interface, the switch must move the MAC address from one interface to the next. The network throughput is impacted drastically, users will probably notice a slow-down on their network applications, and the switches might crash because of an exhausted CPU and low memory resources.
 
-Question 29
+Question 29 - Checked
 Refer to the exhibit. 
 
       G0/2     G0/3
@@ -9879,7 +9567,7 @@ Answer: CD
 
 Explanation: Before the switch is put in the correct VTP domain and in client mode, the switch must be connected to any other switch in the VTP domain through a trunk in order to receive/transmit VTP information.
 
-Question 32
+Question 32 - Checked
 An OSPF router is forming an adjacency with a neighbor and sends the neighbor an OSPF DBD packet describing the contents of its link-state database. During which OSPF neighbor state does the router send the packet?
 A. exchange
 B. 2-Way
@@ -10327,7 +10015,7 @@ Update
 Query
 Reply
 
-Question 61
+Question 61 - Checked
 Refer to the exhibit. 
 
 R1(config)# logging host 192.168.10.10
@@ -10585,7 +10273,7 @@ Answer: B
 Explanation
 Type 7 passwords are considered insecure. They are encrypted with a weak Vigenere cypher that is easily deciphered in seconds.
 
-Question 76
+Question 76 - Checked
 Which threat protection capability is provided by Cisco ESA?
 A. web filtering
 B. cloud access security
@@ -10829,7 +10517,7 @@ Answer: D
 
 Explanation
 
-Question 89
+Question 89 - Checked
 Which data format is expected by Cisco DNA Center for all incoming data from the REST API?
 A. YAML
 B. HTTP
@@ -10841,7 +10529,7 @@ Answer: C
 Explanation
 The Cisco DNA Center controller expects all incoming data from the REST API to be in JSON format.
 
-Question 90
+Question 90 - Checked
 Which three orchestration tools require agent software on client machines to be managed? (Choose three.)
 A. Chef
 B. Ansible
@@ -10855,7 +10543,7 @@ Answer: AEF
 Explanation
 There are several available agent based configuration and automation tools, including Puppet, Chef, and SaltStack. Ansible, Puppet Bolt, and EEM are agentless tools.
 
-Question 91
+Question 91 - Checked
 Which three are components of puppet modules? (Choose three.)
 A. files
 B. recipes
@@ -10978,7 +10666,7 @@ Answer: DE
 Explanation
 Two new LSA types are added to OSPFv3, type 8, link-local LSA, and type 9, intra-area prefix LSA. These two LSAs advertise unicast prefixes and prevent the need for OSPF calculations when interface addresses are added or changed.
 
-Question 99
+Question 99 - Checked
 Refer to the exhibit. 
 
      G0/2          G0/1
@@ -11475,7 +11163,7 @@ CoPP protects the route processor on network devices by treating route processor
 
  Therefore we must apply the CoPP to deal with SSH because it is in the management plane. CoPP must be put under “control-plane” command. But we cannot name the control-plane (like "transit").
 
-Question 32
+Question 32 - Checked
 A client device roams between access points located on different floors in an atrium. The access points are joined to the same controller and configured in local mode. The access points are in different AP groups and have different IP addresses, but the client VLAN in the groups is the same.
 What type of roam occurs?
 A. inter-controller
@@ -12007,7 +11695,7 @@ Explanation
 https://mrncciew.com/2013/03/17/l3-inter-controller-roaming/
 The client in Anchor WLC is seen with "mobility role" = Anchor and "AP type" Mobile
 
-Question 81
+Question 81 - Checked
 What is the structure of a JSON web token?
 A. three parts separated by dots: header, payload, and signature
 B. three parts separated by dots: version, header, and signature
@@ -12019,7 +11707,7 @@ Answer: A
 Explanation
 https://auth0.com/docs/tokens/references/jwt-structure
 
-Question 82
+Question 82 - Checked
 A response code of 404 is received while using the REST API on Cisco DNA Center to POST to this URI: 
 /dna/intent/api/v1/template-programmer/project 
 What does the code mean?
@@ -12076,7 +11764,7 @@ Explanation
 Agentless tool means that no software or agent needs to be installed on the client machines that are to be managed. Ansible is such an agentless tool. In contrast to agentless tool, agent-based tool requires software or agent to be installed on the client. Therefore the master and slave nodes can communicate directly without the need of high-level language interpreter.
 An agentless tool uses standard protocols, such as SSH, to push configurations down to a device (and it can be considered a “messaging system”).
 
-Question 88
+Question 88 - Checked
 Which statement about Cisco Express Forwarding is true?
 A. The CPU of a router becomes directly involved with packet-switching decisions.
 B. It uses a fast cache that is maintained in a router data plane.
@@ -12087,7 +11775,7 @@ Answer: C
 
 Explanation
 
-Question 89
+Question 89 - Checked
 Which statement about TLS is true when using RESTCONF to write configurations on network devices?
 A. It is used for HTTP and HTTPS requests.
 B. It requires certificates for authentication.
@@ -12297,7 +11985,7 @@ Fabric mode APs continue to support the same wireless media services that tradit
 Reference: https://www.cisco.com/c/en/us/td/docs/solutions/CVD/Campus/sda-sdg-2019oct.html
 https://www.cisco.com/c/en/us/td/docs/solutions/CVD/Campus/sda-sdg-2019oct.html
 
-Question 109
+Question 109 - Checked
 Refer to the exhibit.
 
 Extended IP access list EGRESS
@@ -12757,7 +12445,7 @@ Answer: ACF
 Explanation
 The three components that are combined to form a bridge ID are bridge priority, extended system ID, and MAC address.
 
-Question 163
+Question 163 - Checked
 In which two port states does a switch learn MAC addresses and process BPDUs in a PVST network? (Choose two.)
 A. listening
 B. disabled
@@ -12770,7 +12458,7 @@ Answer: CD
 Explanation
 Switches learn MAC addresses at the learning and forwarding port states. They receive and process BPDUs at the blocking, listening, learning, and forwarding port states.
 
-Question 164
+Question 164 - Checked
 Which STP priority configuration would ensure that a switch would always be the root switch?
 A. spanning-tree vlan 10 priority 0
 B. spanning-tree vlan 10 priority 61440
@@ -12889,7 +12577,7 @@ Answer: D
 
 Explanation
 
-Question 173
+Question 173 - Checked
 What are two configuration parameters that must match for all switches in the same MST region? (Choose two.)
 A. bridge priority
 B. region name
@@ -12902,8 +12590,8 @@ Answer: BC
 Explanation
 The mst version number and region name must match for all switches in the same MST region. These parameters can be adjusted through MST configuration.
 
-Question 174
-Assuming that all switches in a network have the default bridge priority for each MST instance, what effect does the command spanning-tree mst 10 root seconday have when entered on a single switch?
+Question 174 - Checked
+Assuming that all switches in a network have the default bridge priority for each MST instance, what effect does the command spanning-tree mst 10 root secondary have when entered on a single switch?
 A. sets the bridge priority on the switch to 28672 for MST instance 10
 B. sets the bridge priority on the switch to 24586 for MST instance 10
 C. sets the bridge priority on the switch to 24582 for MST instance 10
@@ -12916,7 +12604,7 @@ In MST configuration, an MST instance priority can be defined in one of two meth
 spanning-tree mst instance-number priority priority , where the priority is a value between 0 and 61,440, in increments of 4096
 spanning-tree mst instance-number root { primary | secondary }[ diameter diameter ], where the primary keyword sets the priority to 24,576, and the secondary keyword sets the priority to 28,672
 
-Question 175
+Question 175 - Checked
 Refer to the exhibit. A network administrator issues the show spanning-tree command to verify the MST configuration. Which two conclusions can be drawn based on the output? (Choose two.)
 
 Show spanning-tree mst
@@ -13198,7 +12886,7 @@ Answer: A
 
 Explanation
 
-Question 194
+Question 194 - Checked
 Refer to the exhibit. Access1 is a new switch that is to be connected as a VTP client to the network once it has been configured. Given the output generated by the VTP server switch Dist-2, which series of configuration commands would successfully introduce the client switch into the VTP domain?
 
 Dist-2¢# show vtp status
@@ -13270,7 +12958,7 @@ Answer: B
 
 Explanation
 
-Question 197
+Question 197 - Checked
 Which type of routing protocol uses LSAs and TLVs to support extended features?
 A. path vector
 B. link-state
@@ -13282,7 +12970,7 @@ Answer: B
 Explanation
 Link-state routing protocols include capabilities such as LSAs for OSPF and TLVs (type/length/value) for IS-IS that allow them to support extended features.
 
-Question 198
+Question 198 - Checked
 What are two characteristics of link-state routing protocols? (Choose two.)
 A. They can load balance across unequal metric cost paths.
 B. They use path attributes to determine the best loop-free path.
@@ -13429,7 +13117,7 @@ Answer: C
 Explanation
 BGP is a path vector protocol which uses several path attributes to determine the best path. To prevent loops BGP updates include a record of each autonomous system that the routing advertisement traversed. A BGP router that receives the update should not see its own AS in the AS Path. If it did, it would indicate a loop.
 
-Question 209
+Question 209 - Checked
 What is the purpose for creating VRFs on a router?
 A. to isolate paths
 B. to determine the vector to reach a destination network
@@ -13995,7 +13683,7 @@ Answer: A
 Explanation
 When OSPF is operational and converged, a full adjacency is formed between routers.
 
-Question 236
+Question 236 - Checked
 Refer to the exhibit. 
 
 A bunch of routers connected together.
@@ -14027,7 +13715,7 @@ Answer: B
 Explanation
 The network 192.168.4.0 0.0.3.255 area 0 command has the correct network and wildcard mask combination to capture the four networks and activate the associated interfaces for area 0.
 
-Question 238
+Question 238 - Checked
 An administrator is configuring an OSPF router and would like the router to automatically advertise a default route into the OSPF domain even if there is no default route in the RIB. Which configuration will accomplish this?
 A. default-information originate always
 B. network 0.0.0.0 0.0.0.0 area 0
@@ -14134,7 +13822,7 @@ Answer: D
 Explanation
 OSPF uses link-state advertisement messages (LSAs) to build the LSDB and maintain routing tables. OSPF routers use LSA types 1 to 5 to describe the networks to which they are directly connected or networks which they learned from other routers. These networks can be located in other areas or can also be from non-OSPF networks. Some LSAs are used to identify an ASBR. Although most LSAs will be flooded across multiple areas, some LSAs are flooded only within the area where they originated.
 
-Question 242
+Question 242 - Checked
 Which two statements describe OSPF route summarization? (Choose two.)
 A. OSPF can perform automatic summarization on major classful network boundaries even if no summarization commands are entered from the CLI.
 B. Once OSPF route summarization is configured, the summary route will be advertised even if none of the networks in the address range are in the routing table.
@@ -14545,7 +14233,7 @@ Answer: B
 Explanation
 Statically configuring the BGP router ID (RID) is a best practice to ensure RID stability. If the RID is not statically configured, the dynamic RID allocation logic uses the highest IP address of any active loopback interfaces. If there is not an active loopback interface, then the highest IP address of any active interfaces becomes the RID when the BGP process initializes.
 
-Question 270
+Question 270 - Checked
 Refer to the exhibit. 
 
 Show run
@@ -14566,7 +14254,7 @@ Answer: B
 Explanation
 For a BGP session to initiate, one address family for a neighbor must be activated. On Cisco routers the IPv4 address family is activated by default; however, it may cause confusion when working with other address families. The BGP router configuration command no bgp default ip4-unicast disables the automatic activation of the IPv4 AFI.
 
-Question 271
+Question 271 - Checked
 Refer to the exhibit. 
 
 Which two configurations will allow router R1 to establish a neighbor relationship with router R2? (Choose two.)
@@ -14622,7 +14310,7 @@ Answer: AB
 Explanation
 The BGP configuration rules in IPv4 apply to IPv6, except that the IPv6 address family must be initialized, and the neighbor is activated. Routers with only IPv6 addressing must statically define the BGP RID to allow sessions to form.
 
-Question 274
+Question 274 - Checked
 A network administrator is configuring IPv6 route summarization on a BGP router. The objective is to aggregate the IPv6 networks from 2001:db8:0:0::/64 to 2001:db8:0:35::/64 into a single summary route. Which aggregation command should be used for the task?
 A. aggregate-address 2001:db8::/60 summary-only
 B. aggregate-address 2001:db8::/61 summary-only
@@ -14710,7 +14398,7 @@ Answer: C
 Explanation
 It is appropriate to use BGP when an autonomous system is multihomed, or has more than one connection to another autonomous system or to the Internet. BGP is not appropriate for single-homed autonomous systems. Autonomous system 65003 is a single-homed AS because it is only connected to one other autonomous system, 65002.
 
-Question 280
+Question 280 - Checked
 A company is deploying BGP multihoming to provide internet connection redundancy. Which method can be used to avoid the internet transit routing situation?
 A. deploying iBGP routing in all routers within the local AS
 B. ensuring that no IGP session is running on the local BGP routers
@@ -14750,7 +14438,7 @@ If a sequence number is not provided, the sequence number is incremented by 10 a
 If a matching statement is not included, an implied all prefixes is associated with the statement.
 Processing within a route map stops after all optional actions have processed and after matching a conditional matching criterion.
 
-Question 282
+Question 282 - Checked
 A company is deploying BGP multihoming to provide network connection redundancy for several branch locations. One of the network design objectives is to provide deterministic routing among company locations during failover by providing a specific location to handle branch transit traffic. Which two design criteria should be applied to the specific facility? (Choose two.)
 A. The bandwidth can be sized according to the traffic needs.
 B. The facility should be in a central place from all company locations.
@@ -14979,7 +14667,7 @@ Answer: AE
 Explanation
 Private BGP communities follow a particular convention where the first 16 bits represent the AS of the community origination, and the second 16 bits represent a pattern defined by the originating AS. A private BGP community pattern can vary from organization to organization, does not need to be registered, and can signify geographic locations for one AS while signifying a method of route advertisement in another AS.
 
-Question 293
+Question 293 - Checked
 Refer to the exhibit. 
 
 Router bgp 300
@@ -15293,7 +14981,7 @@ Answer: C
 Explanation
 A C-RP advertises its willingness to be an RP every 60 seconds via RP announcement messages to the reserved well-known multicast group 224.0.1.39 (Cisco-RP-Announce). RP mapping agents join group 224.0.1.39 to receive the RP announcements.
 
-Question 313
+Question 313 - Checked
 Which two statements about Protocol Independent Multicast (PIM) are true? (Choose two.)
 A. Three of the forwarding modes for PIM are PIM dense mode (PIM-DM), PIM sparse mode (PIM-SM), and PIM sparse-dense mode.
 B. PIM is a multicast routing protocol that makes packet-forwarding decisions independent of the unicast IP routing protocol that is running in the network.
@@ -15399,7 +15087,7 @@ Explanation
 OR BC?
 IPv4 uses an 8-bit Type of Service field to mark packets at Layer 3 and IPv6 uses an 8-bit Traffic Class field to mark packets at Layer 3. The fields are used by receiving devices to forward the packets based on the appropriate assigned QoS policy.
 
-Question 319
+Question 319 - Checked
 A network administrator has defined the trust boundary of a network. What is the function of trusted endpoints deployed across the network?
 A. Trusted endpoints are devices designed to provide network security features.
 B. Trusted endpoints provide monitoring and logging solutions.
@@ -15591,7 +15279,7 @@ Video-AF41
 Best Effort-O
 Background-AF11
 
-Question 329
+Question 329 - Checked
 Which statement describes NBAR2?
 A. NBAR2 can identify a variety of protocols and applications by using up to Layer 6 data.
 B. NBAR2 supports only scavenger traffic.
@@ -16254,7 +15942,7 @@ Answer: BE
 Explanation
 Advanced Encryption Algorithm (AES) and Triple DES (3DES) are encryption algorithms used for IPsec. DIffie-Hellman (DH), Pre-shared Keys (PSK), and Internet Key Exchange (IKE) are all encryption key mechanisms.
 
-Question 357
+Question 357 - Checked
 Which two identification methods are used by LISP instead of traditional IP addresses? (Choose two.)
 A. xTR
 B. RLOCs
@@ -16528,7 +16216,7 @@ Answer: C
 Explanation
 Spatial multiplexing allows faster data throughput by multiplexing or distributing data across two or more radio chains operating on the same channel but separated through spatial diversity.
 
-Question 375
+Question 375 - Checked
 Which term describes the decrease in signal strength of an RF even though there are no obstacles in the path between a transmitter and a receiver?
 A. transmit beamforming
 B. free space path loss
@@ -16540,7 +16228,7 @@ Answer: B
 Explanation
 Whenever an RF signal is transmitted from an antenna, the signal amplitude decreases as it travels through free space. Even if there are no obstacles in the path between the transmitter and receiver, the signal strength will weaken. This is known as free space path loss.
 
-Question 376
+Question 376 - Checked
 How does the 802.11ax amendment (Wi-Fi 6) differ from any other 802.11 wireless standard created before it?
 A. Wi-Fi 6 can utilize channel widths of 20, 40, 80, or 160 MHz.
 B. Wi-Fi 6 can support data rates in excess of 150 Mbps per spatial stream.
@@ -16552,7 +16240,7 @@ Answer: C
 Explanation
 In comparing 802.11ax (Wi-Fi 6) to previous 802.11 implementations, one of the key differences is that 802.11ax can use OFDMA to allocate air time for transmission by multiple devices simultaneously.
 
-Question 377
+Question 377 - Checked
 Which IEEE standard operates at wireless frequencies in both the 5 GHz and 2.4 GHz ranges?
 A. 802.11a
 B. 802.11n
@@ -16749,7 +16437,7 @@ Answer: D
 Explanation
 When a wireless client is roaming among APs that are bound to the same WLC controller, the roam occurs entirely within the controller. This is known as intracontroller roaming. Intercontroller roaming occurs when a client is roaming among APs that are bound to different WLC controllers. Layer 2 roaming is a type of the intercontroller roaming.
 
-Question 393
+Question 393 - Checked
 A company deploys a Cisco wireless network over a large campus. The wireless network uses lightweight APs and multiple WLCs. A network technician walks around the campus to verify that wireless clients can roam smoothly between APs bound to different WLCs and assigned different VLANs and IP subnets. The technician verifies that while the client roams around campus, the client retains the same VLAN and IP address assigned. Which roaming scenario is the technician verifying?
 A. intracontroller roaming
 B. local-to-local roaming
@@ -16761,7 +16449,7 @@ Answer: D
 Explanation
 In a Cisco wireless network, when a client initiates an intercontroller roam, the two controllers involved can compare the VLAN numbers that are assigned to the respective WLAN interfaces. If the VLAN IDs are the same, the client undergoes a Layer 2 intercontroller roam (also called local-to-local roam) and can continue to use the original IP address on the new controller. If the two VLAN IDs differ, the controllers arrange a Layer 3 roam that will allow the client to keep using the same IP address.
 
-Question 394
+Question 394 - Checked
 A company deploys a Cisco wireless network over the campus. Wireless network access is needed for visitors to access the internet while on campus. What are two best practices in setting up APs and WLCs for secure wireless connections for visitors? (Choose two.)
 A. only using private IP addresses for APs and clients
 B. using static IP addressing for clients to better locate visitor clients
@@ -17043,7 +16731,7 @@ Answer: A
 Explanation
 To configure the WLC with the RADIUS server information, click the SECURITY tab > RADIUS > Authentication . Click New… to add the RADIUS server information.
 
-Question 414
+Question 414 - Checked
 Which situation is an example of EAP deployment?
 A. when both the AP and client are configured with the same key or secret word for authentication by the AP
 B. when a wireless client sends its MAC address to the AP for authentication after being validated by the internal database of the AP
@@ -17055,7 +16743,7 @@ Answer: D
 Explanation
 In a 802.1x WLAN environment, WPA2 with EAP (Extensible Authentication Protocol) allows for a back-end authentication server like Radius. In this environment, even though the supplicant is authenticated by the AP, the actual authentication process is carried out by the back-end Radius server through the WLAN controller.
 
-Question 415
+Question 415 - Checked
 Which three statements concerning wireless network security are accurate? (Choose three.)
 A. A wireless client first associates with an AP and then authenticates for network access.
 B. WPA2-Personal prevents attackers from being able to use a key to unencrypt data that was already transmitted over the air.
@@ -17193,7 +16881,7 @@ Answer: D
 Explanation
 When users from the same area report an issue, check the AP to see that it is working or is misconfigured.
 
-Question 426
+Question 426 - Checked
 A network engineer is working with a user to troubleshoot connectivity of a laptop to a lightweight AP. The user has rebooted the laptop, and the network engineer is checking the connection status of the client from the WLC GUI. The client connection status dot is showing black on the DHCP step, just as it did before the reboot. What can the network engineer learn from this output?
 A. The DHCP server is down.
 B. The laptop has successfully received IP addressing information or has been statically configured.
@@ -17206,7 +16894,7 @@ Answer: C
 Explanation
 The client connection status on the WLC GUI shows a dot for particular steps used by a client when joining a wireless network. The dot can be black if a step is unsuccessful and green if the step is successful. The DHCP step shows whether the WLC has learned the client IP address from a DHCP server.
 
-Question 427
+Question 427 - Checked
 A network administrator is configuring a WLC to provide WLAN access to users in an office building. When testing the newly created WLAN, the administrator does not see the SSID from a wireless device. What is a possible cause?
 A. The APs have not been configured for the new WLAN.
 B. The new WLAN needs to be enabled.
@@ -17218,7 +16906,7 @@ Answer: B
 Explanation
 After a new WLAN is created and configured on a WLC, it should be enabled before it can be accessed by users.
 
-Question 428
+Question 428 - Checked
 A network technician is checking the status of a live AP on the WLC. On the Access Point View screen, the technician notices that the AP is using channel 11 and the channel utilization is 35%. However, the technician notices that there is no wireless client associated with the AP. What is a possible explanation for the channel utilization?
 A. The CAPWAP tunnel between the AP and the WLC is down.
 B. Nearby APs and clients are also using channel 11.
@@ -17295,7 +16983,7 @@ Answer: AE
 Explanation
 The WLAN will only be as secure as the weakest security suite you configure on it. Ideally, you should use WPA2 or WPA3 with AES/CCMP and try to avoid any other hybrid mode. Hybrid modes such as WPA with AES and WPA2 with TKIP can cause compatibility issues.
 
-Question 435
+Question 435 - Checked
 Which network design solution will best extend access layer connectivity to host devices?
 A. implementing redundancy
 B. implementing EtherChannel
@@ -17307,7 +16995,7 @@ Answer: C
 Explanation
 EtherChannel allows more data to be moved at the access layer, but does not provide network expansion. Redundancy is used to provide failover solutions but does not focus on network expansion. Routing protocols are not used to provide network expansion at the access layer. Wireless connectivity provides network access to a large number of users at the access layer.
 
-Question 436 
+Question 436  - Checked
 A network designer must provide a rationale to a customer for a design which will move an enterprise from a flat network topology to a hierarchical network topology. Which two features of the hierarchical design make it the better choice? (Choose two.)
 A. simpler deployment for additional switch equipment
 B. easier to provide redundant links to ensure higher availability
@@ -17320,7 +17008,7 @@ Answer: AB
 Explanation
 A hierarchical design for switches helps network administrators when planning and deploying a network expansion, performing fault isolation when a problem occurs, and providing resiliency when traffic levels are high. A good hierarchical design has redundancy when it can be afforded so that one switch does not cause all networks to be down.
 
-Question 437
+Question 437 - Checked
 What are three benefits of employing a hierarchical network design? (Choose three.)
 A. Use of a hierarchical design allows replacement of redundant devices with high-capacity network equipment.
 B. The hierarchical model allows the use of high-performance switches at all design layers, thus allowing for a fully-meshed topology.
@@ -17334,7 +17022,7 @@ Answer: CDF
 Explanation
 Hierarchical design provides fault containment by constraining the network changes to a subset of the network, which affects fewer systems and makes it easy to manage as well as improve resiliency. In a modular layer design, network components can be placed or taken out of service with little or no impact to the rest of the network and this facilitates troubleshooting, problem isolation, and network management.
 
-Question 438
+Question 438 - Checked
 At the distribution layer of a hierarchical network, what are two advantages of using Layer 3 devices instead of Layer 2 switches? (Choose two.)
 A. creates fewer IP subnets to configure and manage
 B. provides connectivity between different VLANs
@@ -17416,7 +17104,7 @@ Answer: B
 Explanation
 In this hierarchical model, the distribution/core layer provides connectivity to the WAN edge block, the Internet edge block, the network services block, and data center. The WAN edge block is used to connect to remote data centers, remote branches or other campus networks. The Internet edge block is used for regular Internet access, ecommerce, to connect to remote branches, and remote VPN access. The data center/server room block is where business critical servers are placed to serve up websites, corporate e-mail, business applications, storage, big data processing, and backup services. The network services edge is where devices providing network services reside such as the Wireless LAN Controllers (WLCs), Identity Services Engine (ISE), Telepresence Manager, and Cisco Unified Communications Manager (CUCM).
 
-Question 444
+Question 444 - Checked
 In a new network design, an organization has decided to manage all of its wireless access points using a wireless network controller. In which network design block of the campus network architecture would the centralized wireless network controllers be found?
 A. network services
 B. internet edge
@@ -17428,7 +17116,7 @@ Answer: A
 Explanation
 In this hierarchical model, the distribution/core layer provides connectivity to the WAN edge block, the Internet edge block, the network services block, and data center. The WAN edge block is used to connect to remote data centers, remote branches or other campus networks. The internet edge block is used for regular Internet access, ecommerce, to connect to remote branches, and remote VPN access. The data center/server room block is where business critical servers are placed to serve up websites, corporate e-mail, business applications, storage, big data processing, and backup services. The network services edge is where devices providing network services reside such as the Wireless LAN Controllers (WLCs), Identity Services Engine (ISE), Telepresence Manager, and Cisco Unified Communications Manager (CUCM).
 
-Question 445
+Question 445 - Checked
 A network engineer has to decide between a Layer 2 Access Layer (STP-based) and a Layer 3 Access Layer (Routed access) campus design option. Which statement must be considered for a decision to be made?
 A. The Routed access option is the best cost-effective solution.
 B. The STP based access option supports spanning VLANs across multiple access switches, whereas the Routed access option does not.
@@ -17726,7 +17414,7 @@ Answer: A
 Explanation
 The overlay network is built by the SD-Access fabric data plane over an underlay network by using VXLAN tunneling technology. Using VXLAN allows the SD-Access fabric to support Layer 2 and Layer 3 virtual topologies (overlays) and the ability to operate over any IP-based network.
 
-Question 462
+Question 462 - Checked
 What is the responsibility of the ISE subsystem within the Cisco SD-Access Architecture controller layer?
 A. It provides all the underlay and fabric automation and orchestration services for the physical and network layers.
 B. It provides all the identity and policy services for the physical layer and network layer.
@@ -17869,7 +17557,7 @@ Answer: B
 Explanation
 When enabled on a switch, SPAN or port mirroring, copies frames sent and received by the switch and forwards them to another port, known as a Switch Port Analyzer port, which has a analysis device attached.
 
-Question 472
+Question 472 - Checked
 Refer to the exhibit. 
 
 Server - - - - - - SWA - - - - - - - Packet Analyzer
@@ -17894,7 +17582,7 @@ Answer: C
 Explanation
 The local SPAN configuration requires two statements to identify the source and destination ports for the mirrored traffic. The statements must use the same session number. In this example, the source port is the port connected to the server (Gi0/1) and the destination port is the port attached to the packet analyzer (Fa0/7).
 
-Question 473
+Question 473 - Checked
 Refer to the exhibit. 
 
 Server - - - SW1 - - - SW2 - - - Sniffer
@@ -18035,7 +17723,7 @@ Answer: D
 Explanation
 The network edge is the ingress and egress point for traffic to and from the internet. It is the most important place in the network (PIN) for e-commerce and is also the highest-risk PIN.
 
-Question 479
+Question 479 - Checked
 What threat protection actions are involved in the “before” phase of the attack continuum?
 A. defining the abilities and actions that are required when an attack gets through
 B. establishing policies and implementing prevention measures to reduce risks
@@ -18408,7 +18096,7 @@ Answer: D
 Explanation
 The service password-encryption command uses a Cisco proprietary Vignere cypher algorithm which is weak and easily reversible. The enable secret and the username secret commands encrypt passwords using the MD5 hashing algorithm and the username algorithm-type sha 256 command uses a SHA-256 hashed secret and is considered uncrackable.
 
-Question 497
+Question 497 - Checked
 Which is the preferred method for securing device terminal lines?
 A. a password configured directly on the terminal lines
 B. username-based authentication
@@ -18493,7 +18181,7 @@ Answer: D
 Explanation
 Control Plane Policing (CoPP) does not manage or disable any services. It does not direct traffic away from the route processor, but rather it prevents unnecessary traffic from getting to the route processor.
 
-Question 504
+Question 504 - Checked
 Which command can be issued to protect a Cisco router from unauthorized automatic remote configuration?
 A. no cdp enable
 B. no service pad
@@ -18505,7 +18193,7 @@ Answer: C
 Explanation
 Service configuration allows Cisco devices to be configured automatically from remote devices using TFTP. By disabling this service with the no service config command, the threat of an unauthorized automatic device configuration can be mitigated.
 
-Question 505
+Question 505 - Checked
 Which vulnerability can be mitigated by disabling CDP and LLDP on a Cisco device?
 A. advertising detailed information about a device
 B. automatic remote configuration
@@ -18517,7 +18205,7 @@ Answer: A
 Explanation
 Both CDP and LLDP are topology discovery tools and can advertise detailed information about a device. To prevent a Cisco device from sending CDP and LLDP packets onto the network, both protocols should be disabled.
 
-Question 506
+Question 506 - Checked
 Which type of threat defense is provided by Cisco Umbrella?
 A. blocking requests to malicious Internet destinations
 B. monitoring and analyzing network traffic for potential network intrusion attacks
@@ -18936,7 +18624,7 @@ Chef Solo: The Chef server is hosted locally on the workstation. Chef client and
 Hosted Chef: The Chef server is hosted in the cloud.
 Private Chef: All Chef components are within the same enterprise network.
 
-Question 531
+Question 531 - Checked
 Which term is used to describe a set of instructions for execution by the configuration management tool Puppet?
 A. Manifest
 B. Playbook
@@ -19030,7 +18718,7 @@ Answer: D
 
 Explanation
 
-Question 535
+Question 535 - Checked
 Which statement describes the Cisco Embedded Event Manager?
 A. It is a security policy management platform that provides highly secure network access control (NAC) to users and devices.
 B. It is a centralized management platform that aggregates and correlates threat events.
@@ -19042,7 +18730,7 @@ Answer: D
 Explanation
 The Cisco Embedded Event Manager (EEM) is a Cisco IOS tool that uses software applets to automate tasks on a Cisco device. EEM is completely contained within the local device and needs no external scripting or monitoring device.
 
-Question 536
+Question 536 - Checked
 Which configuration management tool uses an agentless approach?
 A. Ansible
 B. Chef
@@ -19331,6 +19019,14 @@ Refer to the exhibit.
 R1 - - - - - - - R2
 20.1.1.1     20.1.1.2
        Area 0
+
+R1
+Router ospf 1
+Network 0.0.0.0 255.255.255.255 area 0
+
+R2
+Router ospf 2
+Network 20.0.0.0 0.0.0.255 area 0
 
 Which command must be applied to R2 for an OSPF neighborship to form?
 A. network 20.1.1.2.0.0.0.0 area 0
@@ -19649,7 +19345,7 @@ Cisco IOS software basically supports two modes of CEF load balancing: On per-de
 For per destination load balancing a hash is computed out of the source and destination IP address (- > Answer ‘It combines the source and destination IP addresses to create a hash for each destination’ is correct). This hash points to exactly one of the adjacency entries in the adjacency table (-> Answer ‘Each hash maps directly to a single entry in the adjacency table’ is correct), providing that the same path is used for all packets with this source/destination address pair. If per packet load balancing is used the packets are distributed round robin over the available paths. In either case the information in the FIB and adjacency tables provide all the necessary forwarding information, just like for nonload balancing operation.
 The number of paths used is limited by the number of entries the routing protocol puts in the routing table, the default in IOS is 4 entries for most IP routing protocols with the exception of BGP, where it is one entry. The maximum number that can be configured is 6 different paths -> Answer ‘Cisco Express Forwarding can load-balance over a maximum of two destinations’ is not correct.
 
-Question 166. 
+Question 166.  - Checked
 Which statement about a Cisco APIC controller versus a more traditional SDN controller is true?
 A. APIC does support a Southbound REST API
 B. APIC supports OpFlex as a Northbound protocol
@@ -19691,7 +19387,7 @@ Explanation
 Ansible works by connecting to your nodes and pushing out small programs, called “Ansible modules” to them. These programs are written to be resource models of the desired state of the system. Ansible then executes these modules (over SSH by default), and removes them when finished.
 Chef is a much older, mature solution to configure management. Unlike Ansible, it does require an installation of an agent on each server, named chef-client. Also, unlike Ansible, it has a Chef server that each client pulls configuration from.
 
-Question 169. 
+Question 169.  - Checked
 Refer to the exhibit. 
 
 aaa new-model
@@ -19713,7 +19409,7 @@ Answer: D
 
 Explanation
 
-Question 170. 
+Question 170.  - Checked
 Which technology is used to provide Layer 2 and Layer 3 logical networks in the Cisco SD Access architecture?
 A. underlay network
 B. VPN routing/forwarding
@@ -19728,7 +19424,7 @@ An overlay network is created on top of the underlay network through virtualizat
 SD-Access allows for the extension of Layer 2 and Layer 3 connectivity across the overlay through the services provided by through LISP.
 Reference: Click here
 
-Question 171. 
+Question 171.  - Checked
 Refer to the exhibit. 
 
             G0/1 G0/0
@@ -20148,7 +19844,7 @@ IP SLAs allows Cisco customers to analyze IP service levels for IP applications 
 Being Layer-2 transport independent, IP SLAs can be configured end-to-end over disparate networks to best reflect the metrics that an end-user is likely to experience.
 Reference: Here
 
-Question 189. 
+Question 189.  - Checked
 Refer to the exhibit. 
 
 10.0.0.0/24 - R1 - - - - - - - R2 - 192.168.0.0/16
@@ -20178,7 +19874,7 @@ Answer: BC
 
 Explanation
 
-Question 190. 
+Question 190.  - Checked
 Refer to the exhibit. 
 
   F0/0      F0/0  F0/1     F0/1
@@ -21223,7 +20919,7 @@ Loading: In this state, the actual exchange of link state information occurs Ful
 http://www.cisco.com/en/US/tech/tk365/technologies_tech_note09186a0080093f0e.shtml)
 Neighbors Stuck in Exstart/Exchange State the problem occurs most frequently when attempting to run OSPF between a Cisco router and another vendor’s router. The problem occurs when the maximum transmission unit (MTU) settings for neighboring router interfaces don’t match. If the router with the higher MTU sends a packet larger that the MTU set on the neighboring router, the neighboring router ignores the packet.
 
-Question 248. 
+Question 248.  - Checked
 Refer to the exhibit. 
 
 Monitor session 1 source vlan 10-12 rx
@@ -21555,7 +21251,7 @@ Answer: A
 Explanation
 The ip sla 10 will ping the IP 192.168.10.20 every 3 seconds to make sure the connection is still up. We can configure an EEM applet if there is any problem with this IP SLA via the command event track 10 state down.
 
-Question 260. 
+Question 260.  - Checked
 A network engineer is configuring Flexible NetFlow and enters these commands:
 
 Sampler Netflow1
@@ -21575,19 +21271,19 @@ Answer: BE
 Explanation
 The “mode random one-out of 100” specifies that sampling uses the random mode and only take one sample out of every 100 packets.
 
-Question 261. 
+Question 261.  - Checked
 Refer to the exhibit. 
 
-        	   AS100
+              AS100
     10.1.1.1        10.2.2.2
     R1 - - - - - - - - R2
     |                   |
-    |                   |
+    | Link 1            | Link 2
     |                   |
     |                   |
     R3 - - - - - - - - R4
     10.3.3.3        10.4.4.4
-        	   AS200
+              AS200
 
 An engineer must ensure that all traffic entering AS 200 will choose Link 2 as an entry point. Assuming that all BGP neighbor relationships have been formed and that the attributes have not been changed on any of the routers, which configuration accomplish task?
 
@@ -21629,7 +21325,7 @@ Answer: A
 Explanation
 R3 advertises BGP updates to R1 with multiple AS 100 so R3 believes the path to reach AS 200 via R3 is farther than R2 so R3 will choose R2 to forward traffic to AS 200.
 
-Question 262. 
+Question 262.  - Checkeds
 Refer to the exhibit. 
 
 (Too much to write)
@@ -21662,7 +21358,7 @@ Answer: A
 Explanation
 Hosted virtualization is type 2 hypervisor. In contrast to type 1 hypervisor, a type 2 hypervisor (or hosted hypervisor) runs on top of an operating system and not the physical hardware directly. A big advantage of Type 2 hypervisors is that management console software is not required. Examples of type 2 hypervisor are VMware Workstation (which can run on Windows, Mac and Linux) or Microsoft Virtual PC (only runs on Windows).
 
-Question 264. 
+Question 264.  - Checked
 Refer to the exhibit. 
 
    209.165.202.128/30                   209.165.202.132/30
@@ -21909,7 +21605,7 @@ In contrast to type 1 hypervisor, a type 2 hypervisor (or hosted hypervisor) run
 Type 1 is more efficient and well performing, it is also more secure than type 2 because the flaws and vulnerabilities that are endemic to Operating Systems are often absent from Type 1, bare metal hypervisors.
 Type 1 has better performance, scalability and stability but supported by limited hardware.
 
-Question 276. 
+Question 276.  - Checked
 Refer to the exhibit. 
 
 Ip flow-export dest 192.168.10.1 9991
@@ -22029,7 +21725,7 @@ Answer: C
 Explanation
 First-in, first-out (FIFO): FIFO entails no concept of priority or classes of traffic. With FIFO, transmission of packets out the interface occurs in the order the packets arrive, which means no QoS.
 
-Question 283. 
+Question 283.  - Checked
 Cisco DNA Center has obtained the username of the client and the multiple devices that the client is using on the network. How is Cisco DNA Center getting these context details?
 A. The administrator had to assign the username to the IP address manually in the user database tool on Cisco DNA Center.
 B. Those details are provided to Cisco DNA Center by the Identity Services Engine
@@ -22040,7 +21736,7 @@ Answer: B
 
 Explanation
 
-Question 284. 
+Question 284.  - Checked
 In a traditional 3 tier topology, an engineer must explicitly configure a switch as the root bridge and exclude it from any further election process for the spanning-tree domain. Which action accomplishes this task?
 A. Configure the spanning-tree priority to 32768
 B. Configure root guard and portfast on all access switch ports.
@@ -22166,7 +21862,7 @@ JSON syntax structure: + uses curly braces {} to hold objects and square bracket
 In the above example, “cars” is an array which contains three values “Ford”, “BMW” and “Fiat”.
 Note: Although our correct answer above does not have curly braces to hold objects but it is still the best choice here.
 
-Question 293. 
+Question 293.  - Checked
 What is the differences between TCAM and the MAC address table?
 A. The MAC address table is contained in CAM ACL and QoS information is stored in TCAM
 B. The MAC address table supports partial matches. TCAM requires an exact match
@@ -22193,7 +21889,7 @@ Answer: AE
 Explanation
 In the figure below, we can see ICMP & SNMP can reach to underlay switches.
 
-Question 295.
+Question 295. - Checked
 What is the function of a control-plane node in a Cisco SD-Access solution?
 A. to run a mapping system that manages endpoint to network device relationships
 B. to implement policies and communicate with networks outside the fabric
@@ -22205,7 +21901,7 @@ Answer: A
 Explanation
 Control-Plane Nodes – Map System that manages Endpoint to Device relationships Fabric Border Nodes – A Fabric device (e.g. Core) that connects External L3 network(s) to the SDA Fabric Fabric Edge Nodes – A Fabric device (e.g. Access or Distribution) that connects Wired Endpoints to the SDA Fabric Fabric Wireless Controller – A Fabric device (WLC) that connects APs and Wireless Endpoints to the SDA Fabric
 
-Question 296. 
+Question 296.  - Checked
 After a redundant route processor failure occurs on a Layer 3 device, which mechanism allows for packets to be forwarded from a neighboring router based on the most recent tables?
 A. RPVST+
 B. NSF
@@ -22216,7 +21912,7 @@ Answer: B
 
 Explanation
 
-Question 297. 
+Question 297.  - Checked
 Which two results occur if Cisco DNA Center loses connectivity to devices in the SD-Access fabric? (Choose two )
 A. All devices reload after detecting loss of connection to Cisco DNA Center
 B. Already connected users are unaffected, but new users cannot connect
@@ -22329,7 +22025,7 @@ Explanation
 Paravirtualization works differently from the full virtualization. It doesn’t need to simulate the hardware for the virtual machines. The hypervisor is installed on a physical server (host) and a guest OS is installed into the environment. Virtual guests aware that it has been virtualized, unlike the full virtualization (where the guest doesn’t know that it has been virtualized) to take advantage of the functions.
 In full virtualization, guests will issue a hardware calls but in paravirtualization, guests will directly communicate with the host (hypervisor) using drivers.
 
-Question 305. 
+Question 305.  - Checked
 Which solution do laaS service providers use to extend a Layer 2 segment across a Layer 3 network?
 A. VLAN
 B. VTEP
@@ -22613,17 +22309,6 @@ Identity Services – External ID System(s) (e.g. ISE) are leveraged for dynamic
 Analytics Engine – External Data Collector(s) (e.g. NDP) are leveraged to analyze Endpoint to App flows and monitor fabric status
 Reference: https://www.cisco.com/c/dam/global/da_dk/assets/training/seminaria-materials/Software_Defined_Access_2017.pdf
 
-Question 323. 
-If the noise floor is -90 dBm and the wireless client is receiving a signal of -75 dBm, what is the SNR?
-A. 15
-B. 1.2
-C. -165
-D. .83
-
-Answer: A
-
-Explanation
-
 Question 324. 
 All switches are configured with the default port priority value. Which two commands ensure that traffic from PC1 is forwarded over Gi1/3 trunk port between DWS1 and DSW2? (Choose two)
 A. DSW2(config-if)#spanning-tree port-priority 128
@@ -22773,7 +22458,7 @@ Explanation
 YANG is used to model each protocol based on RFC 6020.
 Reference: https://www.cisco.com/c/en/us/td/docs/ios-xml/ios/datamodels/configuration/xe-16/data-models-xe-16-book/yang-netconf.html
 
-Question 334. 
+Question 334.  - Checked
 Refer to the exhibit. 
 
 Vian503 - Group 1
@@ -22863,7 +22548,7 @@ Explanation
 Although PIM is called a multicast routing protocol, it actually uses the unicast routing table to perform the reverse path forwarding (RPF) check function instead of building up a completely independent multicast routing table. Unlike other routing protocols, PIM does not send and receive routing updates between routers.
 Reference: https://www.cisco.com/c/en/us/td/docs/ios-xml/ios/ipmulti_pim/configuration/xe-16/imc-pim-xe-16-book/imc-tech-oview.html
 
-Question 339. 
+Question 339.  - Checked
 Under which network conditions is an outbound QoS policy that is applied on a router WAN interface most beneficial?
 A. under all network conditions
 B. under network convergence conditions
@@ -22874,7 +22559,7 @@ Answer: D
 
 Explanation
 
-Question 340. 
+Question 340.  - Checked
 Which technology does VXLAN use to provide segmentation for Layer 2 and Layer 3 traffic?
 A. bridge domain
 B. VLAN
@@ -22961,7 +22646,7 @@ Answer: B
 
 Explanation
 
-Question 346. 
+Question 346.  - Checked
 What is a benefit of a virtual machine when compared with a physical server?
 A. Multiple virtual servers can be deployed on the same physical server without having to buy additional hardware.
 B. Virtual machines increase server processing performance.
@@ -22972,7 +22657,7 @@ Answer: A
 
 Explanation
 
-Question 347. 
+Question 347. - Checked
 What is the recommended MTU size for a Cisco SD-Access Fabric?
 A. 1500
 B. 9100
@@ -22985,7 +22670,7 @@ Explanation
 VXLAN adds 50 bytes to the original packet. The common denominator and recommended MTU value available on devices operating in a fabric role is 9100. Network should have a minimum starting MTU of at least 1550 bytes to support the fabric overlay. MTU values between 1550 and 9100 are supported along with MTU values larger than 9100 though there may be additional configuration and limitations based on the original packet size.
 MTU 9100 is provisioned as part of LAN Automation. Devices in the same routing domain and Layer 2 domain should be configured with a consistent MTU size to support routing protocol adjacencies and packet forwarding without fragmentation.
 
-Question 348. 
+Question 348.  - Checked
 What Is the process for moving a virtual machine from one host machine to another with no downtime?
 A. high availability
 B. disaster recovery
@@ -22997,7 +22682,7 @@ Answer: C
 Explanation
 Live migration refers to the process of moving a running virtual machine or application between different physical machines without disconnecting the client or application. Memory, storage, and network connectivity of the virtual machine are transferred from the original guest machine to the destination. An example of live migration tool is VMware vSphere vMotion.
 
-Question 349. 
+Question 349.  - Checked
 What are two features of NetFlow flow monitoring? (Choose two.)
 A. Copies all ingress flow information to an interface
 B. Include the flow record and the flow importer
@@ -23049,7 +22734,7 @@ Explanation
 RSSI, or “Received Signal Strength Indicator,” is a measurement of how well your device can hear a signal from an access point or router. It’s a value that is useful for determining if you have enough signal to get a good wireless connection.
 This value is measured in decibels (dBm) from 0 (zero) to -120 (minus 120). The closer to 0 (zero) the stronger the signal is which means it’s better, typically voice networks require a -65db or better signal level while a data network needs -80db or better.
 
-Question 352. 
+Question 352.  - Checked
 Which method should an engineer use to deal with a long-standing contention issue between any two VMs on the same host?
 A. Adjust the resource reservation limits
 B. Live migrate the VM to another host
@@ -23060,7 +22745,7 @@ Answer: A
 
 Explanation
 
-Question 353. 
+Question 353.  - Checked
 Which protocol is implemented to establish secure control plane adjacencies between Cisco SD-WAN nodes?
 A. IKE
 B. DTLS
@@ -23275,7 +22960,7 @@ Explanation
 We only have one AP in each store so we can only user “Presence”, which is the most basic form of location tracking.
 Reference: https://www.ciscolive.com/c/dam/r/ciscolive/emea/docs/2016/pdf/BRKEWN-2012.pdf
 
-Question 368. 
+Question 368.  - Checked
 Refer to the exhibit. 
 
 SW1
@@ -23298,7 +22983,7 @@ Explanation
 In this case, we are using your EtherChannel without a negotiation protocol on Switch2. As a result, if
 the opposite switch is not also configured for EtherChannel operation on the respective ports, there is a danger of a switching loop. The EtherChannel Misconfiguration Guard tries to prevent that loop from occuring by disabling all the ports bundled in the EtherChannel.
 
-Question 369. 
+Question 369.  - Checked
 Refer to the exhibit. 
 
 Show access-list 100
@@ -23645,7 +23330,7 @@ Answer: D
 
 Explanation
 
-Question 396. 
+Question 396.  - Checked
 What is the centralized control policy in a Cisco SD-WAN deployment?
 A. list of ordered statements that define user access policies
 B. set of statements that defines how routing is performed
@@ -23655,8 +23340,12 @@ D. list of enabled services for all nodes within the cloud
 Answer: B
 
 Explanation
-
-Question 397. 
+ In Cisco SD-WAN, there are two types of Centralized Control Policies that fulfill different objectives:
+ + Topology – Topology policies control the route information such as omp, tloc, and service routes that are being redistributed to a list of sites. As the name implies, they are typically used for limiting the number of overlay tunnels between sites and controlling the overlay topology.
+ + VPN Membership – VPN Membership policies are used to control the distribution of routing information for specific VPNs to a list of sites. A typical use-case is for creating guest networks that have Internet access but site-to-site communication is restricted.
+ Reference: https://www.networkacademy.io/ccie-enterprise/sdwan/what-is-a-centralized-control-policy
+ 
+Question 397.  - Checked
 What is the function of Cisco DNA Center in a cisco SD-Access deployment?
 A. It is responsible for routing decisions inside the fabric
 B. It is responsible for the design, management, deployment, provisioning, and assurance of the fabric network devices.
@@ -23823,7 +23512,7 @@ Answer: B
 
 Explanation
 
-Question 412. 
+Question 412.  - Checked
 Refer to the exhibit. 
 
 Username admin privilege 15 password 0 afjklsdjf
@@ -24031,7 +23720,13 @@ Answer: D
 Explanation
 
 Question 431. 
-Refer to the exhibit. External users require HTTP connectivity to an internal company web server that is listening on TCP port 8080. Which command set accomplishes this requirement?
+Refer to the exhibit. 
+
+R1
+Internet interface - G0/0 - 209.165.200.225
+Internal interface - G0/1 - 10.1.1.1
+
+External users require HTTP connectivity to an internal company web server that is listening on TCP port 8080. Which command set accomplishes this requirement?
 
 A. interface G0/0
 ip address 209.166.200.226 266.265.266.224
@@ -24086,6 +23781,12 @@ E. Option E
 Answer: B
 
 Explanation
+ We need:
+ + G0/0: NAT outside
+ + G0/1: NAT inside
+ -> Only Option D & Option E are correct
+ We need to configure local-ip before global-ip in the command ip nat inside source static local-ip global-ip so only
+ Option D is correct.
 
 Question 432. 
 A network engineer configures BGP between R1 and R2. Both routers use BGP peer group CORP and are set up to use MD5 authentication. This message is logged to the console of router R1:
@@ -24167,7 +23868,7 @@ Answer: C
 
 Explanation
 
-Question 439. 
+Question 439.  - Checked
 Which three elements determine Air Time efficiency? (Choose three)
 A. evert-driven RRM
 B. data rate (modulation density) or QAM
@@ -24176,9 +23877,15 @@ D. number of spatial streams and spatial reuse
 E. RF group leader
 F. dynamic channel assignment
 
-Answer: ACE
+Answer: BCD
 
 Explanation
+ Four things determine Air Time Efficiency
+ 1. Data rate (Modulation density) orQAM -(how many Bit’s per Radio Symbol) 64 QAM is more robust but 1024 QAM is a lot faster
+ 2. Number of spatial streams and spatial reuse (introduction of OFDMA and Resource Units) and UL/DL MU-MIMO
+  3. Channel bandwidth –How Many frequencies can we modulate at one time
+  4. Protocol overhead –Preamble/Ack/BA, Guard Interval “GI” etc.
+ Reference: https://www.ciscolive.com/c/dam/r/ciscolive/emea/docs/2020/pdf/BRKEWN-3010.pdf
 
 Question 441.  - Checked
 An engineer configures HSRP group 37. The configuration does not modify the default virtual MAC address. Which virtual MAC address does the group use?
@@ -24411,32 +24118,6 @@ C. On-premises offers faster deployment than cloud
 D. On-premises offers lower latency for physically adjacent systems than cloud.
 
 Answer: D
-
-Explanation
-
-Question 469. 
-Which set of commands on router r R1 Allow deterministic translation of private hosts PC1, PC2, and PC3 to addresses in the public space?
-
-A. 0/0 inside, 0/1 outside
-Ip nat inside source static 10.10.10.101 155.1.1.101
-Ip nat inside source static 10.10.10.102 155.1.1.102
-Ip nat inside source static 10.10.10.103 155.1.1.103
-
-B. 0/0 inside, 0/1 outside
-Access-list 1 10.10.10.0 0.0.0.255
-Ip nat inside source list 1 int 0/1 overload
-
-C. 0/0 inside, 0/1 outside
-Access-list 1 10.10.10.0 0.0.0.255
-Ip nat pool POOL 155.1.1.101 155.1.1.103 netmask 255.255.255.0
-Ip nat inside source list 1 pool POOL
-
-D. 0/0 outside, 0/1 inside
-Ip nat inside source static 10.10.10.101 155.1.1.101
-Ip nat inside source static 10.10.10.102 155.1.1.102
-Ip nat inside source static 10.10.10.103 155.1.1.103
-
-Answer: A
 
 Explanation
 
