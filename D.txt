@@ -1,3 +1,4 @@
+
 Question 2
 What is a characteristic of traffic shaping?
 A. drops out-of-profile packets
@@ -47,14 +48,12 @@ C. encode
 D. decode
 E. JSONDecoder
 
+Answer: BCA
 
-Answer:BCA
-
+Explanation
 1. JSONEncoder
 2. encode
 3. data
-
-Explanation
 JSONEncoder class is used for serialization of any Python object while performing encoding. It contains three different methods of encoding which are:
 + default(obj) – Implemented in the subclass and return serialize object for o object.
 + encode(obj) – Same as JSON dumps Python method return JSON string of Python data structure.
@@ -535,6 +534,8 @@ D. to provide a framework to describe data flow patterns in networks
 
 Answer: B
 
+Explanation 
+
 Question 37
 Refer to the exhibit.
 
@@ -692,6 +693,8 @@ C. atomic clock
 D. stratum
 
 Answer: D
+
+Explanation 
 
 Question 44
 Which configuration saves the running configuration to the startup configuration and logs a “saving configuration automatically” message when a syslog message that contains “SYS-5-CONFIG_I” is received’?
@@ -886,6 +889,8 @@ D. Trustpoint must be set to the management certificate of the WLC
 
 Answer: A
 
+Explanation 
+
 Question 50
 Drag and drop the code snippets from the bottom onto the blanks in the PHP script to convert a PHP array into JSON format. Not all options are used.
 
@@ -1024,6 +1029,8 @@ D. aaa authentication exec default radius
 
 Answer: C
 
+Explanation 
+
 Question 57
 Which mechanism can be used to enforce network access authentication against an AAA server if the endpoint does not support the 802.1X supplicant functionality?
 A. WebAuth
@@ -1049,6 +1056,8 @@ C. VPN connection between client and server
 D. TLS or SSL for communication
 
 Answer: D
+
+Explanation 
 
 Question 59
 Which protocol does Cisco SD-WAN use to protect control plane communication?
@@ -1374,6 +1383,8 @@ D. Configure user “cisco” with privilege level 15.
 
 Answer: D
 
+Explanation 
+
 Question 73
 Which security actions must be implemented to prevent an API injection attack?
 A. Log and monitor failed attempts.
@@ -1533,7 +1544,7 @@ C. Uses JSON exclusively
 D. RESTful API based on HTTP methods
 E. supports NETCONF, SSH, SNMP, and others
 
-Answer:ACD
+Answer: ACD
 
 Explanation
 Cisco DNA Center APIs are grouped into four categories: northbound, southbound, eastbound and westbound:
@@ -2903,10 +2914,11 @@ action 07 cli command "int $ports"
 action 08 cli command "shut"
 action 09 end
 
-Answer:
-1. watchdog
-2. (Gi…)
-3. 1
+A. Gig
+B. 1
+C. Watchdog
+
+Answer: CAB
 
 Explanation
 The “watchdog” keyword specifies that an event is triggered when the specified time counts down to zero. The timer automatically resets to the initial value and continues to count down.
