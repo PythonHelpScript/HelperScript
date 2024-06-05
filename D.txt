@@ -1,3 +1,3293 @@
+Question 1
+Which two security mechanisms are used by Cisco Threat Defense to gain visibility into the most dangerous cyber threats? (Choose two)
+A. dynamic enforce policy
+B. file reputation
+C. virtual private networks
+D. Traffic Telemetry
+E. VLAN segmentation
+
+Answer: BD
+
+Explanation
+Threat defense: It is important to have visibility into the most dangerous cyber threats. Threat defense provides this visibility through network traffic telemetry, file reputation, and contextual information (such as device types, locations, users, identities, roles, privileges levels, login status, posture status, and so on). It enables assessment of the nature and the potential risk of suspicious activity so that the correct next steps for cyber threats can be taken.
+
+Question 2
+Drag and drop the code snippets from the bottom onto the blanks in the code to construct a request that configures a deny rule on an access list.
+Make sure answers are in the correct order.
+
+{ "ip": {
+"Access-list": {
+"ios-acl: extended": {
+"ios-acl:name": "ato", "ios-acl:_____________": {
+"ios-acl:sequence": "1111111", "ios-acl:ace-rule": {
+"ios-acl:action": "______________",
+"ios-acl:protocol": "______________", "ios-acl:any": "",
+"ios-acl:____________": "" }
+...
+}
+
+A. deny
+B. access-list-seq-rule
+C. dst-any
+D. ip
+
+Answer: BADC
+
+Explanation
+1. access-list-seq-rule
+2. deny
+3. ip
+4. dst-any
+
+We can find a similar solution here but written in xml: https://github.com/CiscoDevNet/clus2017_iosxe_demo_booth/blob/master/demo_StreamingTelemetry/ietf_client_ncc.py
+
+Question 5
+Refer to the exhibit.
+
+Connected networks
+RA - 10.100.1.0/24
+RB - 10.100.2.0/24, 10.100.3.0/24
+RC - 10.100.4.0/24
+
+             G0/0/0
+      RouterB-----------RA
+        |
+        | G0/0/1
+        |
+        |
+       RC
+
+A network administrator must configure router B to allow traffic only from network 10.100.2.0 to networks outside of router B. Which configuration must be applied?
+
+Option A
+
+RouterB(config)# access-list 101 permit ip 10.100.2.0 0.0.0.255 any
+RouterB(config)# access-list 101 deny any
+!
+RouterB(config)# int g0/0/0
+RouterB(config-if)# ip access-group 101 out
+
+Option B
+
+RouterB(config)# access-list 101 permit ip 10.100.3.0 0.0.0.255 any
+RouterB(config)# access-list 101 deny any
+
+RouterB(config)# int g0/0/0
+RouterB(config-if)# ip access-group 101 out
+!
+RouterB(config)# int g0/0/1
+RouterB(config-if)# ip access-group 101 out
+
+Option C
+
+RouterB(config)# access-list 101 permit ip 10.100.2.0 0.0.0.255 any
+RouterB(config)# access-list 101 deny any
+!
+RouterB(config)# int g0/0/2
+RouterB(config-if)# ip access-group 101 in
+
+Option D
+
+RouterB(config)# access-list 101 permit ip 10.100.2.0 0.0.0.255 any
+RouterB(config)# int g0/0/0
+RouterB(config-if)# ip access-group 101 out
+!
+RouterB(config)# int g0/0/1
+RouterB(config-if)# ip access-group 101 out
+
+A. Option A
+B. Option B
+C. Option C
+D. Option D
+
+Answer: D
+
+Explanation
+There are two interfaces that are connected to networks “outside” of router B, which are Gi0/0/0 & Gi0/0/1 so we have to apply the ACL to both interfaces with outbound direction.
+
+Question 7
+Drag and drop the code snippets from the bottom onto the blanks in the script to convert a Python object into a compact JSON object by removing space characters. Not all options are used.
+Make sure to put answers in order they appear.
+
+import json
+data = { ... }
+
+obj = json._____________(_____________, ____________)
+print(obj)
+
+A. separators=(',', ':')
+B. data
+C. "loads"
+D. "dumps"
+
+Answer: DBA
+
+Explanation
+1. “dumps”
+2. data
+3. separators=(‘,’, ‘:’)
+
+json.dumps() adds spaces in the JSON object. For example:
+
+{'key1': 'default', 'key2': 'none'}
+We can create a compact JSON object by removing spaces with “dumps”. It helps save some bytes when sending over the wire:
+
+Question 13
+Which action is a LISP ITR responsible for?
+A. responding to map-request messages
+B. finding EID-to-RLOC mappings
+C. accepting registration requests from ETRs
+D. forwarding user data traffic
+
+Answer: B
+
+Explanation
+Ingress Tunnel Router (ITR) is the device (or function) that is responsible for finding EID-to-RLOC mappings for all traffic destined for LISP-capable sites. After the encapsulation, the original packet become a LISP packet.
+
+Question 14
+An engineer modifies the existing ISE guest portal URL to use a static FQDN. Users immediately report that they receive certificate errors when they are redirected to the new page. Which two additional configuration steps are needed to implement the change? (Choose two)
+A. Create and sign a new CSR that contains the static FQDN entry
+B. Add the FQDN entry under the WLC virtual interface
+C. Manually configure the hosts file on each user device
+D. Disable HTTPS on the WLC under the Management menu
+E. Add a new DNS record to resolve the FQDN to the PSN IP address
+
+Answer: AE
+
+Explanation
+
+Question 16
+Which JSON script is properly formatted?
+
+Option A
+
+{
+ "car":[
+ {
+  "type":"Ford",
+  "color":"red",
+  "year":"1998"
+ }
+]
+}
+Option B
+
+"truck":[
+     {
+	"type":"Dodge",
+	"color":"blue",
+	"year":"2015"
+      }
+     ]
+Option C
+
+[
+   "book":{
+    "title":"Engineering",
+    "grade":"11",
+    "edition":"4".
+      }
+]
+Option D
+
+{ "device":
+    {[   
+       "type":"switch,
+       "model":"Catalyst",
+       "mac":"00:46:10:06:93:55",
+      ]
+     }
+}
+
+A. Option A
+B. Option B
+C. Option C
+D. Option D
+
+Answer: A
+
+Explanation
+A JSON script should start with “{” -> Only Option A and Option D are correct. But Option D is surely not correct as the “switch is written without closing quote. Also another error in Option D is: square bracket [ can only hold a group of values or objects, separated by comma. For example:
+
+"sports": ["volley-ball","badminton"] -> This [] holds a group of values
+or
+
+"book": [
+{
+  "id": "01",
+  "language": "Java",
+  "edition": "third"
+},
+{
+  "id": "02",
+  "language": "C++",
+  "edition": "second"
+} -> This [] holds a group of objects
+But in Option D we see square bracket holds key/value pair which is not correct. Therefore only Option A is correct.
+
+Question 20
+Drag and drop the snippets onto the blanks within the code to create an EEM script that adds an entry to a locally stored text file with a timestamp when a configuration change is made. Not all options are used.
+Make sure that answers are in the correct order.
+
+event manager applet CONF_CHANGE
+_____________ "SYS-5-CONFIG_I"
+action 1.0 cli command ____________
+action 2.0 cli command "show clock ______________:ConfSave.txt"
+action 3.0 syslog Priority information msg "Configuration changed"
+
+A. event cli pattern
+B. "conf t"
+C. "enable"
+D. | append flash
+E. event syslog pattern
+F. flash
+ 
+Answer: ECD
+
+Explanation
+1. event syslog pattern
+2. “enable”
+3. | append flash
+
+The command “show clock | append flash:ConfSave.txt” means that we want to write the output of the “show clock” command to a file on the flash memory.
+
+Question 21
+A customer requires their wireless data traffic to egress at the switch port of the access point. Which access point mode supports this?
+A. FlexConnect
+B. Sniffer
+C. Bridge
+D. Monitor
+
+Answer: A
+
+Explanation
+FlexConnect AP mode enables switching traffic between an SSID and a VLAN locally if the CAPWAP to the WLC is down, even when the AP is at a remote site. It can also be configured to egress at the access point’s LAN port.
+
+Reference: https://study-ccnp.com/cisco-wireless-access-point-ap-modes-explained/
+
+Question 23
+Refer to the exhibit.
+
+for x in range(5):
+ print(x)
+
+What is output by this code?
+A. 0 5
+B. 0 1 2 3 4 5
+C. 0 1 2 3 4
+D. (0,5)
+
+Answer: C
+
+Explanation
+The range() function returns a sequence of numbers, starting from 0 by default, and increments by 1 (by default), and stops before a specified number.
+
+Question 25
+What is a benefit of YANG modules?
+A. tightly coupled models with encoding to improve performance
+B. easier multivendor interoperability provided by common or industry models
+C. avoidance of ecosystem fragmentation by having fixed modules that cannot be changed
+D. single protocol and model coupling to simplify maintenance and support
+
+Answer: B
+
+Explanation
+
+Question 27
+What is contained in the VXLAN header?
+A. VXLAN network identifier
+B. source and destination RLOC ID
+C. endpoint ID
+D. original Layer 2 VLAN ID
+
+Answer: A
+
+Explanation
+The key fields for the VXLAN packet in each of the protocol headers are:
+
++ Outer MAC header (14 bytes with 4 bytes optional) – Contains the MAC address of the source VTEP and the MAC address of the next-hop router. Each router along the packet’s path rewrites this header so that the source address is the router’s MAC address and the destination address is the next-hop router’s MAC address.
+
++ Outer IP header (20 bytes)- Contains the IP addresses of the source and destination VTEPs.
++ (Outer) UDP header (8 bytes)- Contains source and destination UDP ports:
+– Source UDP port: The VXLAN protocol repurposes this standard field in a UDP packet header. Instead of using this field for the source UDP port, the protocol uses it as a numeric identifier for the particular flow between VTEPs. The VXLAN standard does not define how this number is derived, but the source VTEP usually calculates it from a hash of some combination of fields from the inner Layer 2 packet and the Layer 3 or Layer 4 headers of the original frame.
+– Destination UDP port: The VXLAN UDP port. The Internet Assigned Numbers Authority (IANA) allocates port 4789 to VXLAN.
+
++ VXLAN header (8 bytes)- Contains the 24-bit VXLAN Network Identifiers (VNI).
++ Original Ethernet/L2 Frame – Contains the original Layer 2 Ethernet frame.
+
+Note: In fact this question has two correct answer, which are: VXLAN network identifier and original Layer 2 VLAN ID. But we believe the first answer is better.
+
+Question 30
+Which function is performed by vSmart in the Cisco SD-WAN architecture?
+A. redistribution between OMP and other routing protocols
+B. facilitation of NAT detection and traversal
+C. distribution of centralized policies 
+D. execution of localized policies
+
+Answer: C
+
+Explanation
+Answer A is not correct as it is the role of vEdges. But by default, vEdges do not automatically redistribute OMP routes into any legacy routing protocol. We must explicitly enable the redistribution for each particular local protocol on each vEdge router.
+
+Answer B mentions about vBond while answer D mentions about vEdge.
+
+Question 31
+Refer to the exhibit.
+
+R2
+IP - 192.168.0.5/30
+RID 10.0.0.5
+Network Type BROADCAST
+State DR, Priority 1
+Timers - Hello 10, Dead 40, Wait 40
+Neighbor Count 0
+
+R3
+IP - 192.168.0.6/29
+RID 10.0.0.3
+Network Type BROADCAST
+State DR, Priority 1
+Timers - Hello 10, Dead 40, Wait 40
+Neighbor Count 0
+
+Why does the OSPF neighborship fail between the two interfaces?
+A. The IP subnet mask is not the same.
+B. There is a mismatch in the OSPF interface network type.
+C. The OSPF timers are different.
+D. The MTU is not the same.
+
+Answer: A
+
+Explanation
+OSPF forms neighbor relationship with other OSPF routers on the same segment by exchanging hello packets. The hello packets contain various parameters. Some of them should match between neighboring routers. These include:
+
++ Hello and Dead intervals
++ Area ID
++ Authentication type and password
++ Stub Area flag
++ Subnet ID and Subnet mask
+
+In this question we see the subnet mask between two neighbors are not matched (/30 & /29) so the OSPF neighborship failed.
+
+Question 32
+Refer to the exhibit.
+
+  172.16.250.0/30
+R2==============R1
+  172.16.250.4/30
+
+C 172.16.0.0/16, 2 subnets
+D 172.16.1.0/24 [110/7445] via 172.16.250.1 G0/0
+                [110/7445] via 172.16.250.5 G0/4
+
+Clients are reporting an issue with the voice traffic from the branch site to the central site. What is the cause of this issue?
+A. The voice traffic is using the link with less available bandwidth
+B. There is a high delay on the WAN links
+C. There is a routing loop on the network
+D. Traffic is load-balancing over both links, causing packets to arrive out of order
+
+Answer: D
+
+Explanation
+From the traceroute output, we learn the second link (172.16.250.5) has greater latency than the first link (172.16.250.1) so the packets will arrive out of order when traffic is load-balancing over both links.
+
+Note: Latency (also known as delay) refers to the time it takes a voice packet to reach its destination. Latency is measured in milliseconds (ms) (or thousandths of a second). Latency of 150ms or less (one-way) is generally acceptable. Latency greater than 150ms (again, one way) adversely affects the call quality experience.
+
+Question 33
+Refer to the exhibit.
+
+10.1.1.10                               10.1.1.20
+ HostA-------SW1----------------SW2-------HostB
+        G0/2     G0/1       G0/1    G0/2
+
+HostA MAC:aaaa.bbbb.cccc
+HostB MAC:aaaa.bbbb.dddd
+
+An engineer must deny HTTP traffic from host A to host B while allowing all other communication between the hosts. Which command set accomplishes this task?
+
+Option A
+
+SW1(config)# ip access-list extended DENY-HTTP
+SW1(config-ext-nacl)#permit tcp host 10.1.1.10 host 10.1.1.20 eq www
+
+SW1(config)# ip access-list extended MATCH_ALL
+SW1(config-ext-nacl)# permit ip any any
+
+SW1(config)# vlan access-map HOST-A-B 10
+SW1(config-access-map)# match ip address DENY-HTTP
+SW1(config-access-map)# action drop
+SW1(config)# vlan access-map HOST-A-B 20
+SW1(config-access-map)# match ip address MATCH_ALL
+SW1(config-access-map)# action forward
+
+SW1(config)# vlan filter HOST-A-B vlan 10
+
+Option B
+
+SW1(config)# mac access-list extended HOST-A-B
+SW1(config-ext-macl)# permit host aaaa.bbbb.cccc aaaa.bbbb.dddd
+
+SW1(config)# ip access-list extended DENY-HTTP
+SW1(config-ext-nacl)#permit tcp host 10.1.1.10 host 10.1.1.20 eq www
+
+SW1(config)# vlan access-map DROP-MAC 10
+SW1(config-access-map)# match mac address HOST-A-B
+SW1(config-access-map)# action forward
+SW1(config)# vlan access-map HOST-A-B 20
+SW1(config-access-map)# match ip address DENY-HTTP
+SW1 (config-access-map)# action drop
+SW1(config)# vlan filter HOST-A-B vlan 10
+
+Option C
+
+SW1(config)# mac access-list extended HOST-A-B
+SW1(config-ext-macl)# permit host aaaa.bbbb.cccc aaaa.bbbb.dddd
+
+SW1(config)# ip access-list extended DENY-HTTP
+SW1(config-ext-nacl)#deny tcp host 10.1.1.10 host 10.1.1.20 eq www
+
+SW1(config)# vlan access-map DROP-MAC 10
+SW1(config-access-map)# match mac address HOST-A-B
+SW1(config-access-map)# action drop
+SW1(config)# vlan access-map HOST-A-B 20
+SW1(config-access-map)# match ip address DENY-HTTP
+SW1(config-access-map)# action drop
+
+SW1(config)# vlan filter HOST-A-B vlan 10
+
+Option D
+
+SW1(config)# ip access-list extended DENY-HTTP
+SW1(config-ext-nacl)#deny tcp host 10.1.1.10 host 10.1.1.20 eq www
+
+SW1(config)# ip access-list extended MATCH_ALL
+SW1(config-ext-nacl)# permit ip any any
+
+SW1(config)# vlan access-map HOST-A-B 10
+SW1(config-access-map)# match ip address DENY-HTTP
+SW1(config-access-map)# action drop
+SW1(config)# vian access-map HOST-A-B 20
+SW1(config-access-map)# match ip address MATCH_ALL
+SW1(config-access-map)# action forward
+
+SW1(config)# vlan filter HOST-A-B vlan 10
+
+A. Option A
+B. Option B
+C. Option C
+D. Option D
+
+Answer: A
+
+Explanation
+In this case we need to configure a VLAN access-map to deny HTTP traffic and apply it to VLAN 10. To do it, first create an access-list, by which interesting traffic will be matched. The principle of VLAN access-map config is similar to the route-map principle.
+
+After this we’ll create a vlan access-map, which has two main parameters: action and match.
+Match: by this parameter the interesting traffic is matched and here RACL or MAC ACL can be applied as well.
+Action: what to do with matched traffic. Two main parameters exist: Drop and Forward. In case of Drop, matched traffic will be dropped, and in case of forward, matched traffic will be allowed.
+
+A good reference and example can be found at https://www.networkstraining.com/vlan-access-map-example-configuration/
+
+In this question, we have to permit both ACL because the matched traffic will be decided by the VLAN Access map below (forward or drop).
+
+Question 34
+Which virtualization component creates VMs and performs hardware abstraction that allows multiple VMs to run at the same time?
+A. rkt
+B. Docker
+C. container 
+D. hypervisor
+
+Answer: D
+
+Explanation
+Hypervisors support the creation and management of virtual machines (VMs) by abstracting a computer’s software from its hardware.
+
+Question 40
+An SSID is configured and both clients can reach their gateways on the Layer 3 switch, but they cannot communicate with each other. Which action resolves this issue?
+A. Set the P2P Blocking Action to Forward-UpStream.
+B. Set the P2P Blocking Action to Disabled
+C. Set the WMM Policy to Required.
+D. Set the WMM Policy to Allowed.
+
+Answer: B
+
+Explanation
+Wi-Fi Multimedia (WMM) is used to prioritize different types of traffic -> It cannot block traffic so it is not a problem of this question.
+
+Peer to peer (P2P) blocking is applied to individual WLANs. You can have traffic bridged locally within the controller, dropped by the controller, or forwarded to the upstream VLAN.
+
+Choose one of the following options from the P2P Blocking drop-down list:
+
++ Disabled – Disables peer-to-peer blocking and bridges traffic locally within the controller whenever possible.This is the default value.
+Note: Traffic is never bridged across VLANs in the controller.
++ Drop – Causes the controller to discard the packets.
++ Forward-UpStream – Causes the packets to be forwarded on the upstream VLAN. The device above the controller decides what action to take regarding the packets.
+
+Reference: https://www.cisco.com/c/en/us/td/docs/wireless/controller/7-5/configuration-guide/b_cg75/b_cg75_chapter_01001011.pdf
+
+-> In this question two laptops are in the same VLAN so answer A is not correct. Only answer B is correct.
+
+Question 43
+Where is the wireless LAN controller located in a mobility express deployment?
+A. There is no wireless LAN controller in the network.
+B. The wireless LAN controller is embedded into the access point.
+C. The wireless LAN controller exists in the cloud.
+D. The wireless LAN controller exists in a server that is dedicated for this purpose.
+
+Answer: B
+
+Explanation
+Mobility Express is the ability to use an access point (AP) as a controller instead of a real WLAN controller. But this solution is only suitable for small to midsize, or multi-site branch locations where you might not want to invest in a dedicated WLC. A Mobility Express WLC can support up to 100 APs.
+
+Question 44
+What is a characteristic of VXLAN?
+A. It uses TCP for transport.
+B. It has a 12-byte packet header.
+C. It extends Layer 2 and Layer 3 overlay networks over a Layer 2 underlay.
+D. It is a multi-tenant solution.
+
+Answer: D
+
+Explanation
+VXLAN header consists of 8 bytes and contains the 24-bit VNI -> Answer B is not correct.
+
+VXLAN uses UDP, not TCP -> Answer A is not correct.
+
+VXLAN is often described as an overlay technology because it allows to stretch Layer 2 connections over an intervening Layer 3 network -> Answer C is not correct.
+
+Therefore only answer D is left.
+
+Question 48
+Which capability does a distributed virtual switch have?
+A. use floating static routes
+B. provide configuration consistency across the hosts
+C. run dynamic routing protocols
+D. use advanced IPsec encryption algorithms
+
+Answer: B
+
+Explanation
+Virtual switches are used to connect virtual network controllers of VMs to networks on the second layer of the OSI model.
+
+Standard vSwitches are configured on each ESXi host manually. However, in large virtual environments, virtual switches usually have the same vSwitch configuration, including for port groups, VLANs, connected networks, etc. If you need to add a new port group associated with VLAN to connect VMs on ESXi hosts to that VLAN, you have to configure vSwitch on each ESXi host the same way manually. This is a time-consuming process.
+
+To address this, VMware allows you to use the distributed virtual switch, a logical switch that can be configured on vCenter Server once for several hosts. This means that you don’t have to configure standard virtual switches on each ESXi host manually.
+
+Reference: https://www.nakivo.com/blog/vmware-distributed-switch-configuration/
+
+Question 49
+Refer to the exhibit.
+
+#! /usr/bin/env python3
+from env_lab import dnac
+import json
+import requests
+import urllib3
+from requests.auth import HTTPBasicAuth
+from prettytable import PrettyTable
+
+dnac_devices = PrettyTable(['Hostname','Platform Id','Software Type','Software Version','Up Time' ])
+dnac_devices.padding_width = 1
+headers = {
+              'content-type': "application/json",
+              'x-auth-token': ""
+}
+
+def dnac_login(host, username, password):
+   url = "https://{}/api/system/v1/auth/token".format(host)
+   response = requests.request("POST", url, auth=HTTPBasicAuth(username, password),
+                  headers=headers,verify=False)
+   return response.json()["Token"]
+
+def network_device_list(dnac, token):
+   url = "https://{}/api/v1/network-device".format(dnac['host'])
+   headers["x-auth-token"] = token
+   response = requests.get(url, headers=headers, verify=False)
+   data = response.json()
+   for item in data['response']:
+     dnac_devices.add_row([item["hostname"],item["platformId"],item["softwareType"],
+    item["softwareVersion"],item["upTime"]])
+
+Option A
+login = dnac_login(dnac["host"], dnac["username"], dnac["password"]
+network_device_list(dnac, login)
+for item in dnac_devices:
+print(dnac_devices.item)
+
+Option B
+login = dnac_login(dnac["host"], dnac["username"], dnac["password"]
+network_device_list(dnac, login)
+print(dnac_devices)
+
+Option C
+network_device_list(dnac["host"], dnac["username"], dnac["password"]
+login = dnac_login(dnac)
+print(dnac_devices)
+
+Option D
+network_device_list(dnac["host"], dnac["username"], dnac["password"]
+login = dnac_login(dnac)
+for item in dnac_devices:
+print(dnac_devices.item)
+
+Which code results in the working Python script displaying a list of network devices from the Cisco DNA center?
+
+A. Option A
+B. Option B
+C. Option C
+D. Option D
+
+Answer: B
+
+Explanation
+This code is used in the “CCNP and CCIE Enterprise Core” book (page 1537) and we post the full script here for your reference:
+
+#! /usr/bin/env python3
+from env_lab import dnac
+import json
+import requests
+import urllib3
+from requests.auth import HTTPBasicAuth
+from prettytable import PrettyTable
+
+dnac_devices = PrettyTable(['Hostname','Platform Id','Software Type','Software Version','Up Time' ])
+dnac_devices.padding_width = 1
+
+# Silence the insecure warning due to SSL Certificate
+urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+
+headers = {
+              'content-type': "application/json",
+              'x-auth-token': ""
+}
+
+def dnac_login(host, username, password):
+   url =
+"https://{}/api/system/v1/auth/token".format(host)
+   response = requests.request("POST", url,
+auth=HTTPBasicAuth(username, password),headers=headers,verify=False)
+return response.json()["Token"]
+def network_device_list(dnac, token):
+   url = "https://{}/api/v1/networkdevice".format(dnac['host'])
+   headers["x-auth-token"] = token
+   response = requests.get(url, headers=headers, verify=False)
+   data = response.json()
+   for item in data['response']:
+     dnac_devices.add_row([item["hostname"],item["platformId"],item["softwareType"],
+    item["soft. wareVersion"],item["upTime"]])
+
+login = dnac_login(dnac["host"], dnac["username"], dnac["password"])
+network_device_list(dnac, login)
+print(dnac_devices)
+Note: We broke some long lines so the Python format is not correct.
+
+Question 50
+Which two methods are used to assign security group tags to the user in a Cisco Trust Sec architecture? (Choose two)
+A. modular QoS
+B. policy routing
+C. web authentication
+D. DHCP
+E. IEEE 802.1x
+
+Answer: CE
+
+Explanation
+Cisco ISE assigns the SGT tags to users or devices that are successfully authenticated and authorized through 802.1x, MAB, or WebAuth.
+
+Reference: CCNP and CCIE Enterprise Core ENCOR 350-401 Official Cert Guide
+
+Question 55A
+Drag and drop the automation characteristics from the left onto the corresponding tools on the right.
+Which of the following describe a part of Ansible? (Choose three)
+A. all functions are performed over SSH
+B. Ruby syntax in configuration files
+C. YAML configuration language
+D. based on Python
+
+Answer: ACD
+
+Explanation
+Ansible
++ all functions are performed over SSH
++ YAML configuration language
++ based on Python
+
+Chef
++ Ruby syntax in configuration files
+
+Question 55B
+Drag and drop the automation characteristics from the left onto the corresponding tools on the right.
+Which of the following describe a part of Chef?
+A. all functions are performed over SSH
+B. Ruby syntax in configuration files
+C. YAML configuration language
+D. based on Python
+
+Answer: B
+
+Explanation
+Ansible
++ all functions are performed over SSH
++ YAML configuration language
++ based on Python
+
+Chef
++ Ruby syntax in configuration files
+
+Question 57
+What is a benefit of using segmentation with TrustSec?
+A. Integrity checks prevent data from being modified in transit.
+B. Packets sent between endpoints on a LAN are encrypted using symmetric key cryptography.
+C. Security group tags enable network segmentation.
+D. Firewall rules are streamlined by using business-level profiles.
+
+Answer: C
+
+Explanation
+Benefits of Segmentation with TrustSec
+
+Security Group Tagging transforms segmentation by simplifying administration:
++ Security group tags allow organizations to segment their networks without having to redesign to accommodate more VLANs and subnets.
++ Firewall rules are dramatically streamlined by using an intuitive business-level profile method.
++ Policy enforcement is automated, assisting compliance and increasing security efficacy.
++ Security auditing becomes much easier, as Qualified Security Assessors can more easily validate that rules are being enforced to meet compliance.
+
+Reference: https://www.cisco.com/c/dam/en/us/solutions/collateral/enterprise-networks/trustsec/trustsec_pci_validation.pdf
+
+In fact this question has two correct answers.
+
+Question 62A
+Drag and drop the characteristic from the left onto the orchestration tools that they describe on the right.
+Which of the following are about Ansible? (Choose two)
+A. Uses playbooks
+B. Uses a pull model
+C. Procedural
+D. Declarative
+
+Answer: AC
+
+Explanation
+Ansible:
++ uses playbooks
++ prodedural
+
+Puppet:
++ uses a pull model
++ declarative
+
+In Ansible, Playbooks are files that provide actions and logic about what Ansible should do. Ansible playbooks are files that contain tasks to configure hosts. Ansible playbooks are written in YAML format.
+
+Puppet is based on a Pull deployment model, where the nodes check in regularly after every 1800 seconds with the Master to see if anything needs to be updated in the agent. If anything needs to be updated the agent pulls the necessary Puppet codes from the Master and performs required actions.
+
+Chef and Ansible encourage a procedural style where you write code that specifies, step-by-step, how to to achieve some desired end state. Terraform, SaltStack, and Puppet all encourage a more declarative style where you write code that specifies your desired end state, and the IAC tool itself is responsible for figuring out how to achieve that state.
+
+Question 62B
+Drag and drop the characteristic from the left onto the orchestration tools that they describe on the right.
+Which of the following are about Puppet? (Choose two)
+A. Uses playbooks
+B. Uses a pull model
+C. Procedural
+D. Declarative
+
+Answer: BD
+
+Explanation
+Ansible:
++ uses playbooks
++ prodedural
+
+Puppet:
++ uses a pull model
++ declarative
+
+In Ansible, Playbooks are files that provide actions and logic about what Ansible should do. Ansible playbooks are files that contain tasks to configure hosts. Ansible playbooks are written in YAML format.
+
+Puppet is based on a Pull deployment model, where the nodes check in regularly after every 1800 seconds with the Master to see if anything needs to be updated in the agent. If anything needs to be updated the agent pulls the necessary Puppet codes from the Master and performs required actions.
+
+Chef and Ansible encourage a procedural style where you write code that specifies, step-by-step, how to to achieve some desired end state. Terraform, SaltStack, and Puppet all encourage a more declarative style where you write code that specifies your desired end state, and the IAC tool itself is responsible for figuring out how to achieve that state.
+
+Question 63
+Refer to the exhibit.
+
+Authentication servers - Enabled, none set
+Accounting servers - Enable, none set
+EAP Parameters - Disabled
+RADIUS Interim Update - Enabled
+Local EAP Auth - Disabled
+
+An engineer must configure a Cisco WLC with WPA2 Enterprise mode and avoid global server lists. Which action is required?
+A. Select a RADIUS authentication server
+B. Disable the RADIUS server accounting interim update
+C. Enable EAP parameters
+D. Apply CISCO ISE default settings
+
+Answer: A
+
+Explanation
+The “interim update” option is intended to periodically send the accounting data to the RADIUS server (e.g every 60 seconds) -> Answer B is not correct.
+
+If we scroll up a bit in the “AAA Servers” tab, we will see the message “Select AAA servers below to override use of default servers on this WLAN” so we can choose the AAA server in the boxes to avoid default/global server lists -> Answer A is correct.
+
+Question 65
+Refer to the exhibit.
+
+flow record v4Talkers 
+ match ipv4 source address 
+ match ipv4 destination address 
+ collect counter bytes long
+!
+flow record v6Talkers 
+ match ipv6 source address 
+ match ipv6 destination address 
+ collect counter bytes long
+!
+flow monitor v4Talkers 
+ record v4Talkers
+!
+flow monitor v6Talkers 
+ record v6Talkers
+
+An administrator must collect basic statistics about the approximate amount of IPv4 and IPv6 flows entering Gi0/0 using NetFlow. However, the administrator is concerned that NetFlow processing during periods of high utilization on Gi0/0 will overwhelm the router CPU. Which configuration minimizes CPU impact and keeps the data flows across Gi0/0 intact?
+
+Option A
+
+interface Gi0/0 
+ load-interval 600 
+ ip flow monitor v4Talkers 
+ ipv6 flow monitor v6Talkers
+Option B
+
+policy-map Talkers 
+ class class-default 
+  police cir percent 50 
+   conform-action transmit 
+   exceed-action drop
+!
+interface Gi0/0 
+ service-policy input Talkers 
+ ip flow monitor v4Talkers 
+ ipv6 flow monitor v6Talkers
+Option C
+
+sampler R-1-1024 
+ mode random 1 out-of 1024
+!
+interface Gi0/0
+ ip flow monitor v4Talkers sampler R-1-1024 input 
+ ipv6 flow monitor v6Talkers sampler R-1-1024 input
+Option D
+
+interface Gi0/0 
+ no ip route-cache 
+ ip flow monitor v4Talkers 
+ ipv6 flow monitor v6Talkers
+
+A. Option A
+B. Option B
+C. Option C
+D. Option D
+
+Answer: C
+
+Explanation
+Flow samplers are created as separate components in a router’s configuration. Flow samplers are used to reduce the load on the device that is running Flexible NetFlow by limiting the number of packets that are selected for analysis.
+
+Question 67
+An engineer must configure a multicast UDP jitter operation. Which configuration should be applied?
+A. Router(config)#ip sla 1
+Router(config)#udp jitter 10.0.0.1 source-ip 192.168.1.1
+B. Router(config)#ip sla 1
+Router(config)#udp-jitter 192.0.2.115 65051 num-packets 20
+C. Router(config)#ip sla 1
+Router(config)#udp-jitter 192.0.2.115 65051
+D. Router(config)#ip sla 1
+Router(config)#udp jitter 239.1.1.1 65051 end-point list List source-ip 192.168.1.1
+
+Answer: D
+
+Explanation
+The command “udp jitter 239.1.1.1 65051 end-point list List source-ip 192.168.1.1” configures the IP SLAs operation as a multicast UDP jitter operation and enters multicast UDP jitter configuration mode.
+
+Reference: https://www.cisco.com/c/en/us/td/docs/ios-xml/ios/ipsla/configuration/15-mt/sla-15-mt-book/sla_mcast_suppt.html
+
+Note: In fact the correct command should be “Router(config-ip-sla)# udp-jitter 239.1.1.1 65051 endpoint-list List source-ip 192.168.1.1”. Maybe they are unintended typos of this question.
+
+Question 68
+Which two mechanisms are used with OAuth 2.0 for enhanced validation? (Choose two)
+A. authorization
+B. custom headers
+C. request management
+D. authentication
+E. accounting
+
+Answer: AD
+
+Explanation
+
+Question 75
+
+Refer to the exhibit.
+
+#!/usr/bin/python3
+
+import requests
+
+requests.urllib3.disable_warnings()
+
+AuthURL="https://dna-center/dna/system/api/v1/auth/token"
+USER="admin"
+PASSWORD="SomePassword"
+
+Response = requests.post(AuthURL, auth=(USER, PASSWORD), verify=False) 
+if Response.status_code < 200 or Response.status_code > 299: 
+  print(f"Aborting; received status code {Response.status_code}") 
+  exit ()
+
+<...removed...>
+
+admin@linux:~$ ./fetch.py 
+Aborting; received status code 401
+
+An administrator writes a script to fetch the list of devices that are registered with Cisco DNA Center. Why does the execution abort?
+
+A. The “dna-center” hostname cannot be resolved to an IP address
+B. The username or the password is incorrect
+C. The TLS certificate of DNA Center is invalid
+D. The authentication URL is incorrect
+
+Answer: B
+
+Explanation
+From the last line, we see the returned code was 401.
+
+The 401 Unauthorized Error is an HTTP status code error that represented the request sent by the client to the server that lacks valid authentication credentials. It may be represented as 401 Unauthorized, Authorization required, HTTP error 401- Unauthorized. It represents that the request could not be authenticated.
+
+Question 76
+When is GLBP preferred over HSRP?
+A. When encrypted helm are required between gateways h a single group
+B. When the traffic load needs to be shared between multiple gateways using a single virtual IP
+C. When the gateway routers are a mix of Cisco and non-Cisco routers
+D. When clients need the gateway MAC address lo Be the same between multiple gateways
+
+Answer: B
+
+Explanation
+An advantage of GLBP over HSRP, VRRP is GLBP can load-balance traffic without any trick.
+
+Question 77
+A network engineer wants to configure console access to a router without using AAA so that the privileged exec mode is entered directly after a user provide the correct login credentials. Which action achieves this goal?
+A. Configure login authentication privileged on line con 0
+B. Configure a local username with privilege level 15
+C. Configure privilege level 15 on line con 0
+D. Configure a RADIUS or TACACS+ server and use it to send the privilege level
+
+Answer: C
+
+Explanation
+Putting the privilege-level 15 on the console is one way to work around the issue. And it works – as long as you are comfortable with the fact that everyone who logs in on the console will be immediately placed directly into privilege/enable mode.
+
+Reference: https://community.cisco.com/t5/network-access-control/privileged-exec-at-line-con-0/td-p/1705892
+
+We also tested both “login authentication privileged” and “privilege level 15” commands. Only the latter exists:
+
+Question 78
+Which TLV value must be added to Option 43 when DHCP is used to ensure that APs join the WLC?
+A. 642
+B. 0x77
+C. 0xf1
+D. AAA
+
+Answer: C
+
+Explanation
+“TLV values for the Option 43 suboption: Type + Length + Value. Type is always the suboption code 0xf1.
+
+Question 89
+Which Python library is used to work with YANG data models via NETCONF?
+A. Postman
+B. requests
+C. ncclient
+D. cURL
+
+Answer: C
+
+Explanation
+In order to work with NETCONF, we have a library called ncclient. It’s a Python library that facilitates client-side scripting and application development around the NETCONF protocol.
+
+Reference: https://blog.wimwauters.com/networkprogrammability/2020-03-30-netconf_python_part1/
+
+Question 90
+Refer to the exhibit.
+
+         Area 0 
+  G0/1            G0/1
+R1---------------------R2
+
+R1 Routes
+192.168.1.0/24, 192.168.2.0/24
+
+R2 Routes
+172.16.1.0/24, 172.16.2.0/24
+
+Which two configurations enable R1 and R2 to advertise routes into OSPF? (Choose two)
+
+A. R2
+router ospf 0
+network 172.16.1.0 255.255.255.0 area 0
+network 172.16.2.0 255.255.255.0 area 0
+
+B. R2
+router ospf 0
+network 172.16.1.0 0.0.0.255 area 0
+network 172.16.2.0 255.255.255.0 area 0
+
+C. R1
+router ospf 0
+network 192.168.1.0 0.0.0.255 area 0
+network 192.168.2.0 0.0.0.255 area 0
+
+D. R2
+router ospf 0
+network 172.16.1.0 0.0.0.255 area 0
+network 172.16.2.0 0.0.0.255 area 0
+
+E. R1
+router ospf 0
+network 192.168.1.0 255.255.255.0 area 0
+network 192.168.2.0 255.255.255.0 area 0
+
+Answer: CD
+
+Explanation
+
+Question 91
+Which two functions is an edge node responsible for? (Choose two)
+A. provides multiple entry and exit points for fabric traffic
+B. provides the default exit point for fabric traffic
+C. provides the default entry point for fabric traffic
+D. provides a host database that maps endpoint IDs to a current location
+E. authenticates endpoints
+
+Answer: AE
+
+Explanation
+From below reference, we learn that answer D is not correct as the Control node (not Edge node) is a simple Host Database that maps Endpoint IDs to a current Location, along with other attributes.
+
+Also from below reference, we can see the functions of Edge Node (page 34):
+
+Edge Node provides first-hop services for Users / Devices connected to a Fabric
+
++ Responsible for Identifying and Authenticating Endpoints (e.g. Static, 802.1X, Active Directory) -> Answer E is correct
++ Register specific Endpoint ID info (e.g. /32 or /128) with the Control-Plane Node(s)
++ Provide an Anycast L3 Gateway for the connected Endpoints (same IP address on all Edge nodes)
++ Performs encapsulation / de-encapsulation of data traffic to and from all connected Endpoints
+
+Reference: https://www.ciscolive.com/c/dam/r/ciscolive/us/docs/2019/pdf/BRKCRS-2818.pdf
+
+Also from above reference, we also learn Border Node is the “default” exit if no entry is available in Control-Plane (“Gateway of Last Resort” for any unknown destinations) -> Answer B and answer C are not correct.
+
+Therefore only answer A is left.
+
+Question 92
+Refer to the exhibit.
+
+      G0/1    G0/0
+ SW1-------R1---------R2
+
+A network engineer is troubleshooting an issue with the file server based on reports of slow file transmissions. Which two commands or command sets are required in switch SW1 to analyze the traffic from the file server with a packet analyzer? (Choose two)
+A. SW1#show monitor
+B. SW1(config)#monitor session 1 source interface gigabitethernet0/3
+SW1(config)#monitor session 1 destination interface gigabitethernet0/1 encapsulation replicate
+C. SW1#show ip route
+D. SW1#show vlan
+
+Answer: AB
+
+Explanation
+
+Question 93
+Which configuration filters out DOT1X messages in the format shown below from being sent toward Syslog server 10.15.20.33?
+
+Nov 20 13:47:32.553: %DOT1X-5-FAIL: Authentication failed for client (e04f.438e.de4f) on Interface Gi1/0/1 AuditSessionID OAQB50A5000004543910739E
+
+A. logging discriminator DOT1X facility drops DOT1X
+logging host 10.15.20.33 discriminator DOT1X
+
+B. logging discriminator DOT1X msg-body drops DOTX
+logging host 10.15.20.33 discriminator DOTX
+
+C. logging discriminator DOT1X mnemonics includes DOTX
+logging host 10.15.20.33 discriminator DOT1X
+
+D. logging discriminator DOT1X mnemonics includes DOT1X
+logging host 10.15.20.33 discriminator DOTX
+
+Answer: A
+
+Explanation
+The “logging discriminator DOT1X facility drops DOT1X” command creates a logging message filter that drops log messages with a specific facility of “DOT1X”.
+
+Here’s a breakdown of the command:
+
++ logging discriminator DOT1X: This command creates a logging message discriminator named “DOT1X” which can be used to filter specific types of log messages.
+
++ facility drops DOT1X: This option tells the discriminator to drop log messages that have a facility of “DOT1X”. Facilities are used to group log messages based on the type of device or process that generated them.
+
+Overall, this command creates a logging message filter that drops log messages with a facility of “DOT1X”. Any log messages that have this facility will not be saved to the router’s log buffer.
+
+This command could be useful in situations where a large number of log messages are generated by the 802.1X authentication process and these messages are not required for troubleshooting or auditing purposes. By dropping these messages, the router’s log buffer can be conserved and the visibility of other log messages can be improved.
+
+Reference: https://community.cisco.com/t5/network-management/filtering-of-logging-messages-to-a-syslog-server-on-a-catalyst/td-p/2585566
+
+Question 98
+Refer to the exhibit.
+
+Coverage Hole Detection - Enabled
+Aironet IE - Enabled
+Layer 2 ACL - None
+URL ACL - None
+P2P Blocking - Disabled
+MFP Client Protection - Optional
+DTIM Period
+a/n - 1
+b/g/n - 1
+NAC State - ISE NAC
+
+An engineer is troubleshooting an issue with client devices triggering excessive power changes on APs in the 2.4 GHz band. Which action resolves this issue?
+A. Disable Coverage Hole Detection
+B. Disable Aironet IE
+C. Set the 802.11 b/g/n DTIM interval to 0
+D. Enable MFP Client Protection
+
+Answer: A
+
+Explanation
+Coverage Hole Detection is a feature that detects areas with poor wireless coverage and may trigger power changes on APs to improve coverage. Disabling it would prevent the APs from making these adjustments, which could stabilize the power levels.
+
+MFP Client Protection is used to protect against clients connecting to a rogue access point only -> Answer D is not correct.
+
+From the exhibit, we see that DTIM Period ranges from 1 to 255 so we cannot set it to 0 -> Answer C is not correct.
+
+“Aironet IE” option means “Aironet IE Extension”. This extension help clients choose the best access point. But it does not relate to our question.
+
+Question 99A
+Drag and drop the solutions that comprise Cisco Cyber Threat Defense from the left onto the objectives they accomplish on the right.
+Which of the following describe StealthWatch?
+A. Detects suspicious web activity
+B. Analyzes network behavior and detects anomalies
+C. Uses pxGrid to remediate security threats
+
+Answer: B
+
+Explanation
++ detects suspicious web activity: Web Security Appliance
++ analyzes network behavior and detects anomalies: StealthWatch
++ uses pxGrid to remediate security threats: Identity Services Engine
+
+Cisco ISE collects dynamic contextual data from throughout the network and uses Cisco pxGrid technology, a robust context-sharing platform, to share that deeper level of contextual data about connected users and devices with external and internal ecosystem partner solutions. Through the use of a single API, Cisco ISE network and security partners use this data in order to improve their own network access capabilities and accelerate their solutions’ capabilities to identify, mitigate, and remediate network threats.
+
+StealthWatch: performs security analytics by collecting network flows via NetFlow
+
+Question 99B
+Drag and drop the solutions that comprise Cisco Cyber Threat Defense from the left onto the objectives they accomplish on the right.
+Which of the following describe Web Security Appliance?
+A. Detects suspicious web activity
+B. Analyzes network behavior and detects anomalies
+C. Uses pxGrid to remediate security threats
+
+Answer: A
+
+Explanation
++ detects suspicious web activity: Web Security Appliance
++ analyzes network behavior and detects anomalies: StealthWatch
++ uses pxGrid to remediate security threats: Identity Services Engine
+
+Cisco ISE collects dynamic contextual data from throughout the network and uses Cisco pxGrid technology, a robust context-sharing platform, to share that deeper level of contextual data about connected users and devices with external and internal ecosystem partner solutions. Through the use of a single API, Cisco ISE network and security partners use this data in order to improve their own network access capabilities and accelerate their solutions’ capabilities to identify, mitigate, and remediate network threats.
+
+StealthWatch: performs security analytics by collecting network flows via NetFlow
+
+Question 99C
+Drag and drop the solutions that comprise Cisco Cyber Threat Defense from the left onto the objectives they accomplish on the right.
+Which of the following describe ISE?
+A. Detects suspicious web activity
+B. Analyzes network behavior and detects anomalies
+C. Uses pxGrid to remediate security threats
+
+Answer: C
+
+Explanation
++ detects suspicious web activity: Web Security Appliance
++ analyzes network behavior and detects anomalies: StealthWatch
++ uses pxGrid to remediate security threats: Identity Services Engine
+
+Cisco ISE collects dynamic contextual data from throughout the network and uses Cisco pxGrid technology, a robust context-sharing platform, to share that deeper level of contextual data about connected users and devices with external and internal ecosystem partner solutions. Through the use of a single API, Cisco ISE network and security partners use this data in order to improve their own network access capabilities and accelerate their solutions’ capabilities to identify, mitigate, and remediate network threats.
+
+StealthWatch: performs security analytics by collecting network flows via NetFlow
+
+Question 100
+Refer to the exhibit.
+
+ip access-list extended 101
+ 10 deny ip any any
+!
+event manager applet Block_Users
+ action 1.0 cli command "enable"
+ action 2.0 cli command "configure terminal"
+ action 3.0 cli command "interface GigabitEthernet1"
+ action 4.0 cli command "ip access-group 101 in"
+ action 5.0 cli command "ip access-group 101 out"
+
+An engineer builds an EEM script to apply an access list. Which statement must be added to complete the script?
+A. event none
+B. action 2.1 cli command “ip action 3.1 cli command 101”
+C. action 6.0 cli command ”ip access-list extended 101”
+D. action 6.0 cli command ”ip access-list extended 101″
+
+Answer: A
+
+Explanation
+The “event none” means this EEM applet is manually triggered. Notice that even we entered the “event none” command at the bottom of the EEM but it will be put on the top:
+
+Question 101
+Which two new security capabilities are introduced by using a next-generation firewall at the Internet edge? (Choose two)
+A. DVPN
+B. NAT
+C. stateful packet inspection
+D. application-level inspection
+E. integrated intrusion prevention
+
+Answer: DE
+
+Explanation
+Next-generation firewalls (NGFWs) are deep-packet inspection firewalls that move beyond port/protocol inspection and blocking to add application-level inspection, intrusion prevention, and bringing intelligence from outside the firewall.
+
+Reference: https://www.gartner.com/en/information-technology/glossary/next-generation-firewalls-ngfws
+
+Question 103
+Why does the vBond orchestrator have a public IP?
+A. to allow for global reachability from all WAN Edges in the Cisco SD-WAN and to facilitate NAT traversal
+B. to provide access to Cisco Smart Licensing servers for license enablement
+C. to enable vBond to learn the public IP of WAN Edge devices that are behind NAT gateways or in private address space
+D. to facilitate downloading and distribution of operational and security patches
+
+Answer: A
+
+Explanation
+SD-WAN Validator – This software-based component performs the initial authentication of WAN Edge devices and orchestrates SD-WAN Controller, Manager, and WAN Edge connectivity. It also has an important role in enabling the communication between devices that sit behind Network Address Translation (NAT).
+
+Reference: https://www.cisco.com/c/en/us/td/docs/solutions/CVD/SDWAN/cisco-sdwan-design-guide.html
+
+The major components of the Cisco SD-WAN Validator are:
+
+…
+
+NAT traversal: The Cisco SD-WAN Validator facilitates the initial orchestration between edge routers and Cisco SD-WAN Controllers when one or both of them are behind NAT devices.
+
+Reference: https://www.cisco.com/c/en/us/td/docs/routers/sdwan/configuration/sdwan-xe-gs-book/system-overview.html
+
+Note: Cisco SD-WAN has been rebranded to Cisco Catalyst SD-WAN. As part of this rebranding, the vManage name has been changed to SD-WAN Manager, the vSmart name has been changed to SD-WAN Controller, and the vBond name has been changed to SD-WAN Validator.
+
+
+Question 3
+A network engineer must configure the VTY lines on a router to achieve these results:
+
++ Remote access should be permitted only for secure protocols.
++ Only a password should be required for device authentication.
++ All idle EXEC sessions must be terminated in 60 minutes.
+
+Which configuration should be applied?
+
+Option A
+line vty 0 15 
+ login
+ password Cisco123 
+ transport input all 
+ exec-timeout 60
+
+Option B
+line vty 0 15 
+ password Cisco123 
+ transport input ssh 
+ exec-timeout 60
+
+Option C
+line vty 0 15 
+ password Cisco123 
+ transport input all 
+ session-timeout 60
+
+Option D
+line vty 0 15
+ password Cisco123 
+ transport input telnet ssh 
+ exec-timeout 60
+
+A. Option A
+B. Option B
+C. Option C
+D. Option D
+
+Answer: B
+
+Explanation
+From the requirement “Remote access should be permitted only for secure protocols” we can immediately figure out only Option B is correct as it only allows SSH connection with the “transport input ssh” command.
+
+Question 6
+Refer to the exhibit.
+
+R1
+Track 26 interface S0/0.1 line-protocol
+Int g0/0
+Ip address 10.10.10.2 255.255.255.0
+Standby 100 ip 10.10.10.1
+Standby 100 priority 105
+Standby 100 preempt
+Standby 100 track 26
+
+R2
+Int g0/0
+Ip address 10.10.10.3 255.255.255.0
+Standby 100 ip 10.10.10.1
+
+An engineer must modify the existing configuration so that R2 can take over as the primary router when serial interface 0/0.1 on R1 goes down. Which command must the engineer apply?
+A. R2# standby 100 preempt
+B. R2# standby 100 priority 100
+C. R2# standby 100 track 26 decrement 10
+D. R2# track 26 interface Serial0/0.1 line-protocol
+
+Answer: A
+
+Explanation
+This is a tricky question as we cannot apply any command about “track 26” on R2 as it only decrease the HSRP priority on R2. We need the “standby 10o preempt” command to take over the primary router because R1 is tracking S0/0.1 interface already. When this interface goes down, R1’s HSRP priority will decrease by 10 which is smaller than that of R2.
+
+Question 7
+Refer to the exhibit.
+
+from ncclient import manager
+
+netconf_host = manager.connect(host='ios-xe-example.com',
+				port=22,
+				username='cisco',    
+				password='cisco',
+				hostkey_verify=False, 
+				device_params={'name':'iosxe'})
+print (netconf_host.get_config('running'))
+netconf_host.close_session()
+
+An engineer deploys a script to retrieve the running configuration from a NETCONF-capable Cisco IOS XE device that is configured with default settings. The script falls. Which configuration must be applied to retrieve the configuration using NETCONF?
+A. print (netconf_host.get_config(‘show running’))
+B. port=830
+C. device_params={‘name’:’ ios-xe’})
+D. hostkey_verify=True,
+
+Answer: B
+
+Explanation
+Port 830 listens for NETCONF over SSH connections so we need to connect via this port, not port 22.
+
+Question 10
+A customer requires their wireless network to be fully functional, even if the wireless controller fails. Which wireless design supports these requirements?
+A. FlexConnect
+B. mesh
+C. centralized
+D. embedded
+
+Answer: A
+
+Explanation
+FlexConnect, formerly known as Hybrid Remote Edge AP (H-REAP), mode: allows data traffic to be switched locally and not go back to the controller. The FlexConnect AP can perform standalone client authentication and switch VLAN traffic locally even when it’s disconnected to the WLC (Local Switched).
+
+Question 12
+Refer to the exhibit.
+
+WLAN
+Layer 2 Security - WPA + WPA2
+Mac Filtering - Disabled
+PMF - Disabled
+WPA2 Policy - Enabled
+Encryption - AES
+Auth Key Mgmt - None
+MPSK - Disabled
+Fast Transition - Disabled
+
+Which action must be taken to configure a WLAN for WPA2-AES with PSK and allow only 802.11r-capable clients to connect?
+A. Enable Fast Transition and FT + PSK.
+B. Enable Fast Transition and PSK
+C. Change Fast Transition to Adaptive Enabled and enable FT +PSK.
+D. Enable PSK and FT + PSK.
+
+Answer: A
+
+Explanation
+Cisco created a proprietary method known as “Adaptive FT” to workaround the issue of incompatible Apple devices not being able to associate to 802.11r enabled WLANs -> Answer C is not correct.
+
+“Pure mode” sets a hard requirement on the wireless network in that clients that connect must support Fast Transition. Clients that do not support Fast Transition will not be able to connect at all. For WPA2-PSK networks, select “FT + PSK”.
+
+Note: Answer D is the “mixed mode”. For this mode, in the beacon/probe response sent out by the AP towards the client devices, both the non-FT 802.11x and FT 802.11x authentication methods are announced and the client can choose which one it wants to use.
+
+Reference: https://www.wiresandwi.fi/blog/configuring-fast-transition-ft-80211r-on-a-cisco-wlc
+
+Question 13
+Refer to the exhibit.
+
+interface Ethernet0/0
+ ip address 10.1.1.1 255.255.255.252
+ ip nat outside
+!
+interface Ethernet0/0
+ ip address 10.10.10.1 255.255.255.0
+ ip nat inside
+!
+ip nat inside source static 10.10.10.10 10.0.3.10
+
+Which address type is 10.10.10.10 configured for?
+A. outside global
+B. inside global
+C. outside local
+D. inside local
+
+Answer: D
+
+Explanation
+The syntax of this command is: Router(config)# ip nat inside source static [inside_local_address [inside_global_address].
+
+Therefore the inside local IP address 10.10.10.10 will be translated to 10.0.3.10 when it is sent out from the router.
+
+Question 14
+Which function does a virtual switch provide?
+A. RAID storage for virtual machines
+B. connectivity between virtual machines
+C. CPU context switching for multitasking between virtual machines
+D. emulation of power for virtual machines
+
+Answer: B
+
+Explanation
+Hypervisors provide virtual switch (vSwitch) that Virtual Machines (VMs) use to communicate with other VMs on the same host. The vSwitch may also be connected to the host’s physical NIC to allow VMs to get layer 2 access to the outside world.
+
+Question 15
+Refer to the exhibit.
+
+Router(config)#ntp master
+Router(config)#ntp source loopback 0
+
+What is the result of the NTP configuration?
+A. The router will use the address of loopback 0 to communicate with the NTP server.
+B. The router will advertise but not listen to NTP broadcast packets.
+C. The router will be used as an NTP authoritative server only if it synchronized with an outside source.
+D. The router will be used as an NTP authoritative server, even if it is not synchronized with an outside source.
+
+Answer: D
+
+Explanation
+To configure a Cisco device as an Authoritative NTP Server, use the ntp master [stratum] command. An Authoritative NTP Server can distribute time even when it is not synchronized to an existing time server.
+
+Question 19
+Refer to the exhibit.
+
+R2(config)#event manager applet script_1
+R2(config-applet)#action 1 cli command "enable"
+R2(config-applet)#action 2 cli command "config t"
+R2(config-applet)#action 3 cli command "interface ge0/0"
+R2(config-applet)#action 4 cli command "ip add 172.16.1.1 255.255.255.0" 
+R2(config-applet)#action 5 cli command "no sh"
+R2(config-applet)#action 6 cli command "end"
+R2(config-applet)#exit
+
+An engineer must create a manually triggered EEM applet to enable the R2 router interface and assign an IP address to it. What is required to complete this configuration?
+A. R2(config-applet)#action 4 cli command “ip add 172.16.1.1 0.0.0.255”
+B. R2(config)# event manager session cli username
+C. R2(config-applet)# event oir
+D. R2(config-applet)# event none sync yes
+
+Answer: D
+
+Explanation
+If you want to manually run the EEM applet, use the “event none” command. “sync yes” means “run the commands synchronously”. In other words, “run each command and wait until it is executed then run the next one”.
+
+Question 20
+What is stateful switchover?
+A. cluster protocol used to facilitate switch failover
+B. mechanism to take control from a failed RP while maintaining connectivity
+C. mechanism used to prevent routing protocol loops during an RP switchover
+D. First Hop Redundancy Protocol for host gateway connectivity
+
+Answer: B
+
+Explanation
+Stateful switchover (SSO) establishes one of the supervisor engines as active while the other supervisor engine is designated as standby, and then SSO synchronizes information between them. A switchover from the active to the redundant supervisor engine occurs when the active supervisor engine fails, or is removed from the switch, or is manually shut down for maintenance.
+
+Reference: https://www.cisco.com/en/US/docs/general/Test/dwerblo/broken_guide/nsfsso.html
+
+Question 25
+Which two features are available only in next-generation firewalls? (Choose two)
+A. virtual private network
+B. deep packet inspection
+C. stateful inspection
+D. application awareness
+E. packet filtering
+
+Answer: BD
+
+Explanation
+NGFWs combine many of the capabilities of traditional firewalls — including packet filtering, network address translation (NAT) and port address translation (PAT), URL blocking, and virtual private networks (VPNs) — with quality of service (QoS) functionality and other features not found in traditional firewalls. These include intrusion prevention, SSL and SSH inspection, deep-packet inspection, and reputation-based malware detection, as well as application awareness.
+
+Reference: https://www.techtarget.com/searchsecurity/definition/next-generation-firewall-NGFW
+
+Question 26
+What is a characteristic of a Type 2 hypervisor?
+A. It eliminates the need for an underlying operating system.
+B. It is completely independent of the operating system.
+C. Its main task is to manage hardware resources between different operating systems.
+D. It is installed on an operating system and supports other operating systems.
+
+Answer: D
+
+Explanation
+A Type 2 hypervisor enables quick and easy access to an alternative guest OS alongside the primary one running on the host system.
+
+Reference: https://www.ibm.com/topics/hypervisors
+
+Question 27
+
+Refer to the exhibit.
+
+R1#show policy-map control-plane
+Control Plane
+
+Service-policy input: CoPP
+  Class-map: telnet_copp (match-all)
+   33 packets, 1998 bytes
+   5 minute offered rate 0 bps, drop rate 0 bps
+   Match: access-group 100
+   police:
+     cir 8000 bps, bc 1500 bytes
+    conformed 33 packets, 1998 bytes; actions:
+     transmit
+    exceeded 0 packets, 0 bytes; actions: 
+     drop
+    conformed 0 bps, exceed 0 bps
+
+  Class-map: class-default (match-any)
+    59 packets, 5516 bytes
+    5 minute offered rate 0 bps, drop rate 0 bps 
+    Match: any 
+R1#sh access-lists 100 
+Extended IP access list 100
+  10 deny tcp host 10.0.0.5 any eq 22 (13 matches)
+  20 permit tcp any any eq 22 (2 matches)
+  30 deny tcp host 10.0.0.5 any eq telnet (18 matches) 
+  40 permit tcp any any eq telnet (31 matches)
+
+Which result is achieved by the CoPP configuration?
+A. Traffic that matches entry 10 of ACL 100 is always dropped.
+B. Class-default traffic is dropped.
+C. Traffic that matches entry 10 of ACL 100 is always allowed with a limited CIR.
+D. Traffic that matches entry 10 of ACL 100 is always allowed.
+
+Answer: D
+
+Explanation
+Packets that match a deny rule are excluded from that class and cascade to the next class (if one exists) for classification. This is in contrast to packets matching a permit rule, which are then included in that class and no further comparisons are performed. Let’s see an example:
+
+ip access-list extended CoPP_Telnet
+ deny tcp host 192.168.1.1 any eq telnet      ! Allow this traffic unconstrained
+ permit tcp any any eq telnet                 ! Rate-limit this traffic
+!
+class-map Telnet_class
+ match access-group name CoPP_Telnet
+!
+policy-map CoPP_Telnet_policy
+ class Telnet_class
+  police cir 8000
+   conform-action transmit
+   exceed-action drop
+!
+control-plane
+ service-policy input CoPP_Telnet_policy
+!
+This CoPP allows host with source address of 192.168.1.1 to forward Telnet packets to the control plane without constraint while all remaining Telnet packets are policed at the specified rate. A strange thing here is we have to “deny” source 192.168.1.1 in the ACL so that it is excluded from “class-map Telnet_class”. It will be matched by the “class-default” which is implemented implicitly at the end of the policy-map. This default class will match all the traffic and allows them by default.
+
+Question 32
+Which function is performed by vSmart in the Cisco SD-WAN architecture?
+A. redistribution between OMP and other routing protocols
+B. facilitation of NAT detection and traversal
+C. aggregation and distribution of VPN routing information
+D. execution of localized policies
+
+Answer: C
+
+Explanation
+Answer A is not correct as it is the role of vEdges. But by default, vEdges do not automatically redistribute OMP routes into any legacy routing protocol. We must explicitly enable the redistribution for each particular local protocol on each vEdge router.
+
+Answer B mentions about vBond while answer D mentions about vEdge.
+
+Question 35
+An engineer must use flexible NetFlow on a group of switches. To prevent overloading of the flow collector, if the flow is idle for 20 seconds, the flow sample should be exported. Which command set should be applied?
+
+Option A
+flow record recordflow 
+ exporter flowexport
+ record recordflow
+ cache timeout active 120 
+ cache timeout inactive 20 
+ cache type immediate
+
+Option B
+flow monitor monitorflow
+ exporter flowexport
+ record recordflow
+ cache timeout active 120 
+ cache timeout inactive 20 
+ cache type immediate
+
+Option C
+flow monitor monitorflow 
+ exporter recordflow 
+ cache timeout active 20 
+ cache timeout inactive 120 
+ cache type permanent
+
+Option D
+flow record recordflow
+ match ipv6 destination ip-address 
+ match ipv6 source ip-address 
+ match ipv6 protocol-type view 
+ match interface input 
+ match interface output 
+ match transport destination-port 
+ collect counter bytes long
+
+A. Option A
+B. Option B
+C. Option C
+D. Option D
+
+Answer: B
+
+Explanation
+“if the flow is idle for 20 seconds, the flow sample should be exported” -> We need to use the “cache timeout inactive 20” command.
+
++ “cache type permanent”: This command specifies the permanent cache type. This type of cache never ages out any flows.
+
++ “cache type immediate”: This command specifies the immediate cache type. This type of cache will age out every record as soon as it is created, with the result that every flow contains just one packet.
+
+-> Therefore we need to use the “cache type permanent” with the “cache timeout inactive 20” to age out a flow if it has not seen any activity for 20 seconds. Maybe there is a typo in this question as none of the answers has both commands. But Option B is the best answer as these commands are used in “flow monitor”, not “flow record”.
+
+Question 36
+When a branch location loses connectivity, which Cisco FlexConnect state rejects new users but allows existing users to function normally?
+A. Authentication-Down / Switch-Local
+B. Authentication-Down / Switching-Down
+C. Authentication-Central / Switch-Local
+B. Authentication-Local / Switch-Local
+
+Answer: A
+
+Explanation
+authentication down, local switching—In this state, the WLAN rejects any new clients trying to authenticate, but it continues sending beacon and probe responses to keep existing clients alive. This state is valid only in standalone mode.
+
+Reference: https://www.cisco.com/c/en/us/td/docs/wireless/controller/8-4/config-guide/b_cg84/flexconnect.html
+
+Question 37
+Which action does the Python script accomplish?
+
+client.connect (ip, port=22,username=usr,password=pswd)
+stdin,stdout,stderr = client.exec_command('show ip bgp 192.168.10.100 bestpath\n')
+print(stdout)
+
+A. displays the output of the show command in a formatted way
+B. connects to a Cisco device using SSH and exports the routing table information
+C. connects to a Cisco device using Telnet and exports the routing table information
+D. connects to a Cisco device using SSH and exports the BGP table for the prefix
+
+Answer: B
+
+Explanation
+
+displays the output of the show command in an unformatted way
+
+Question 41
+In a Cisco SD-Access environment, which function is performed by the border node?
+A. Connect devices to the fabric domain.
+B. Group endpoints into IP pools.
+C. Provide reachability information to fabric endpoints.
+D. Provide connectivity to traditional layer 3 networks.
+
+Answer: D
+
+Explanation
++ Fabric border node: This fabric device (for example, core layer device) connects external Layer 3 networks to the SDA fabric.
+
+Question 43
+In which way are EIGRP and OSPF similar?
+A. Both protocols support unequal-cost load balancing.
+B. Both protocols use hello packets to discover neighbors.
+C. Both protocols send updates using unicast addresses.
+D. Both protocols support autosummarization.
+
+Answer: B
+
+Explanation
+
+Question 51
+What is a characteristic of the Cisco DNA Center Template Editor feature?
+A. It facilitates software upgrades to network devices from a central point.
+B. It facilitates a vulnerability assessment of the network devices.
+C. It uses a predefined configuration through parameterized elements or variables.
+D. It provides a high-level overview of the health of every network device.
+
+Answer: C
+
+Explanation
+Cisco DNA Center provides an interactive editor called Template Editor to author CLI templates. You can design templates easily with a predefined configuration by using parameterized elements or variables. After creating a template, you can reuse the template to deploy your devices in one or more sites that are configured anywhere in your network.
+
+Reference: https://www.cisco.com/c/en/us/td/docs/cloud-systems-management/network-automation-and-management/dna-center/2-1-2/user_guide/b_cisco_dna_center_ug_2_1_2/b_cisco_dna_center_ug_2_1_1_chapter_01000.html
+
+Question 53
+What is one role of the VTEP in a VXLAN environment?
+A. to maintain VLAN configuration consistency
+B. to encapsulate the tunnel
+C. to forward packets to non-USP sites
+D. to provide EID-to-RLOC mapping
+
+Answer: B
+
+Explanation
+VTEPs connect between Overlay and Underlay network and they are responsible for encapsulating frame into VXLAN packets to send across IP network (Underlay) then decapsulating when the packets leaves the VXLAN tunnel.
+
+Question 57
+Refer to the exhibit.
+
+Elevation
+Two ovals
+
+Azimuth
+Circle
+
+Which antenna emits this radiation pattern?
+A. omnidirectional
+B. RP-TNC
+C. dish
+D. Yagi
+
+Answer: A
+
+Explanation
+These Omnidirectional antennas have a doughnut shaped radiation pattern and are ideal for connecting devices that are on the same plane and to either side of each other. These are commonly misused in in-building and mobile applications. In mobile applications, Omnidirectional Dipole Antennas fail to have the proper patterning needed in order to connect to a tower that is on a much higher elevation. In in-building applications, Omnidirectional Dipole Antennas fail specifically in point to multipoint deployments where the user can be standing directly underneath a transmitting antenna, and be in a dead zone.
+
+Reference: https://www.mpantenna.com/omnidirectional-antenna-radiation-patterns/
+
+Question 63
+In a campus network design, what are two benefits of using BFD for failure detection? (Choose two)
+A. BFD is an efficient way to reduce memory and CPU usage.
+B. BFD speeds up routing convergence time.
+C. BFD provides path failure detection in less than a second.
+D. BFD enables network peers to continue forwarding packets in the event of a restart.
+E. BFD provides fault tolerance by enabling multiple routers to appear as a single virtual router.
+
+Answer: BC
+
+Explanation
+BFD (Bidirectional Forwarding Detection) is a super-fast protocol that is able to detect link failures within milliseconds or even microseconds -> Answer C is correct.
+
+While BGP can detect route failures, BFD can be configured to detect these failures more quickly, which allows for faster responses and improved convergence -> Answer B is correct.
+
+Question 64
+Refer to the exhibit.
+
+Person#1:
+First Name is Johnny
+Last Name is Table
+Hobbies are:
+• Running
+• Video games
+
+Person#2
+First Name is Billy
+Last Name is Smith
+Hobbies are:
+• Napping
+• Reading
+
+Which JSON syntax is derived from this data?
+
+Option A
+{‘Person’: [{‘First Name’: ‘Johnny’, ‘Last Name’: ‘Table’, ‘Hobbies’: [‘Running’, ‘Video games’]}, {‘First Name’: ‘Billy’, ‘Last Name’: ‘Smith’, ‘Hobbies’: [‘Napping’, ‘Reading’]}]}	
+
+Option B
+{[{‘First Name’: ‘Johnny’, ‘Last Name’: ‘Table’, ‘Hobbies’: ‘Running’,’Hobbies’: ‘Video games’}, {‘First Name’: ‘Billy’, ‘Last Name’: ‘Smith’, ‘Hobbies’: ‘Napping’, ‘Hobbies’: Reading’}]}
+ 
+Option C
+{‘Person’: [{‘First Name’:’Johnny’, ‘Last Name’: ‘Table’, ‘Hobbies’: ‘Running’, ‘Video games’}, {‘First Name’: ‘Billy’, ‘Last Name’: ‘Smith’, ‘Hobbies’: ‘Napping’, ‘Reading’}]}	
+
+Option D
+{[{‘First Name’: ‘Johnny’, ‘Last Name’: ‘Table’, ‘Hobbies’: [‘Running’, ‘Video games’]}, {‘First Name’: ‘Billy’, ‘Last Name’: ‘Smith’, ‘Hobbies’: [‘Napping’,’Reading’]}]}
+
+A. Option A
+B. Option B
+C. Option C
+D. Option D
+
+Answer: A
+
+Explanation
+Option B and Option D are not correct because the first square bracket in “{[{” should not be there.
+
+Option C “Hobbies” should be an array, not “‘Hobbies’: ‘Running’, ‘Video games’”
+
+Option A is correct and we also format it in a more comprehensive way below:
+
+{
+   "Person":[
+      {
+         "First Name":"Johnny",
+         "Last Name":"Table",
+         "Hobbies":[
+            "Running",
+            "Video games"
+         ]
+      },
+      {
+         "First Name":"Billy",
+         "Last Name":"Smith",
+         "Hobbies":[
+            "Napping",
+            "Reading"
+         ]
+      }
+   ]
+}
+
+Question 70
+Refer to the exhibit.
+
+https://192.168.43.103/restconf/data/ietf-interfaces/interfaces/interface-Loopback100
+
+What does the response “204 No Content” mean for the REST API request?
+A. Interface loopback 100 is removed from the configuration.
+B. Interface loopback 100 is not removed from the configuration.
+C. The DELETE method is not supported.
+D. Interface loopback 100 is not found in the configuration.
+
+Answer: A
+
+Explanation
+The 204 status code means that the request was received and understood, but that there is no need to send any data back. The server has fulfilled the request but does not need to return an entity-body, and might want to return updated meta information.
+
+Note: HTTP status code of 2xx means “Success”, which indicates that the client’s request was accepted successfully.
+
+Question 71
+What gives priority on an egress interface, for database traffic that connected on an ingress interface, without changing the CoS value?
+A. class map
+B. CoS map
+C. QoS group
+D. policy map
+
+Answer: D
+
+Explanation
+
+Question 72
+Which JSON script is properly formatted?
+
+Option A
+
+[
+ "subject":{
+ [
+  "title":"Sewing",
+  "listing":"elective",
+  "session":"Summer"
+ }
+]
+]
+
+Option B
+
+["Lodging":
+     {
+	"type":B&B,
+	"location":Oceanfront,
+	"contact":946-261-2833
+      }
+]
+
+Option C
+
+["class":{
+    "title":"Science",
+    "Grade":"11",
+    "location":"Room C",
+      }
+]
+
+Option D
+
+{ 
+  "frames":[
+  {  
+   "type":"premium",
+   "material":"wood",
+   "shape":"square"
+  }
+ ]
+}
+
+A. Option A
+B. Option B
+C. Option C
+D. Option D
+
+Answer: D
+
+Explanation
+A JSON script should start with “{” -> Option A, Option B & Option C are not correct. Moreover, Option B the value Oceanfront should be put inside double quotes "". Option C should remove the last comma , (behind “Room C”).
+
+Question 73
+What are two characteristics of vManage APIs? (Choose two)
+A. Southbound API is based on NETCONF and XML
+B. Southbound API is based on RESTCONF and JSON
+C. Southbound API is based on OMP and DTLS
+D. Northbound API is based on RESTCONF and JSON
+E. Northbound API is RESTful, using JSON
+
+Answer: AE
+
+Explanation
+Cisco vManage provides northbound RESTful APIs that allow customers to build their own unique business logic on top of the SD-WAN solution -> Answer E is correct.
+
+Question 74
+Which action is the vSmart controller responsible for in an SD-WAN deployment?
+A. onboard vEdge nodes into the SD-WAN fabric
+B. distribute security information for tunnel establishment between vEdge routers
+C. manage, maintain, and gather configuration and status for nodes within the SD-WAN fabric
+D. gather telemetry data from vEdge routers
+
+Answer: B
+
+Explanation
++ Orchestration plane (vBond) assists in securely onboarding the SD-WAN WAN Edge routers into the SD-WAN overlay (-> Therefore answer A mentioned about vBond). The vBond controller, or orchestrator, authenticates and authorizes the SD-WAN components onto the network. The vBond orchestrator takes an added responsibility to distribute the list of vSmart and vManage controller information to the WAN Edge routers. vBond is the only device in SD-WAN that requires a public IP address as it is the first point of contact and authentication for all SD-WAN components to join the SD-WAN fabric. All other components need to know the vBond IP or DNS information.
+
++ Management plane (vManage) is responsible for central configuration and monitoring. The vManage controller is the centralized network management system that provides a single pane of glass GUI interface to easily deploy, configure, monitor and troubleshoot all Cisco SD-WAN components in the network. (-> Answer C and answer D are about vManage)
+
++ Control plane (vSmart) builds and maintains the network topology and make decisions on the traffic flows. The vSmart controller disseminates control plane information between WAN Edge devices, implements control plane policies and distributes data plane policies to network devices for enforcement (-> Answer B is about vSmart)
+
+Question 78
+Which version of NetFlow does Cisco Threat Defense utilize to obtain visibility into the network?
+A. NBAR2
+B. IPFIX
+C. 8
+D. flexible
+
+Answer: D
+
+Explanation
+The Cisco Cyber Threat Defense solution takes advantage of the customization capability of the Flexible NetFlow Feature in Cisco IOS, allowing for customizable NetFlow Version 9 records.
+
+Reference: https://www.cisco.com/c/dam/en/us/td/docs/security/network_security/ctd/ctd2-0/design_guides/ctd_2-0_cvd_guide_jul15.pdf
+
+Note: Flexible NetFlow is a newest version so far (newer than NetFlow version 9). Flexible NetFlow extends NetFlow version 9 capabilities to help customer determine how to optimize resource usage, plan network capacity, and identify the optimal application layer for quality of service (QoS).
+
+Question 79
+A company hires a network architect to design a new OTT wireless solution within a Cisco SD-Access Fabric wired network. The architect wants to register access points to the WLC to centrally switch the traffic. Which AP mode must the design include?
+A. bridge
+B. fabric
+C. local
+D. FlexConnect
+
+Answer: C
+
+Explanation
+Local mode (default mode): It offers one or more basic service sets (BBS) on a specific channel. AP maintains a tunnel towards its Wireless Controller. When the AP is not transmitting wireless client frames, it measures noise floor and interference, and scans for intrusion detection (IDS) events every 180 seconds.
+
+Question 80
+Which data is properly formatted with JSON?
+
+Option A
+{
+  "name": Peter,
+  "age": 25,
+  "likesJson": true,
+  "characteristics": ["small","strong","18"],
+}
+
+Option B
+{
+   "name": "Peter"
+   "age": "25"
+   "likesJson": true
+   "characteristics": ["small","strong",18]
+}
+
+Option C
+{
+   "name": "Peter",
+   "age": "25",
+   "likesJson": true,
+   "characteristics": ["small","strong",18]
+}
+
+Option D
+{
+   "name": "Peter",
+   "age": "25",
+   "likesJson": true,
+  "characteristics": ["small","strong","18"],
+}
+
+A. Option A
+B. Option B
+C. Option C
+D. Option D
+
+Answer: C
+
+Explanation
+Option A and Option D are not correct as the last commas (in [“small”,”strong”,”18″],) need to be removed
+Option B is missing three commas behind values “Peter”, “25” and true.
+Option C is correct.
+
+Question 81
+Refer to the exhibit.
+
+AAA Override - Disabled
+Aironet IE - Disabled
+Layer 2 ACL - none
+URL ACL - none
+Split Tunnel - Disabled
+MFP Client Protection - Optional
+NAC State - None
+
+An engineer is troubleshooting an mDNS issue in an environment where Cisco ISE is used to dynamically assign mDNS roles to users. The engineer has confirmed that ISE is sending the correct values, but name resolution is not functioning as expected. Which WLC configuration change resolves the issue?
+A. Enable Aironet IE
+B. Set MFP client protection to Required
+C. Change NAC state to ISE NAC
+D. Enable AAA Override
+
+Answer: D
+
+Explanation
+
+Question 82
+Refer to the exhibit.
+
+Request URL: https://www.cisco.com/libs/granite/csrf/token.json
+Request Method: GET
+Status Code: 403
+Remote Address: 23.207.65.173:443
+Referrer Policy: strict-origin-when-cross-origin
+
+Why was the response code generated?
+A. The resource was unreachable
+B. Access was denied based on the user permissions.
+C. The resource 15 no longer available on the server.
+D. There is a conflict in the current state of the resource.
+
+Answer: B
+
+Explanation
+Status code 403 means “Forbidden”, which means “access was denied” -> Answer B is correct.
+
+For your information, Cross-Origin Resource Sharing (CORS) is an HTTP mechanism that allows resource sharing from one origin to another origin securely.
+
+Two URLs would be considered to be having different origins when they have different protocols, ports (if specified), or hosts.
+
+For example, making a request from https://domain-a.com to https://domain-b.com/api-1 is considered cross-origin as they have different hostnames.
+
+Internet browsers follow the same-origin policy and restrict cross-origin HTTP requests initiated from scripts. This means that a website is only allowed to make requests to the same origin unless the response from other origins includes the right CORS headers.
+
+Question 83
+An engineer must configure interface and sensor monitoring on a router. The NMS server is located in a trusted zone with IP address 10.15.2.19. Communication between the router and the NMS server must be encrypted and password-protected using the most secure algorithms. Access must be allowed only for the NMS server and with the minimum permission levels needed. Which configuration must the engineer apply?
+
+Option A
+
+ip access-list extended nms 
+  permit 1 host 10.15.2.19 any
+
+ snmp-server view ro internet included
+
+ snmp-server view ro ifEntry included
+
+ snmp server group nms v3 priv notify ro access nms
+  snmp-server user user1 nms v3 encrypted auth md5 Password1 pri 3des Password123
+
+Option B
+ip access-list standard nms
+  permit 10.15.2.19 0.0.0.0
+
+ snmp-server view ro iso included
+
+ snmp-server view ro ifEntry included
+
+ snmp server group nms v3 priv read ro access nms
+  snmp-server user user1 nms v3 auth sha Password1 pri aes 256 Password123
+
+Option C
+ip access-list standard nms 
+  permit 10.15.2.19 0.0.0.0
+
+ snmp-server view rw iso included
+
+ snmp server view rw ifEntry included
+
+snmp-server group nms v3 auth write rw access nms
+ snmp server user user1 nms v3 auth des Password1 pri des Password123
+
+Option D
+ip access list standard nms 
+  permit 10.15.2.19 255.255.255.255
+
+ snmp server view ro cisco included
+
+ snmp server view ro ifEntry included 
+
+ snmp-server group nms v3 priv read ro access nms
+  snmp server user user1 nms v3 auth 3des Password1 pri aes 192 Password123
+
+A. Option A
+B. Option B
+C. Option C
+D. Option D
+
+Answer: B
+
+Explanation
+“The NMS server must be encrypted and password-protected using the most secure algorithms” -> Option A and Option C are not correct as they are using MD5 and DES (Data Encryption Standard).
+
+Option D is not correct as the access-list must use the wildcard mask, not subnet mask in “permit 10.15.2.19 255.255.255.255” statement.
+
+-> Only Option B is correct. Option B is also using SHA (Secure Hash Algorithm) and AES (Advanced Encryption Standard) which are the most secure algorithms so far.
+
+Question 84
+Refer to the exhibit.
+
+Router# configure terminal 
+Router(config)# interface GigabitEthernet0/1
+Router(config-if)#ip address 10.0.0.3 255.255.255.0 
+Router(config-if)# standby 512 ip 10.0.0.1
+
+An engineer attempts to configure standby group 512 on interface GigabitEthernet0/1, but the configuration is not accepted. Which command resolves this problem?
+A. standby version 2
+B. standby 512 preempt
+C. standby redirects
+D. standby 512 priority 100
+
+Answer: A
+
+Explanation
+The group number range is from 0 to 255 for HSRP version 1 and from 0 to 4095 for HSRP version 2 so we must change to version 2 to use group 512.
+
+Question 86
+Which mechanism does OAuth use to strengthen REST API security when compared to BasicAuth?
+A. Token
+B. SSL
+C. Authentication
+D. TLS
+
+Answer: A
+
+Explanation
+Auth0 generates access tokens for API authorization scenarios, in JSON web token (JWT) format. The permissions represented by the access token, in OAuth terms, are known as scopes. When an application authenticates with Auth0, it specifies the scopes it wants. If those scopes are authorized by the user, then the access token will represent these authorized scopes.
+
+Reference: https://auth0.com/docs/authenticate/protocols/oauth
+
+Question 91A
+Drag and drop the virtual components from the left onto their descriptions on the right.
+Which of the following describes VMDK?
+A. Configuration file containing settings for a virtual machine such as guest OS
+B. Component of a virtual machine responsible for sending packets to the hypervisor
+C. Zip file connecting a virtual machine configuration file and a virtual disk
+D. File containing a virtual machine disk drive
+
+Answer: D
+
+Explanation
++ configuration file containing settings for a virtual machine such as guest OS: VMX
++ component of a virtual machine responsible for sending packets to the hypervisor: vNIC
++ zip file connecting a virtual machine configuration file and a virtual disk: OVA
++ file containing a virtual machine disk drive: VMDK
+
+The VMX file simply holds the virtual machine configuration.
+
+VMDK (short for Virtual Machine Disk) is a file format that describes containers for virtual hard disk drives to be used in virtual machines like VMware Workstation or VirtualBox.
+
+An OVA file is an Open Virtualization Appliance that contains a compressed, “installable” version of a virtual machine. When you open an OVA file it extracts the VM and imports it into whatever virtualization software you have installed on your computer.
+
+Question 91B
+Drag and drop the virtual components from the left onto their descriptions on the right.
+Which of the following describes vNIC?
+A. Configuration file containing settings for a virtual machine such as guest OS
+B. Component of a virtual machine responsible for sending packets to the hypervisor
+C. Zip file connecting a virtual machine configuration file and a virtual disk
+D. File containing a virtual machine disk drive
+
+Answer: B
+
+Explanation
++ configuration file containing settings for a virtual machine such as guest OS: VMX
++ component of a virtual machine responsible for sending packets to the hypervisor: vNIC
++ zip file connecting a virtual machine configuration file and a virtual disk: OVA
++ file containing a virtual machine disk drive: VMDK
+
+The VMX file simply holds the virtual machine configuration.
+
+VMDK (short for Virtual Machine Disk) is a file format that describes containers for virtual hard disk drives to be used in virtual machines like VMware Workstation or VirtualBox.
+
+An OVA file is an Open Virtualization Appliance that contains a compressed, “installable” version of a virtual machine. When you open an OVA file it extracts the VM and imports it into whatever virtualization software you have installed on your computer.
+
+Question 91C
+Drag and drop the virtual components from the left onto their descriptions on the right.
+Which of the following describes VMX?
+A. Configuration file containing settings for a virtual machine such as guest OS
+B. Component of a virtual machine responsible for sending packets to the hypervisor
+C. Zip file connecting a virtual machine configuration file and a virtual disk
+D. File containing a virtual machine disk drive
+
+Answer: A
+
+Explanation
++ configuration file containing settings for a virtual machine such as guest OS: VMX
++ component of a virtual machine responsible for sending packets to the hypervisor: vNIC
++ zip file connecting a virtual machine configuration file and a virtual disk: OVA
++ file containing a virtual machine disk drive: VMDK
+
+The VMX file simply holds the virtual machine configuration.
+
+VMDK (short for Virtual Machine Disk) is a file format that describes containers for virtual hard disk drives to be used in virtual machines like VMware Workstation or VirtualBox.
+
+An OVA file is an Open Virtualization Appliance that contains a compressed, “installable” version of a virtual machine. When you open an OVA file it extracts the VM and imports it into whatever virtualization software you have installed on your computer.
+
+Question 91D
+Drag and drop the virtual components from the left onto their descriptions on the right.
+Which of the following describes OVA?
+A. Configuration file containing settings for a virtual machine such as guest OS
+B. Component of a virtual machine responsible for sending packets to the hypervisor
+C. Zip file connecting a virtual machine configuration file and a virtual disk
+D. File containing a virtual machine disk drive
+
+Answer: C
+
+Explanation
++ configuration file containing settings for a virtual machine such as guest OS: VMX
++ component of a virtual machine responsible for sending packets to the hypervisor: vNIC
++ zip file connecting a virtual machine configuration file and a virtual disk: OVA
++ file containing a virtual machine disk drive: VMDK
+
+The VMX file simply holds the virtual machine configuration.
+
+VMDK (short for Virtual Machine Disk) is a file format that describes containers for virtual hard disk drives to be used in virtual machines like VMware Workstation or VirtualBox.
+
+An OVA file is an Open Virtualization Appliance that contains a compressed, “installable” version of a virtual machine. When you open an OVA file it extracts the VM and imports it into whatever virtualization software you have installed on your computer.
+
+Question 94
+Refer to the exhibit.
+
+hostname CPE
+!
+ip dhcp excluded-address 192.168.10.0 192.168.10.10
+!
+ip dhcp pool LAN 
+ network 192.168.10.0 255.255.255.0 
+ default-router 192.168.10.1
+ dns-server 192.0.2.254
+!
+interface Loopback0 
+ ip address 192.168.255.1 255.255.255.255
+!
+interface GigabitEthernet0/1 
+ description => LAN <= 
+ ip address 192.168.10.1 255.255.255.0
+!
+--
+CPE# debug ip dhcp server packet
+DHCP server packet debugging is on.
+CPE#
+*Sep 11 11:00:12.520: DHCPD: inconsistent relay information.
+*Sep 11 11:00:12.520: DHCPD: relay information option exists, but giaddr is zero.
+
+The CPE router acts as a DHCP server for the locally attached LAN. After DHCP snooping is enabled on the switch where the DHCP clients are connected, clients are unable to obtain their configuration from the DHCP server. What is the cause of this issue?
+A. The IP address of the DHCP server is in the excluded DHCP range.
+B. The configuration of Gi0/1 is missing the ip helper-address 192.168.255.1 command.
+C. The DHCP server drops DHCP packets carrying Option 82 and an empty relay agent IP address.
+D. The excluded DHCP range contains the subnet address of the entire LAN network.
+
+Answer: C
+
+Explanation
+To solve this problem, we can add the global command ip dhcp relay information trust-all on the DHCP server CPE. This will instruct CPE to accept DHCP requests with a zero giaddr.
+
+Question 95
+Refer to the exhibit.
+
+Web              G0/0    G0/1
+Server----------------R1---------------Internet
+       192.168.1.0/24    172.16.1.3/31
+100.1.1.100     
+
+The web server is configured to listen only to TCP port 8080 for all HTTP requests. Which command is required to allow Internet users to access the web server on HTTP port 80?
+A. ip nat outside source static tcp 10.1.1.100 8080 10.1.1.100 80
+B. ip nat inside source static tcp 10.1.1.100 80 10.1.1.100 8080
+C. ip nat inside source static tcp 10.1.1.100 8080 10.1.1.100 80
+D. ip nat outside source static tcp 10.1.1.100 80 10.1.1.100 8080
+
+Answer: C
+
+Explanation
+From the Internet side, users request HTTP with port 80: Outside port is 80
+This question said the web server only listens on port 8080: Inside port is 8080
+
+The syntax of this command is “ip nat inside source static tcp {inside-ip} [inside-port] {outside-ip} [outside-port]” so answer A is correct.
+
+The purpose of this command  is to translate packets on the inside interface with a source IP address of 10.1.1.100 and port 8080 to the IP address 10.1.1.100 with port 80. This also implies that any packet received on the outside interface with a destination address of 10.1.1.100:8080 has the destination translated to 10.1.1.100:80.
+
+We can find the same scenario at: https://www.cisco.com/c/en/us/support/docs/ip/network-address-translation-nat/13772-12.html#toc-hId–907557791 where the internal web server is configured to listen to TCP port 8080.
+
+Question 97
+Refer to the exhibit.
+
+v= json.loads(requests.get("http://10.66.77.88:3000/version").text)[0]['ver'] 
+c= json.loads(requests.get("http://10.66.77.88:3000/version").text)[1]['cnt']
+bp= []
+for i in range (int(c)):
+   bp.append(json.loads(requests.get("http://10.66.77.88:3000/badip").text)[i]['ip'])
+
+What is achieved by this Python script?
+A. It counts JSON data from a website.
+B. It loads JSON data into an HTTP request.
+C. It reads JSON data into a formatted list.
+D. It converts JSON data to an HTML document.
+
+Answer: C
+
+Explanation
+First the variable bp is created as an empty list “bp= []”. Then we append the bad IPs into this list with a “for” loop. At the end of this code, bp may look like this: bp = [‘100.11.1.1’, ‘201.89.23.33’, ‘89.90.28.34’,…]
+
+Question 99
+An engineer must implement a configuration to allow a network administrator to connect to the console port of a router and authenticate over the network. Which command set should the engineer use?
+
+A. aaa new-model
+aaa authentication login default enable
+
+B. aaa new-model
+aaa authentication login console local
+
+C. aaa new-model
+aaa authentication login console group radius
+
+D. aaa new-model
+aaa authentication enable default
+
+Answer: C
+
+Explanation
+The statement “authenticate over the network” means it is not authenticated via local database.
+
+Question 100
+Which feature is provided by Cisco Mobility Services Engine in a Cisco Wireless Unified Network architecture?
+A. It adds client packet capturing
+B. It enables NetFlow data collection
+C. It adds client tracking and location API
+D. It identifies authentication problems
+
+Answer: C
+
+Explanation
+The real time location APIs provides access to the location of devices that are currently being tracked by the MSE.
+
+Reference: https://www.cisco.com/c/en/us/td/docs/wireless/mse/8-0/MSE_REST_API/Guide/Cisco_MSE_REST_API_Guide/Location_API.html
+
+
+Question 2
+Drag and drop the DHCP messages that are exchanged between a client and an AP into the order they are exchanged on the right.
+In which order do each of these occur?
+A. DHCP Request
+B. DHCP Offer
+C. DHCP ACK
+D. DHCP Discover
+ 
+Answer: DBAC
+
+Explanation
++ Step 1: DHCP Discover
++ Step 2: DHCP Offer
++ Step 3: DHCP Request
++ Step 4: DHCP ACK
+
+There are four messages sent between the DHCP Client and DHCP Server: DHCPDISCOVER, DHCPOFFER, DHCPREQUEST and DHCPACKNOWLEDGEMENT. This process is often abbreviated as DORA (for Discover, Offer, Request, Acknowledgement).
+
+Question 3
+Refer to the exhibit.
+
+list = [1, 2]
+list = list * 3
+print(list)
+
+What is the value of the variable list after the code is run?
+A. [1, 2, 1, 2, 1, 2]
+B. [1, 2] * 3
+C. [1, 2], [1, 2], [1, 2]
+D. [3, 6]
+
+Answer: A
+
+Explanation
+
+Question 4
+Refer to the exhibit.
+
+Ip access-list standard netconfacl
+Permiti 172.16.2.0 0.0.0.255
+Deny any
+
+An engineer must configure router R1 to allow only NETCONF connections from the management VLAN. Which command completes this configuration?
+A. R1(config)# netconf-yang ssh ipv4 access-list name netconfacl
+B. R1(config)# ip http secure-server
+R1(config)# ip http accounting commands 12 default
+C. R1(config-if)# ip access-group netconfacl out
+D. R1(config-if)# ip access-group netconfacl in
+
+Answer: A
+
+Explanation
+The command “netconf-yang ssh ipv4 access-list name netconfacl” configures an ACL for the NETCONF-YANG session.
+
+Reference: https://www.cisco.com/c/en/us/td/docs/ios-xml/ios/prog/configuration/1611/b_1611_programmability_cg/service_level_ACLs_NETCONF_RESTCONF.html
+
+Question 6
+Refer to the exhibit.
+
+SW1# show span vlan 10
+This bridge is the root
+Priority 24586 (24586 sys-id-ext 10)
+G0/0	Desg FWD 4	128.1	P2P (to PC)
+G3/3	Desg FWD 4	128.16	P2P (to SW2)
+
+Int vlan10
+Ip address 192.168.1.252 255.255.255.0
+Standby 10 ip 192.168.1.254
+
+SW2# show span vlan 10
+Priority 32778 (32768 sys-id-ext 10)
+G0/0	Altn BLK 4	128.2	P2P (to PC)
+G3/3	Root FWD 4	128.16	P2P (to SW1)
+
+Int vlan10
+Ip address 192.168.1.253 255.255.255.0
+Standby 10 ip 192.168.1.254
+
+Which configuration causes the traffic from PC-1 to the internet to use the link between CoreSW-1 and CoreSW-2 when both switches are up?
+
+A.CoreSW-2(config)# interface vlan 10
+CoreSW-2(config-if)# standby 10 priority 100
+
+B.CoreSW-1(config)# interface vlan 10
+CoreSW-1(config-if)# standby 10 priority 90
+
+C.CoreSW-2(config)# interface vlan 10
+CoreSW-2(config-if)# standby 10 priority 110
+
+D.CoreSW-1(config)# interface vlan 10
+CoreSW-1(config-if)# standby 10 priority 100
+
+Answer: C
+
+Explanation
+From the “show spanning-tree vlan 10” command on both switches, we learn that CoreSw-1 is the root bridge for VLAN 10 so all traffic in this VLAN must flow to it. Therefore we must make the CoreSw-2 the primary HSRP router so that traffic will be forwarded to CoreSw-1 before sending to the Internet -> We need to set the HSRP priority to a value that is higher than 100 on CoreSW-2.
+
+Question 9
+Which technology provides an overlay fabric to connect remote locations utilizing commodity data paths and improves network performance, boosts security and reduces costs?
+A. SD-WAN
+B. VTEP
+C. InfiniBand
+D. VXLAN
+
+Answer: A
+
+Explanation
+
+Question 14
+Refer to the exhibit.
+
+Branch 1
+10.0.1.0/24
+
+Branch 2
+10.0.2.0/24
+
+Central
+10.0.101.0/24
+
+Which two commands are required on router R1 to block FTP and allow all other traffic from the Branch 2 network? (Choose two)
+
+Option A
+interface GigabitEthernet0/0
+ip address 10.0.0.1 255.255.255.0
+ip access-group 101 out
+
+Option B
+interface Gigabitethernet0/0
+ip address 10.0.101.1 255.255.255.0
+ip access-group 101 in
+
+Option C
+access-list 101 deny tcp 10.0.2.0 0.0.0.255 host 10.0.101.3 eq ftp-data
+access-list 101 permit ip any any
+
+Option D
+access-list 101 deny tcp 10.0.2.0 0.0.0.255 host 10.0.101.3 eq ftp
+access-list 101 deny tcp 10.0.2.0 0.0.0.255 host 10.0.101.3 eq ftp-data
+access-list 101 permit ip any any
+
+Option E
+access-list 101 deny tcp 10.0.2.0 0.0.0.255 host 10.0.101.3 eq ftp
+access-list 101 permit ip any any
+
+A. Option A
+B. Option B
+C. Option C
+D. Option D
+E. Option E
+
+Answer: AD
+
+Explanation
+MAYBE????
+Maybe something is wrong in this question as the direction of the ACL applied to Gi0/0 interface is not correct. All the ACL statements have 10.0.2.0/24 as the source address so we must apply the ACL on the inbound direction of the WAN interface or outbound direction of the LAN interface -> Both Option A and Option B are not correct but we have to choose either of them because three other Options are just ACL statements. We should choose to block the WAN interface as it is closer to the source -> Option A is better.
+
+In the three Options left, Option D is the best choice as it totally blocks FTP connection.
+
+Question 19
+Which characteristic applies to a traditional WAN solution but not to a Cisco SD-WAN solution?
+A. lengthy installation times
+B. centralized reachability, security, and application policies
+C. low complexity and increased overall solution scale
+D. operates over DTLS/TLS authenticated and secured tunnels
+
+Answer: A
+
+Explanation
+
+Question 20
+Refer to the exhibit.
+
+            G0/1         G0/0
+    PC--------------R1-------------
+192.168.10.17
+
+An engineer applies this configuration to R1:
+
+ip nat inside source static 192.168.10.17 192.168.27.42
+
+Which command set should be added to complete the configuration?
+
+Option A
+
+R1(config)# interface GigabitEthernet 0/0
+R1(config-if)# ip nat outside
+
+R1(config)# interface GigabitEthernet 0/1
+R1(config-if)# ip nat inside
+
+Option B
+
+R1(config)# interface GigabitEthernet 0/0
+R1(config)# ip pat outside
+
+R1(config)# interface GigabitEthernet 0/1
+R1(config)# ip pat inside
+
+Option C
+
+R1(config)# interface GigabitEthernet 0/0
+R1(config)# ip pat inside
+
+R1(config)# interface GigabitEthernet 0/1
+R1(config)# ip pat outside
+
+Option D
+
+R1(config)# interface GigabitEthernet 0/0
+R1(config-if)# ip nat inside
+
+R1(config)# interface GigabitEthernet 0/1
+R1(config-if)# ip nat outside
+
+A. Option A
+B. Option B
+C. Option C
+D. Option D
+
+Answer: A
+
+Explanation
+
+The purpose of the command “ip nat inside source static tcp 192.168.10.17 192.168.27.42” is to translate packets on the inside interface with a source IP address of 192.168.10.17 to the IP address 192.168.27.42 -> Gi0/1 interface should be “ip nat inside” (not “pat”) -> Option A is correct.
+
+Question 22
+What is the role of vSmart in a Cisco SD-WAN environment?
+A. to establish secure control plane connections
+B. to monitor, configure, and maintain SD-WAN devices
+C. to provide secure data plane connectivity over WAN links
+D. to perform initial authentication of devices
+
+Answer: A
+
+Explanation
+The vSmart controller, which is the centralized brain of the Cisco SD-WAN solution, establishes and maintains DTLS or TLS connections to all Cisco SD-WAN devices in the overlay network: to the routers, the vBond orchestrators, to Cisco vManage, and to other vSmart controllers. These connections carry control plane traffic.
+
+Reference: https://www.cisco.com/c/en/us/td/docs/routers/sdwan/configuration/security/vedge/security-book/security-overview.html
+
+Question 23
+Which Python library is used to work with YANG data models via NETCONF?
+A. Postman
+B. requests
+C. ncclient
+D. cURL
+
+Answer: C
+
+Explanation
+In order to work with NETCONF, we have a library called ncclient. It’s a Python library that facilitates client-side scripting and application development around the NETCONF protocol.
+
+Reference: https://blog.wimwauters.com/networkprogrammability/2020-03-30-netconf_python_part1/
+
+Question 28
+Which type of roaming event occurs when a client roams across multiple mobility groups?
+A. Layer 1
+B. Layer 7
+C. Layer 3
+D. Layer 2
+
+Answer: C
+
+Explanation
+A Mobility Group is a collection of Wireless LAN Controllers (WLCs) that work together to provide seamless wireless roaming for clients. Each Mobility Group consists of one or more WLCs, and when a client roams from one Mobility Group to another, it’s called Inter-Mobility Group Roaming.
+
+The controller supports seamless roaming across multiple mobility groups. During seamless roaming, the client maintains its IP address across all mobility groups. When a client crosses a mobility group boundary during a roam, the client is fully authenticated, but the IP address is maintained, and mobility tunneling is initiated for Layer 3 roaming.
+
+Reference: https://www.cisco.com/c/en/us/td/docs/wireless/controller/8-5/config-guide/b_cg85/mobility_groups.html
+
+Question 29
+A Cisco administrator deploys a new wireless network but CAPWAP APs cannot communicate with the wireless controller IP connectivity in the network functions properly. Which action resolves the issue?
+A. Open CAPWAP UDP port 12222 in the network firewall
+B. Open CAPWAP UDP ports 5246 and 5247 in the network firewall
+C. Enable the UDP Lite feature on the WLC.
+D. Ensure that the controller is connected to a AAA server
+
+Answer: B
+
+Explanation
+CAPWAP uses UDP ports 5246 (control channel) and 5247 (data channel) so we must open these ports first.
+
+Question 30
+Which technique is used to protect end user devices and data from unknown file behavior?
+A. crypto file ransomware protection using a file hash calculation
+B. file retrospection using continuous scan and analyses
+C. file sandboxing using a protected environment to analyze and simulate the behavior of unknown files
+D. phishing file quarantine using an internal environment to store attached files
+
+Answer: C
+
+Explanation
+
+Question 31
+A client requests a wireless solution for remote branch offices to eliminate the need for a local controller at each branch. The branch users require local termination in a specific VLAN for local internet breakout. Which solution must be deployed?
+A. central switched
+B. FlexConnect local switching
+C. auto-anchor mobility
+D. asymmetric tunneling
+
+Answer: B
+
+Explanation
++ FlexConnect mode, formerly known as Hybrid Remote Edge AP (H-REAP), mode: allows data traffic to be switched locally and not go back to the controller if the CAPWAP to the WLC is down. The FlexConnect AP can perform standalone client authentication and switch VLAN traffic locally even when it’s disconnected to the WLC (Local Switched). FlexConnect AP can also tunnel (via CAPWAP) both user wireless data and control traffic to a centralized WLC (Central Switched). The AP can locally switch traffic between a VLAN and SSID when the CAPWAP tunnel to the WLC is down.
+
+Question 42
+Refer to the exhibit.
+
+no aaa new-model
+username admin privilege 15 secret cisco123
+ip http secure-port 445
+
+Which command must be applied to complete the configuration and enable RESTCONF?
+A. ip http secure-server
+B. ip http server
+C. ip http secure-port 443
+D. ip http client username restconf
+
+Answer: A
+
+Explanation
+
+Question 43
+Which device, in a LISP routing architecture, receives LISP map requests and determines which ETR should handle the map request?
+A. proxy ETR
+B. routing locator
+C. map resolver
+D. map server
+
+Answer: C
+
+Explanation
+Map resolver (MR): The MR performs the following functions:
++ Receives MAP requests, which are encapsulated by ITRs.
++ Provides a service interface to the ALT router, de-encapsulates MAP requests, and forwards on the ALT topology.
++ Sends negative MAP replies in response to MAP requests for non-LISP sites.
+
+Reference: https://www.ciscopress.com/articles/article.asp?p=2992605
+
+Question 44
+How does a WLC achieve stateful switchover for APs and clients?
+A. The active WLC establishes a CAPWAP tunnel to the AP, and the standby WLC establishes a LWAPP tunnel to the AP
+B. The active WLC establishes a CAPWAP tunnel with the AP, and the standby WLC copies the AP database and the client database from the active WLC
+C. The active WLC establishes a CAPWAP tunnel with the AP and standby WLC to share the AP database information
+D. The active and standby WLCs establish separate CAPWAP tunnels to the AP
+
+Answer: B
+
+Explanation
+This guide provides information on the theory of operation and configuration for the Cisco Unified Wireless LAN Controller (WLC) as it pertains to supporting stateful switchover of access points and clients (AP and Client SSO).
+
+The new High Availability (HA) feature (that is, AP SSO) set within the Cisco Unified Wireless Network software release version 8.0 and above allows the access point (AP) to establish a CAPWAP tunnel with the Active WLC and share a mirror copy of the AP database with the Standby WLC. The APs do not go into the Discovery state when the Active WLC fails and the Standby WLC takes over the network as the Active WLC.
+
+There is only one CAPWAP tunnel maintained at a time between the APs and the WLC that is in an Active state.
+
+Reference: https://www.cisco.com/c/en/us/td/docs/wireless/controller/technotes/8-7/High_Availability_DG.html
+
+Note: The underlined sentence is a bit unclear. It should say “… the Active WLC shares a mirror copy of the AP database with the Standby WLC”.
+
+Question 45
+Refer to the exhibit.
+
+R1
+ntp source GigabitEthernet1/1
+ntp master
+ntp peer 192.168.1.1
+interface GigabitEthernet 1/0
+ip address 172.16.1.1 255.255.255.248
+ntp broadcast
+interface GigabitEthernet 1/1 
+ip address 172.31.100.1 255.255.255.0
+
+What is the purpose of the configuration?
+A. The router will function in NTP in client mode
+B. The router will use 172.16.1.1 as the source for NTP packets
+C. The router is allowed to receive NTP broadcast packets
+D. The router will function as an authoritative NTP server
+
+Answer: D
+
+Explanation
+The “ntp source …” command allows you to define the interface to be used as the source interface for generating NTP traffic. By default, the router normally uses the interface closest to the destination as the source interface.
+
+With the ntp master [stratum] command, this device is configured as an Authoritative NTP Server.
+
+Question 47
+Refer to the exhibit.
+
+enable secret cisco
+
+username cisco privilege 15 secret cisco
+
+aaa new-model
+aaa authentication login default group radius local
+aaa authorization network default group radius
+
+The network administrator must be able to perform configuration changes when all the RADIUS servers are unreachable. Which configuration allows all commands to be authorized if the user has successfully authenticated?
+A. aaa authorization exec default group radius none
+B. aaa authentication login default group radius local none
+C. aaa authorization exec default group radius
+D. aaa authorization exec default group radius if-authenticated
+
+Answer: D
+
+Explanation
+Let’s see the command “aaa authorization exec default group radius if-authenticated”. Notice the “if-authenticated” keyword at the end of this line. This is saying that if we are authenticated we will immediately be dropped into exec (enable) mode.
+
+Question 56
+Which JSON script is properly formatted?
+
+Option A
+[ "Lodging": [
+     {
+       "type":hotel,
+       "location":B01,
+       "contact":555-234-2342
+   }
+  ]
+]
+
+Option B
+{
+ "truck":[
+     {
+	"type":"Ford",
+	"color":"red",
+	"year":"1998"
+      }
+ ]
+}
+
+Option C
+["car":{
+         "type":"Ford",
+         "color":"red",
+         "year":"1998",
+        }
+]
+
+Option D
+[
+   "subject":{
+       "title":"Art History"
+       "listing":"elective"
+       "session":"Spring"
+      ]
+     }
+}
+
+A. Option A
+B. Option B
+C. Option C
+D. Option D
+
+Answer: B
+
+Explanation
+Option A is not correct as it is missing double quotes with values.
+
+Option C and Option D start with “[” so they are not correct. Moreover, Option C should not have last comma (behind “1998”) and it should be "car":[ (not "car":{. Option D should have commas after values.
+
+Question 58A
+Drag and drop the LISP components on the left to the correct description on the right.
+Which of the following describes a map server?
+A. De-encapsulates LISP packets coming from outside of the LISP site to destinations inside of the site
+B. IPv4 or IPv6 address of an endpoint within a LISP site
+C. Network infrastructure component that learns of EID prefix mapping entries from an ETR
+
+Answer: C
+
+Explanation
++ IPv4 or IPv6 address of an endpoint within a LISP site: EID
++ network infrastructure component that learns of EID-prefix mapping entries from an ETR: map server
++ de-encapsulates LISP packets coming from outside of the LISP site to destinations inside of the site: ETR
+
+Question 58B
+Drag and drop the LISP components on the left to the correct description on the right.
+Which of the following describes an ETR?
+A. De-encapsulates LISP packets coming from outside of the LISP site to destinations inside of the site
+B. IPv4 or IPv6 address of an endpoint within a LISP site
+C. Network infrastructure component that learns of EID prefix mapping entries from an ETR
+
+Answer: A
+
+Explanation
++ IPv4 or IPv6 address of an endpoint within a LISP site: EID
++ network infrastructure component that learns of EID-prefix mapping entries from an ETR: map server
++ de-encapsulates LISP packets coming from outside of the LISP site to destinations inside of the site: ETR
+
+Question 58C
+Drag and drop the LISP components on the left to the correct description on the right.
+Which of the following describes an EID?
+A. De-encapsulates LISP packets coming from outside of the LISP site to destinations inside of the site
+B. IPv4 or IPv6 address of an endpoint within a LISP site
+C. Network infrastructure component that learns of EID prefix mapping entries from an ETR
+
+Answer: B
+
+Explanation
++ IPv4 or IPv6 address of an endpoint within a LISP site: EID
++ network infrastructure component that learns of EID-prefix mapping entries from an ETR: map server
++ de-encapsulates LISP packets coming from outside of the LISP site to destinations inside of the site: ETR
+
+Question 60
+Which mechanism can be used to enforce network access authentication against an AAA server if the endpoint does not support the 802.1X supplicant functionality?
+A. private VLANs
+B. port security
+C. MAC Authentication Bypass
+D. MACsec
+
+Answer: C
+
+Explanation
+802.1x is a great way to protect your network by authenticating everything you connect to your switch ports, However, one disadvantage of 802.1X is that your end devices have to support it. If you can’t use 802.1X but still want to secure your switch ports somehow, you can use MAC Authentication Bypass (MAB).
+
+When you enable MAB on a switchport, the switch drops all frames except for the first frame to learn the MAC address. Pretty much any frame can be used to learn the MAC address except for CDP, LLDP, STP, and DTP traffic. Once the switch has learned the MAC address, it contacts an authentication server (RADIUS) to check if it permits the MAC address.
+
+Reference: https://networklessons.com/cisco/ccie-routing-switching-written/mac-authentication-bypass-mab
+
+Question 61
+What is an advantage of utilizing data models in a multivendor environment?
+A. facilitating a unified approach to configuration and management
+B. lowering CPU load incurred to managed devices
+C. removing the distinction between configuration and runtime state data
+D. improving communication security with binary-encoded protocols
+
+Answer: A
+
+Explanation 
+
+Question 62
+Refer to the exhibit.
+
+aaa new-model
+aaa authentication login default group tacacs+ local 
+!
+tacacs server prod 
+address ipv4 10.10.10.23 
+key cisco123
+!
+ip tacacs source-interface Gig 0/0
+
+Which configuration must be applied for the TACACS+ server to grant access-level rights to remote users?
+A. R1(config)# aaa authorization exec default group tacacs+
+B. R1(config)# aaa authorization exec default local if-authenticated
+C. R1(config)# aaa authentication login enable
+D. R1(config)# aaa accounting commands 15 default start-stop group tacacs+
+
+Answer: A
+
+Explanation
+“grant access-level rights” -> we must use “authorization”
+“applied for the TACACS+ server” -> our command must have “tacacs+” keyword
+
+Question 66
+A wireless network engineer must configure a WPA2+WPA3 policy with the Personal security type. Which action meets this requirement?
+A. Configure the GCMP256 encryption cipher.
+B. Configure the CCMP256 encryption cipher.
+C. Configure the CCMP128 encryption cipher.
+D. Configure the GCMP128 encryption cipher.
+
+Answer: C
+
+Explanation
+CCMP (Counter/CBC-MAC Protocol)
+
+The Counter/CBC-MAC Protocol (CCMP) is considered more secure than TKIP. CCMP consists of two algorithms:
+
++ AES (Advanced Encryption Standard) counter mode encryption.
++ Cipher Block Chaining Message Authentication Code (CBC-MAQ used as a message integrity check (MIC).
+
+The WPA3 Personal stills support AES. WPA3 uses AES-128 for message encryption in Personal and 192 bits in Enterprise
+
+Devices that support CCMP have the WPA2 designation.
+
+Note:
+
+GCMP (Galois/Counter Mode Protocol)
+
+The Galois/Counter Mode Protocol (GCMP) is a cryptographic protocol that provides confidentiality and integrity for data in wireless networks. It is used in the IEEE 802.11 i standard for wireless security, and is also supported by some other wireless networking standards.
+
+GCMP is an authenticated encryption suite that is more secure and more efficient than CCMP. GCMP consists of two algorithms:
+
++ AES counter mode encryption.
++ Galois Message Authentication Code (GMAQ used as a message integrity check (MIC).
+
+GCMP is used in WPA3.
+
+Question 69A
+Drag and drop the characteristics from the left onto the corresponding switching architectures on the right.
+Which of these are characteristics of the RIB? (Choose two)
+A. It is known as CEF
+B. It is used to make destination prefix-based switching decisions
+C. Each routing protocol has its own information base
+D. It is built form information obtained form dynamic routing protocols and connected and static routes
+
+Answer: CD
+
+Explanation
+RIB:
++ Each routing protocol has its own information base
++ It is built from information obtained from dynamic routing protocols and connected and static routes
+
+FIB:
++ It is known as CEF
++ It is used to make destination prefix-based switching decision
+
+Each routing protocol like OSPF, EIGRP has its own Routing information base (RIB) and they select their best candidates to try to install to global RIB so that it can then be selected for forwarding. In order to view the RIB table, use the command “show ip ospf database” for OSPF, “show ip eigrp topology” for EIGRP or “show ip bgp” for BGP. To view the Forwarding Information Base (FIB), use the “show ip cef” command. RIB is in Control plane while FIB is in Data plane.
+
+The Forwarding Information Base (FIB) contains destination reachability information as well as next hop information. This information is then used by the router to make forwarding decisions. The FIB allows for very efficient and easy lookups. Below is an example of the FIB table:
+
+The FIB maintains next-hop address information based on the information in the IP routing table (RIB). In other words, FIB is a mirror copy of RIB.
+
+RIB is in Control plane (and it is not used for forwarding) while FIB is in Data plane (and it is used for forwarding).
+
+Question 69B
+Drag and drop the characteristics from the left onto the corresponding switching architectures on the right.
+Which of these are characteristics of the FIB? (Choose two)
+A. It is known as CEF
+B. It is used to make destination prefix-based switching decisions
+C. Each routing protocol has its own information base
+D. It is built form information obtained form dynamic routing protocols and connected and static routes
+
+Answer: AB
+
+Explanation
+RIB:
++ Each routing protocol has its own information base
++ It is built from information obtained from dynamic routing protocols and connected and static routes
+
+FIB:
++ It is known as CEF
++ It is used to make destination prefix-based switching decision
+
+Each routing protocol like OSPF, EIGRP has its own Routing information base (RIB) and they select their best candidates to try to install to global RIB so that it can then be selected for forwarding. In order to view the RIB table, use the command “show ip ospf database” for OSPF, “show ip eigrp topology” for EIGRP or “show ip bgp” for BGP. To view the Forwarding Information Base (FIB), use the “show ip cef” command. RIB is in Control plane while FIB is in Data plane.
+
+The Forwarding Information Base (FIB) contains destination reachability information as well as next hop information. This information is then used by the router to make forwarding decisions. The FIB allows for very efficient and easy lookups. Below is an example of the FIB table:
+
+The FIB maintains next-hop address information based on the information in the IP routing table (RIB). In other words, FIB is a mirror copy of RIB.
+
+RIB is in Control plane (and it is not used for forwarding) while FIB is in Data plane (and it is used for forwarding).
+
+Question 74
+Refer to the exhibit.
+
+"inventoryStatusDetail": "</status><general code=\"SUCCESS\"/></
+status>",
+"serialNumber": "F0L25040021",
+"lastUpdateTime": 1631261682276,
+"hostname": "c3504.abc.inc",
+"tagcount": "0",
+
+***Output omitted***
+      "lineCardId": "",
+      "managedAtleastOnce": true,
+      "location": null,
+      "type": "cisco 3504 Wireless LAN controller",
+      "managementState": "Managed",
+      "instanceUuid": "6b741b27-f7e7-4470-b6fc-d5168cc59502", 
+      "instanceTenantId": "5e8e896e4d4add00ca2b6487",
+      "id": "6b74ib27-f7e7-4470-b6fc-d5168cc59502"
+     }
+   ],
+   "version": "1.0"
+}
+
+Which HTTP request produced the REST API response that was returned by Cisco DNA Center?
+A. GET /network-device?macAddress=ac:4a:56:6c:7c:00
+B. PUT /network-device?macAddress=ac:4a:56:6c:7c:00
+C. POST /network-device?macAddress=ac:4a:56:6c:7c:00
+D. fetch /network-device?macAddress=ac:4a:56:6c:7c:00
+
+Answer: A
+
+Explanation
+
+Question 81
+Which encoding is used to protect a username and login with RESTful API basic authentication?
+A. Type-7
+B. SHA-1
+C. MD5
+D. Base64
+
+Answer: D
+
+Explanation
+Basic authentication is a simple authentication scheme built into the HTTP protocol. The client sends HTTP requests with the “Authorization” header containing the word “Basic”, a space character, and a “username:password” string encoded in Base64.
+
+For example, to authorize the user “demo” with password “p@55w0rd” the client sends:
+
+Authorization: Basic ZGVtbzpwQDU1dzByZA==
+In this example, the ZGVtbzpwQDU1dzByZA== string results from encoding the string demo:p@55w0rd in Base64.
+
+Reference: https://success.outsystems.com/documentation/11/extensibility_and_integration/rest/expose_rest_apis/add_basic_authentication_to_an_exposed_rest_api/
+
+Question 82
+Drag and drop the code snippets from the bottom onto blanks in the Python script so that the program changes the IP address and saves it as a new JSON file on the disk. Not all options are used.
+
+Import json
+With open("json_ios_xe.json", "r") as json_file:
+json_file_content = json_file.__________()
+
+deconded_json = json.___________(json_file_content)
+
+decoded_json['Cisco-IOS-XE-native:interface']['Gig'][0]['ip'] =¥ "192.168.1.12"
+
+encoded_json_compact = json.__________(decoded_json)
+encoded_json_indented = json.dumps(decoded_json, indent = 4)
+
+With open("json_ios_xe_compact.json", "w") as json_file:
+json_file__________________(dencoded_json_compact)
+
+with open("json_ios_xe_indented.json", "w") as json_file:
+json_file.write(encoded_json_indented)
+
+A. dumps
+B. loads
+C. open
+D. read
+E. load
+F. write
+
+Answer: DBAF
+
+Explanation
+1. read
+2. loads
+3. dumps
+4. write
+Although we can use “load” method (for the first blank box) to read a file object and parse it at the same time but it requires a parameter so we cannot use it at the first blank box (at 3rd line). For example, we can use “load” with this:
+
+with open("json_ios_xe.json", "r") as json_file:
+    json_file_content = json_file.load(json_file)
+Therefore in this question we must use “read” instead at the first blank box then parse it later at the second blank box with “loads”.
+
+Good reference: https://www.freecodecamp.org/news/loading-a-json-file-in-python-how-to-read-and-parse-json/
+
+json.dumps() takes a JSON object and returns a string.
+
+Question 84
+Refer to the exhibit.
+
+AS 65010
+R1, R2, R3
+
+AS 65020
+R4, R5
+
+R2 ------- R4
+
+R1 ------- R5
+
+Which configuration must be applied to ensure that the preferred path for traffic from AS 65010 toward AS 65020 uses the R2 to R4 path?
+
+A. R4(config)# router bgp 65020
+R4(config-router)# bgp default local-preference 300
+
+R5(config)# router bgp 65020
+R5(config-router)# bgp default local-preference 200
+
+B. R2(config)# router bgp 65010
+R2(config-router)# bgp default local-preference 300
+
+R1(config)# router bgp 65010
+R1(config-router)# bgp default local-preference 200
+
+C. R2(config)# router bgp 65010
+R2(config-router)# bgp default local-preference 200
+
+R1(config)# router bgp 65010
+R1(config-router)# bgp default local-preference 300
+
+D. R4(config)# router bgp 65020
+R4(config-router)# bgp default local-preference 200
+
+R5(config)# router bgp 65020
+R5(config-router)# bgp default local-preference 300
+
+Answer: B
+
+Explanation
+We can use local preference attribute to influence the decision of iBGP neighbor to choose the path to external BGP neighbors:
+
+In this question we need to configure higher local preference value on R2 than on R1.
+
+Question 88
+Drag and drop the code snippets from the bottom onto the blanks in the Python script to convert a Python object into a JSON string. Not all options are used.
+
+import ____________
+
+data = {
+...
+}
+
+model = data["devices"][0]["model"]
+
+json_string = ________________(data)
+
+print(______________)
+
+A. json.dumps
+B. json
+C. json_string
+D. json.loads
+
+Answer: BAC
+
+Explanation
+1. json
+2. json.dumps
+3. json_string
+
+The json.dumps() function is used to convert Python objects (dictionary, list, string, integer, boolean… type) into JSON strings. Here’s a simple example:
+
+import json
+data = {'name': 'John', 'age': 25} #Define a Python dictionary
+json_data = json.dumps(data) #Use json.dumps() to convert the dictionary into a JSON string
+print(json_data) #Output: '{"name": "John", "age": 25}'
+
+Question 96
+What is the recommended minimum SNR for voice applications on wireless networks?
+A. 10
+B. 25
+C. 15
+D. 20
+
+Answer: B
+
+Explanation
+
+Question 97
+Refer to the exhibit.
+
+*Apr 6 13:25:03.826: AAA/BIND(00000055): Bind i/f
+*Apr 6 13:25:03.826: AAA/AUTHEN/LOGIN (00000055): Pick method list 'default'
+*Apr 6 13:25:03.826: TPLUS: Queuing AAA Authentication request 85 for processing
+*Apr 6 13:25:03.826: TPLUS(00000055) login timer started 1020 sec timeout
+*Apr 6 13:25:03.826: TPLUS: processing authentication start request id 85
+*Apr 6 13:25:03.826: TPLUS: Authentication start packet created for 85()
+*Apr 6 13:25:03.826: TPLUS: Using server 10.106.60.182
+*Apr 6 13:25:03.826: TPLUS(00000055)/0/NB_WAIT/225FE2DC: Started 5 sec timeout
+*Apr 6 13:25:03.830: TPLUS(00000055)/0/NB_WAIT: socket event 2
+*Apr 6 13:25:03.830: TPLUS(00000055)/0/NB_WAIT: wrote entire 38 bytes request
+*Apr 6 13:25:03.830: TPLUS(00000055)/0/READ: socket event 1
+*Apr 6 13:25:03.830: TPLUS(00000055)/0/READ: Would block while reading
+*Apr 6 13:25:03.886: TPLUS(00000055)/0/READ: socket event 1
+*Apr 6 13:25:03.886: TPLUS(00000055)/0/READ: read entire 12 header bytes (expect 6 bytes data)
+*Apr 6 13:25:03.886: TPLUS(00000055)/0/READ: socket event 1
+*Apr 6 13:25:03.886: TPLUS(00000055)/0/READ: read entire 18 bytes response
+*Apr 6 13:25:03.886: TPLUS(00000055)/0/225FE2DC: Processing the reply packet
+*Apr 6 13:25:03.886: TPLUS: received bad AUTHEN packet length = 6, expected 43974
+*Apr 6 13:25:03.886: TPLUS: Invalid AUTHEN packet (check keys)
+
+An engines configured TACACS+ to authenticate remote users but the configuration is not working as expected. Which configuration must be applied to enable access?
+A. R1(config)#ip tacacs source-interface Gig0/0
+B. R1(config)#tacacs-server prod
+R1(config-server-tacacs)#key cisco123
+C. R1(config)#aaa authorization exec default group tacacs+ local
+D. R1(config)#tacacs-server prod
+R1(config-server-tacacs)#port 1020
+
+Answer: B
+
+Explanation
+From the output, we see the last line is “Invalid AUTHEN packet (check keys)” so surely the key was not matched.
+
+Question 98
+Which access control feature does MAB provide?
+A. user access based on IP address
+B. allows devices to bypass authenticate
+C. network access based on the physical address of a device
+D. simultaneous user and device authentication
+
+Answer: C
+
+Explanation
+Standalone MAC Authentication Bypass (MAB) is an authentication method that grants network access to specific MAC addresses regardless of 802.1X capability or credentials. As a result, devices such as cash registers, fax machines, and printers can be readily authenticated, and network features that are based on authorization policies can be made available.
+
+Reference: https://www.cisco.com/en/US/docs/ios-xml/ios/sec_usr_aaa/configuration/15-2mt/sec-config-mab.html
+
+Question 99
+What function does VXLAN perform in an SD-Access deployment?
+A. policy plane forwarding
+B. control plane forwarding
+C. data plane forwarding
+D. systems management and orchestration
+
+Answer: C
+
+Explanation 
+
 
 Question 2
 What is a characteristic of traffic shaping?
@@ -196,7 +3486,7 @@ k, v = [word.strip() for word in line.split("=>")]: This unpacks the two element
 
 In summary, this line of code is used to extract key-value pairs from a string by splitting it based on the “=>” delimiter and removing any extra whitespace around the keys and values.
 
-Question 23A
+Question 23
 An engineer creates the configuration below. Drag and drop the authentication methods from the left into the order of priority on the right. Not all options are used.
 
 R1#sh run | i aaa
@@ -205,91 +3495,13 @@ aaa authentication login default group ACE group AAA_RADIUS local-case
 aaa session-id common
 R1#
 
-Which is tried first?
+Put each login method in the correct order. Use all four.
 A. AAA_RADIUS group
 B. Deny
 C. ACE group
 D. local
 
-Answer: C
-
-Explanation
-The “aaa authentication login default group ACE group AAA_RADIUS local-case” command is broken down as follows:
-
-+ The ‘aaa authentication’ part is simply saying we want to configure authentication settings.
-+ The ‘login’ is stating that we want to prompt for a username/password when a connection is made to the device.
-+ The ‘default’ means we want to apply for all login connections (such as tty, vty, console and aux). If we use this keyword, we don’t need to configure anything else under tty, vty and aux lines. If we don’t use this keyword then we have to specify which line(s) we want to apply the authentication feature.
-+ The ‘group ACE group AAA_RADIUS” means all users are authenticated using group ACE (the first method). If the credentials are not found on this group, then the group AAA_RADIUS is used (the second method).
-+ The ‘local-case‘ option uses case-sensitive local usernames.
-
-Question 23B
-An engineer creates the configuration below. Drag and drop the authentication methods from the left into the order of priority on the right. Not all options are used.
-
-R1#sh run | i aaa
-aaa new-model
-aaa authentication login default group ACE group AAA_RADIUS local-case
-aaa session-id common
-R1#
-
-Which is tried second?
-A. AAA_RADIUS group
-B. Deny
-C. ACE group
-D. local
-
-Answer: A
-
-Explanation
-The “aaa authentication login default group ACE group AAA_RADIUS local-case” command is broken down as follows:
-
-+ The ‘aaa authentication’ part is simply saying we want to configure authentication settings.
-+ The ‘login’ is stating that we want to prompt for a username/password when a connection is made to the device.
-+ The ‘default’ means we want to apply for all login connections (such as tty, vty, console and aux). If we use this keyword, we don’t need to configure anything else under tty, vty and aux lines. If we don’t use this keyword then we have to specify which line(s) we want to apply the authentication feature.
-+ The ‘group ACE group AAA_RADIUS” means all users are authenticated using group ACE (the first method). If the credentials are not found on this group, then the group AAA_RADIUS is used (the second method).
-+ The ‘local-case‘ option uses case-sensitive local usernames.
-
-Question 23C
-An engineer creates the configuration below. Drag and drop the authentication methods from the left into the order of priority on the right. Not all options are used.
-
-R1#sh run | i aaa
-aaa new-model
-aaa authentication login default group ACE group AAA_RADIUS local-case
-aaa session-id common
-R1#
-
-Which is tried third?
-A. AAA_RADIUS group
-B. Deny
-C. ACE group
-D. local
-
-Answer: D
-
-Explanation
-The “aaa authentication login default group ACE group AAA_RADIUS local-case” command is broken down as follows:
-
-+ The ‘aaa authentication’ part is simply saying we want to configure authentication settings.
-+ The ‘login’ is stating that we want to prompt for a username/password when a connection is made to the device.
-+ The ‘default’ means we want to apply for all login connections (such as tty, vty, console and aux). If we use this keyword, we don’t need to configure anything else under tty, vty and aux lines. If we don’t use this keyword then we have to specify which line(s) we want to apply the authentication feature.
-+ The ‘group ACE group AAA_RADIUS” means all users are authenticated using group ACE (the first method). If the credentials are not found on this group, then the group AAA_RADIUS is used (the second method).
-+ The ‘local-case‘ option uses case-sensitive local usernames.
-
-Question 23D
-An engineer creates the configuration below. Drag and drop the authentication methods from the left into the order of priority on the right. Not all options are used.
-
-R1#sh run | i aaa
-aaa new-model
-aaa authentication login default group ACE group AAA_RADIUS local-case
-aaa session-id common
-R1#
-
-What happens if all three are not able to be used?
-A. AAA_RADIUS group
-B. Deny
-C. ACE group
-D. local
-
-Answer: B
+Answer: CADB
 
 Explanation
 The “aaa authentication login default group ACE group AAA_RADIUS local-case” command is broken down as follows:
@@ -347,7 +3559,7 @@ This is done when you cut and paste this into the Yang Explorer application as a
 Reference: https://www.cisco.com/c/en/us/support/docs/storage-networking/management/200933-YANG-NETCONF-Configuration-Validation.html
 
 Question 29
-What is the result of this python program (3*5)% ?
+What is the result of this python program (3*5)%2?
 A. 7
 B. 7.5
 C. 0
@@ -437,7 +3649,7 @@ D. operates over DTLS/TLS authenticated and secured tunnels
 E. control plan connections between routers
 F. provides flexibility and scalability through a hub and spoke architecture
 
-Answer:BCD
+Answer: BCD
 
 Explanation 
 + uses unique per device feature templates
@@ -771,10 +3983,15 @@ B. Change the DCA Sensitivity option to High
 C. Enable the Avoid Persistent Non-WiFi interference option
 D. Disable the Avoid Foreign AP Interference option
 
-Answer: C
+Answer: A
 
 Explanation
 DRRM is a feature that allows an access point that is in distress to bypass normal RRM intervals and immediately change channels. A CleanAir access point always monitors AQ and reports the AQ every 15 minutes. AQ only reports classified interference devices. The key benefit of EDRRM is fast action time.
+
+A is correct
+
+C works differently.
+if the Persistent Device Avoidance function is enabled, the interference will be marked so that the access-points that have been affected by the interference do not use the channel again.
 
 Reference: https://www.cisco.com/c/en/us/td/docs/wireless/controller/9800/16-12/config-guide/b_wl_16_12_cg/cisco-cleanair.html
 
@@ -1381,9 +4598,12 @@ B. Configure the enable secret to be the same as the secret for user “Cisco”
 C. Configure privilege level 15 under the line configuration.
 D. Configure user “cisco” with privilege level 15.
 
-Answer: D
+Answer: C
 
 Explanation 
+Could be a better question.
+C is correct if you want to set for ALL users
+D is correct if you want to set for ONE user
 
 Question 73
 Which security actions must be implemented to prevent an API injection attack?
@@ -1722,12 +4942,13 @@ F. w
 
 Answer: BDFC
 
+Explanation
 1. print
 2. open
 3. w
 4. dump
 
-Explanation
+
 This Python code defines a dictionary called data and then display the value associated with the key model in the first dictionary of the devices list. This will output the string “Cisco Nexus 3550”.
 
 The code then opens a file called “data.json” in write mode using a with statement. The "w" in the second argument of the open() function indicates that the file should be opened in write mode.
@@ -1765,7 +4986,7 @@ D. with open(input_file) as text:
 E. out_file.close()
 F. out_file = open("Json-output.json", "r")
 
-Answer: BCE
+Answer: DCE
 
 Explanation 
 1. with open(input_file) as text: 
@@ -2935,6 +6156,18 @@ SWA=======================SWB
 
 Operations - Vlan 30
 Sales - Vlan 20
+
+SWA# int range g0/0/0-7
+Switchport mode dynamic auto
+Switchport trunk encapsulation dot1q
+Switchport trunk allowed vlan 1,10,20,30,50
+Channel-group 5 mode auto
+
+SWB# int range g0/0/0-7
+Switchport mode dynamic auto
+Switchport trunk encapsulation dot1q
+Switchport trunk allowed vlan 1,10,20,30,40
+Channel-group 5 mode desirable
 
 Users in the Operations VLAN on Switch A are unable to communicate with users in the Operations VLAN on Switch B. Which action resolves the issue?
 A. Set the switchport mode to dynamic desirable on Switch B.
