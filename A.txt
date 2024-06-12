@@ -99,13 +99,31 @@ An engineer must create a script to append and modify device entries in a JSON-f
    ...
    }
 
-Drag and drop the statements onto the blanks within the code to complete the script. Not all options are used.
-A. ?
-B. ?
-C. ?
-D. ?
 
-Answer: A
+__________________
+changedDevices = {}
+Try:
+__________________
+....
+__________________(keyboard interrupt, EOFError):
+Pass
+
+print(json.dumps(changedDevices, indent=4))
+_____________(("devicesData.json", "r+")
+Devices = json.load(File)
+Devices.update(ChangedDevices)
+Json.dump(Devices, File, indent=4)
+_______________
+
+Drag and drop the statements onto the blanks within the code to complete the script. Not all options are used.
+A. While True:
+B. except
+C. Import json
+D. file.open()
+E. file.close()
+F. File = open
+
+Answer: CABFE
 
 Explanation
 
@@ -1550,7 +1568,6 @@ Explanation
 
 Question 2A
 Which of these relate to config management? (Choose two)
-Which of these relate to Orchestration? (Choose two)
 A. This type of technology provides automation across multiple technologies and domains.
 B. This type of technology enables consistent configuration of infrastructure resources.
 C. Ansible is used for this type of technology.
@@ -2130,7 +2147,7 @@ Refer to the exhibit.
   
 {
 	"method": "GET",
-	"url": "/restconf/api/fsjklfjdklsd"
+	"url": "/restconf/api/running/native/interface"
 	"params": {
 		"Accept": "app/vnd.yang.fjklafjsklsdfjklfsd"
 	},
@@ -2727,7 +2744,7 @@ B. Administrators require deep syntax and context knowledge for the configured e
 C. This model states what is wanted but not how it is achieved
 D. This model defines a set of commands that must be executed in a certain order for the system to achieve the desired state
 
-Answer: BD
+Answer: AC
  
 Explanation
  Chef and Ansible encourage a procedural style where you write code that specifies, step-by-step, how to achieve some desired end state. Terraform, SaltStack, and Puppet all encourage a more declarative style where you write code that specifies your desired end state, and the IAC tool itself is responsible for figuring out how to achieve that state.
@@ -3081,7 +3098,7 @@ D. Config t
 E. | append flash
 F. Flash
 
-Answer: ACE
+Answer: BCE
 
 Explanation
 
@@ -4182,12 +4199,12 @@ Drag and drop the snippets onto the blanks within the code to construct a script
 <ios-bgp:neighbor>
 <ios-bgp:id>________________</ios-bgp:id>
 
-A. ?
-B. ?
-C. ?
-D. ?
+A. 192.168.1.1
+B. 192.168.1.2
+C. 65000
+D. 65001
 
-Answer: A
+Answer: DACB
  
 Explanation
  1. 65001
@@ -5318,9 +5335,14 @@ Explanation
 Question 66
 Refer to the exhibit.
   
-                 172.16.1.2              172.16.1.4
+                172.16.1.3 
+     192.168.13.0/24     
+ R1------------------R3
+       Area 1              
+
+                172.16.1.2              172.16.1.4
      192.168.12.0/24     192.168.24.0/24
-  ------------------R2--------------------R4 
+ R1------------------R2--------------------R4 
        Area 0                 Area 2
 
 An engineer must create a configuration that prevents R3 from receiving the LSA about 172.16.1.4/32. Which configuration set achieves this goal?
@@ -5719,7 +5741,7 @@ D. "permit":
 E. "match": 
 F. "name": "100",
 
-Answer: A
+Answer: AFBE
  
 Explanation
  1. “running”: null
@@ -6002,7 +6024,7 @@ D. "primary":
 E. "target": 
 F. "name": "100"
 
-Answer: A
+Answer: EFDC
  
 Explanation
  1–E
@@ -6973,7 +6995,7 @@ F. Ciso-IOS-XE
    
 Drag and drop the snippets into the RESTCONF request to form the request that returns this response. Not all options are used.
    
-Answer: A
+Answer: ECD
 
 Explanation
  1 – interface/GigabitEthernet/1/
@@ -7343,7 +7365,7 @@ match ip address DENY-HTTP
 ______________
 vlan access-map HOST-A-B 20
 match ip address MATCH_ALL
-
+______________
 vlan filter HOST-A-B vlan 10
 
 A. action drop
@@ -7640,19 +7662,6 @@ The Cisco DNA Center open platform for intent-based networking provides 360-degr
 + Intent-based APIs leverage the controller to enable business and IT applications to deliver intent to the network and to reap network analytics and insights for IT and business innovation. These enable APIs that allow Cisco DNA Center to receive input from a variety of sources, both internal to IT and from line-of-business applications, related to application policy, provisioning, software image management, and assurance.
 Reference: https://www.cisco.com/c/en/us/products/collateral/cloud-systems-management/dna-center/nb-06-dna-cent-plat-sol-over-cte-en.html
 
-Question 4
-What the role of a fusion in an SD-Access solution?
-A. provides connectivity to external networks
-B. acts as a DNS server
-C. performs route leaking between user-defined virtual networks and shared services 
-D. provides additional forwarding capacity to the fabric
-
-Answer: C
-
-Explanation
-Reference: https://www.cisco.com/c/en/us/support/docs/cloud-systems-management/dnacenter/
-213525-sda-steps-to-configure-fusion-router.html#anc1/
-
 Question 6
 On which protocol or technology is the fabric data plane based in Cisco SD-Access fabric?
 A. LISP
@@ -7796,30 +7805,6 @@ D. type 4
 Answer: D
 
 Explanation
-
-Question 3
-Refer to the exhibit. Which IP address becomes the next active next hop for 192.168.102.0/24 when 192.168.101.2 fails?
-A. 192.168.101.18 
-B. 192.168.101.6 
-C. 192.168.101.10 
-D. 192.168.101.14
-
-Answer: A
-
-Explanation
-
-Question 9
-When configuration WPA2 Enterprise on a WLAN, which additional security component configuration is required?
-A. NTP server
-B. PKI server
-C. RADIUS server 
-D. TACACS server
-
-Answer: C
-
-Explanation
-Reference: https://www.cisco.com/c/en/us/support/docs/wireless/4400 -series-wireless-lancontrollers/
-100708-wpa-uwn-config.html#conf
 
 Question 10
 An engineer configures a WLAN with fast transition enabled. Some legacy clients fail to connect to this WLAN. Which feature allows the legacy clients to connect while still allowing other clients to use fast transition based on their OLTIs?
@@ -8100,17 +8085,6 @@ Answer: C
 
 Explanation
 Reference: https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Type 
-
-Question 10
-Which statement about agent-based versus agentless configuration management tools is true?
-A. Agentless tools require no messaging systems between master and slaves.
-B. Agentless tools use proxy nodes to interface with slave nodes.
-C. Agent-based tools do not require a high-level language interpreter such as Python or Ruby on slave nodes.
-D. Agent-based tools do not require installation of additional software packages on the slave nodes.
-
-Answer: C 
-
-Explanation
 
 Question 11
 What is a benefit of data modeling languages like YANG?
@@ -8970,6 +8944,17 @@ Explanation
 
 Question 5
 Scenario The East-WLC-2504A controller has a problem. When configuration changes are made to the Employees- East-Wing AP Group that covers the East-Wing, none of the APs receive the updates. Refer to the exhibits to determine where the problems are.
+
+SSID - Employees
+WLAN ID - 10
+APs - Preconfigured on WLC
+Dynamic IF - east-wing
+Dynamic IF IP - 172.16.1.6/24
+Dynamic IF Gateway - 172.16.1.1/24
+VLAN - 22
+Port - 1
+AP Group - Employees-East-Wing
+
 Note, not all menu items, text boxes, or radio buttons are active.
 Which four changes must be made in the configuration of the East-WLC-2504A controller to restore functionality to the Employees-East-Wing AP Group? (Choose four.)
 A. Change the AP in the Employees-East-Wing AP Group.
@@ -13920,9 +13905,14 @@ B. WPA (AES)
 C. WPA2(AES)+WEP
 D. OPEN
 
-Answer: AC
+Answer: AD
 
 Explanation
+Wi-Fi 6 (IEEE 802.11ax)
+
+In greenfield we don’t need to use any security policy to reduce the wasting time of encryption/decryption.
+
+Wi-Fi 6 does not support WPA with AES while WPA2 (AES) would slow down the connection -> Only 802.1X is the best choice left.
 
 Question 329. 
 Which outcome is achieved with this Python code?
@@ -20290,12 +20280,11 @@ B. Configure the enable secret to be the same as the secret for user “Cisco”
 C. Configure privilege level 15 under the line configuration.
 D. Configure user “cisco” with privilege level 15.
 
-Answer: C
+Answer: D
 
 Explanation 
-Could be a better question.
-C is correct if you want to set for ALL users
-D is correct if you want to set for ONE user
+C is correct if you want to set for ALL users AND connecting through console
+D is correct if you want to set for ONE user AND connecting through SSH
 
 Question 73
 Which security actions must be implemented to prevent an API injection attack?
@@ -21970,5 +21959,76 @@ D. OSPF uses IP protocol number 88. EIGRP uses IP protocol number 89.
 Answer: B
 
 Explanation 
+
+Question 16
+Drag and drop the descriptions of the VSS technology from the left to the right. Not all options are used.
+A. Supported on the Cisco 4500 and 6500 series
+B. Combines exactly two devices
+C. Supports devices that are geographically separated
+D. Supported on Cisco 3750 and 3850 devices
+E. Supports up to nine devices
+F. Uses proprietary cabling
+
+Answer: ABC
+
+Explanation
+VSS:
++ supported on the Cisco 4500 and 6500 series
++ combines exactly two devices
++ supports devices that are geographically separated
+
+The following characteristics are correct for StackWise (but not VSS):
++ can be connected in up to 9 devices
++ is supported only on line 3750 and (2960/3650/3850/3750+)
++ uses proprietary cable for connection
+
+Question 16X
+Drag and drop the descriptions of the stack wise technology from the left to the right. Not all options are used.
+A. Supported on the Cisco 4500 and 6500 series
+B. Combines exactly two devices
+C. Supports devices that are geographically separated
+D. Supported on Cisco 3750 and 3850 devices
+E. Supports up to nine devices
+F. Uses proprietary cabling
+
+Answer: DEF
+
+Explanation
+VSS:
++ supported on the Cisco 4500 and 6500 series
++ combines exactly two devices
++ supports devices that are geographically separated
+
+The following characteristics are correct for StackWise (but not VSS):
++ can be connected in up to 9 devices
++ is supported only on line 3750 and (2960/3650/3850/3750+)
++ uses proprietary cable for connection
+
+Question 49
+Drag and drop characteristics of PIM dense mode from the left to the right. (Choose three)
+A. Requires a rendezvous point to deliver multicast traffic
+B. Builds source-based distribution trees
+C. Uses a pull model to distribute multicast traffic
+D. Uses a push model to distribute multicast traffic
+E. Uses prune mechanisms to stop unwanted multicast traffic
+F. Builds shared distribution trees
+
+Answer: BDE
+
+Explanation
+PIM Dense Mode:
++ builds source-based distribution trees
++ uses a push model to distribute multicast traffic
++ uses prune mechanisms to stop unwanted multicast traffic
+
+PIM-DM supports only source trees – that is, (S,G) entries–and cannot be used to build a shared distribution tree.
+
+Reference: https://www.cisco.com/c/en/us/td/docs/ios-xml/ios/ipmulti_pim/configuration/xe-16-5/imc-pim-xe-16-5-book/imc-tech-oview.html
+
+PIM dense mode (PIM-DM) uses a push model to flood multicast traffic to every corner of the network. This push model is a brute-force method of delivering data to the receivers. This method would be efficient in certain deployments in which there are active receivers on every subnet in the network. PIM-DM initially floods multicast traffic throughout the network. Routers that have no downstream neighbors prune the unwanted traffic. This process repeats every 3 minutes.
+
+A rendezvous point (RP) is required only in networks running Protocol Independent Multicast sparse mode (PIM-SM).
+
+In PIM dense mode (PIM-DM), multicast traffic is initially flooded to all segments of the network. Routers that have no downstream neighbors or directly connected receivers prune back the unwanted traffic.
 
 Question 999
