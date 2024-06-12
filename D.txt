@@ -4598,12 +4598,11 @@ B. Configure the enable secret to be the same as the secret for user “Cisco”
 C. Configure privilege level 15 under the line configuration.
 D. Configure user “cisco” with privilege level 15.
 
-Answer: C
+Answer: D
 
 Explanation 
-Could be a better question.
-C is correct if you want to set for ALL users
-D is correct if you want to set for ONE user
+C is correct if you want to set for ALL users AND connecting through console
+D is correct if you want to set for ONE user AND connecting through SSH
 
 Question 73
 Which security actions must be implemented to prevent an API injection attack?
@@ -6278,5 +6277,92 @@ D. OSPF uses IP protocol number 88. EIGRP uses IP protocol number 89.
 Answer: B
 
 Explanation 
+
+Question 16
+Drag and drop the descriptions of the VSS technology from the left to the right. Not all options are used.
+A. Supported on the Cisco 4500 and 6500 series
+B. Combines exactly two devices
+C. Supports devices that are geographically separated
+D. Supported on Cisco 3750 and 3850 devices
+E. Supports up to nine devices
+F. Uses proprietary cabling
+
+Answer: ABC
+
+Explanation
+VSS:
++ supported on the Cisco 4500 and 6500 series
++ combines exactly two devices
++ supports devices that are geographically separated
+
+The following characteristics are correct for StackWise (but not VSS):
++ can be connected in up to 9 devices
++ is supported only on line 3750 and (2960/3650/3850/3750+)
++ uses proprietary cable for connection
+
+Question 16X
+Drag and drop the descriptions of the stack wise technology from the left to the right. Not all options are used.
+A. Supported on the Cisco 4500 and 6500 series
+B. Combines exactly two devices
+C. Supports devices that are geographically separated
+D. Supported on Cisco 3750 and 3850 devices
+E. Supports up to nine devices
+F. Uses proprietary cabling
+
+Answer: DEF
+
+Explanation
+VSS:
++ supported on the Cisco 4500 and 6500 series
++ combines exactly two devices
++ supports devices that are geographically separated
+
+The following characteristics are correct for StackWise (but not VSS):
++ can be connected in up to 9 devices
++ is supported only on line 3750 and (2960/3650/3850/3750+)
++ uses proprietary cable for connection
+
+Question 21
+A customer has completed the installation of a Wi-Fi 6 greenfield deployment at their new campus. They want to leverage Wi-Fi 6 enhanced speeds on the trusted employee WLAN. To configure the employee WLAN, which two Layer 2 security policies should be used? (Choose two)
+A. WPA (AES)
+B. WPA2 (AES) + WEP
+C. 802.1X
+D. OPEN
+
+Answer: CD
+
+Explanation
+Wi-Fi 6 (IEEE 802.11ax)
+
+In greenfield we don’t need to use any security policy to reduce the wasting time of encryption/decryption.
+
+Wi-Fi 6 does not support WPA with AES while WPA2 (AES) would slow down the connection -> Only 802.1X is the best choice left.
+
+Question 49
+Drag and drop characteristics of PIM dense mode from the left to the right. (Choose three)
+A. Requires a rendezvous point to deliver multicast traffic
+B. Builds source-based distribution trees
+C. Uses a pull model to distribute multicast traffic
+D. Uses a push model to distribute multicast traffic
+E. Uses prune mechanisms to stop unwanted multicast traffic
+F. Builds shared distribution trees
+
+Answer: BDE
+
+Explanation
+PIM Dense Mode:
++ builds source-based distribution trees
++ uses a push model to distribute multicast traffic
++ uses prune mechanisms to stop unwanted multicast traffic
+
+PIM-DM supports only source trees – that is, (S,G) entries–and cannot be used to build a shared distribution tree.
+
+Reference: https://www.cisco.com/c/en/us/td/docs/ios-xml/ios/ipmulti_pim/configuration/xe-16-5/imc-pim-xe-16-5-book/imc-tech-oview.html
+
+PIM dense mode (PIM-DM) uses a push model to flood multicast traffic to every corner of the network. This push model is a brute-force method of delivering data to the receivers. This method would be efficient in certain deployments in which there are active receivers on every subnet in the network. PIM-DM initially floods multicast traffic throughout the network. Routers that have no downstream neighbors prune the unwanted traffic. This process repeats every 3 minutes.
+
+A rendezvous point (RP) is required only in networks running Protocol Independent Multicast sparse mode (PIM-SM).
+
+In PIM dense mode (PIM-DM), multicast traffic is initially flooded to all segments of the network. Routers that have no downstream neighbors or directly connected receivers prune back the unwanted traffic.
 
 Question 999
